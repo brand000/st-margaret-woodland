@@ -22,7 +22,7 @@ const NavBar = (props) => {
       <nav className="nav">
         <div className="logo-container">
           <a className="navbar-logo" href="./">
-            <img src={logo} className="k4slogo" />
+            <img src={logo} className="navlogo" />
 
             <h4>St. Margaret's Bay Wooodland Area</h4>
           </a>

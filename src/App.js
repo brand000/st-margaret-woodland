@@ -12,17 +12,6 @@ function App() {
       </li>
     );
   }
-  // function SelectItem(){
-  //   return(
-  //     <div className="Nav-Item-Dropbox">
-  //       <select className="menu">
-  //           <option className="service"></option>
-  //           <option className="host Events"></option>
-  //           <option className="sports activity"></option>
-  //       </select>
-  //     </div>
-  //   );
-  // }
 
   return (
     <div className="main">
