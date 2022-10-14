@@ -1,5 +1,4 @@
 
-
 //hamburger navbar
 function openNav() {
   document.getElementById("nav-bar").style.width = '25%';
@@ -9,7 +8,7 @@ function closeNav() {
   document.getElementById("nav-bar").style.width = '0%';
 }
 
-/* change menuBtn to menuBtn.open */
+/* change menuBtn to menuBtn.open to open reactive navbar */
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-bar');
 const mainContent = document.querySelector('.main-content');
@@ -30,22 +29,23 @@ menuBtn.addEventListener('click', () => {
   }
 })
 
-//swiper init & autoplay
+//swiper init
 const swiper = new Swiper('.swiper', {
   loop: true,
 
-  // If we need pagination
+  // pagination init
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 
-  // Navigation arrows
+  // nav arrows init
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
+  // autoplay init
   autoplay: {
     delay: 5000,
   },
