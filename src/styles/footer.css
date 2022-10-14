@@ -1,0 +1,15 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    font-family: "Inter";
+    color: lightgreen;
+    height: 5%;
+  }

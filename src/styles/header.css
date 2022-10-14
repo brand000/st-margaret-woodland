@@ -1,0 +1,90 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0e1212;
+  font-family: "Inter";
+  color: lightgreen;
+  height: 10%;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: white;
+}
+
+.org-name {
+  color: black;
+  font-size: 18px;
+  font-family: Inter;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    margin-right: -1rem;
+    background: none;
+    border: 0;
+  }
+
+  .menu-btn_burger {
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px black;
+    transition: all 0.3s linear;
+  }
+  .menu-btn_burger::before,
+  .menu-btn_burger::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px black;
+    transition: all 0.3s linear;
+  }
+  .menu-btn_burger:hover,
+  .menu-btn_burger:hover::before,
+  .menu-btn_burger:hover::after {
+    background: green;
+  }
+  .menu-btn_burger::before {
+    transform: translateY(-12px);
+  }
+  .menu-btn_burger::after {
+    transform: translateY(12px);
+  }
+  /*animation*/
+  .menu-btn.open .menu-btn_burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn_burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn_burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+}

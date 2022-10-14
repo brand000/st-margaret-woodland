@@ -1,0 +1,95 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: white;
+  font-family: "Inter";
+  color: black;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-content {
+  visibility: visible;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  height: 90%;
+  width: 100%;
+}
+
+a{
+  color: black;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main-content.open {
+  opacity: 0.3;
+  transition: opacity .3s linear;
+}
+
+.name-center {
+  text-align: center;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+}
+
+#link-preview{
+  opacity: 100% !important;
+}
+
+.swiper{
+  width: 95%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img{
+  width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color: white !important;
+  transition: .3s;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover{
+  color: green !important;
+}
+
+.swiper-pagination-bullet{
+  background-color: white !important;
+  transition: .2s;
+}
+
+.swiper-pagination-bullet:hover{
+  background-color: green !important;
+}
