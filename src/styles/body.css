@@ -34,18 +34,18 @@ body {
   width: 100%;
 }
 
-a{
+a {
   color: black;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main-content.open {
   opacity: 0.3;
-  transition: opacity .3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .name-center {
@@ -60,36 +60,38 @@ a:hover {
   color: green;
 }
 
-#link-preview{
+#link-preview {
   opacity: 100% !important;
 }
 
-.swiper{
-  width: 95%;
+.swiper {
+  width: 100%;
   height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.swiper-slide img{
+.swiper-slide img {
   width: 100%;
 }
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   color: white !important;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.swiper-button-prev:hover, .swiper-button-next:hover{
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
   color: green !important;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background-color: white !important;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.swiper-pagination-bullet:hover{
+.swiper-pagination-bullet:hover {
   background-color: green !important;
 }

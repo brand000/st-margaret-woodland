@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="styles/footer.css" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <script defer src="js/main.js"></script>
@@ -33,8 +37,30 @@
           <div id="nav-bar" class="nav-bar">
             <nav>
               <ul>
-                <li><a href="components/about.html">About</a></li>
-                <li><a href="components/ecosystem.html">Ecosystem</a></li>
+                <li>
+                  <div class="about-dropdown">
+                    <button class="about-button">
+                      About
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="about-content">
+                      <a href="#">History</a>
+                      <a href="#">Contact</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="eco-dropdown">
+                    <button class="eco-button">
+                      Ecosystem
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="eco-content">
+                      <a href="#">Flora</a>
+                      <a href="#">Fauna</a>
+                    </div>
+                  </div>
+                </li>
                 <li><a href="components/exercise.html">Exercise</a></li>
                 <li><a href="components/burial.html">Burial</a></li>
               </ul>
