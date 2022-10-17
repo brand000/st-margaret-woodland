@@ -47,8 +47,9 @@ ul {
   outline: none;
   color: black;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit;
+  margin: 0; 
+  transition: 0.5s;
 }
 
 .about-content,
@@ -72,6 +73,10 @@ ul {
   display: block;
   text-align: left;
   transition: 0.3s;
+}
+
+.about-button:hover, .eco-button:hover{
+  color: green;
 }
 
 .about-dropdown:hover .about-content,
