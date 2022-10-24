@@ -10,10 +10,11 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="org-name">
+            <div class=" org-name">
                 <a href="index.html">
                     St. Maragrets Bay Wodland Conservation
                 </a>
+
             </div>
         </div>
 
@@ -24,7 +25,7 @@
 
     </header>
 
-    <div class="slideshow-container">
+    <div class=" slideshow-container">
         <!-- slider container -->
         <div class="swiper">
             <!-- slider wrapper -->
