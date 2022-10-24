@@ -20,7 +20,7 @@
 
 
         <?php 
-       include 'common/menus.html'; 
+       include 'common/menu.html'; 
       ?>
 
     </header>
