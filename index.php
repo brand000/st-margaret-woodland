@@ -50,9 +50,9 @@
 
     </div>
 
-    <div class="main-content">
+    <!--div class="main-content">
         <div class="info-text"></div>
-    </div>
+    </div-->
 
     <?php 
      include 'common/footer.html';  
