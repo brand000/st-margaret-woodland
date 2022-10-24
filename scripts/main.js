@@ -1,17 +1,22 @@
-//hamburger navbar
+//hamburger navbar open
 function openNav() {
   document.getElementById("nav-bar").style.width = "25%";
 }
 
+//hamburger navbar close
 function closeNav() {
   document.getElementById("nav-bar").style.width = "0%";
 }
 
-/* change menuBtn to menuBtn.open to open reactive navbar */
+/* change menuBtn to menuBtn.open to navbar */
 const menuBtn = document.querySelector(".menu-btn");
 const navBar = document.querySelector(".nav-bar");
 const mainContent = document.querySelector(".main-content");
+
+//menuOpen default to closed
 let menuOpen = false;
+
+//event listener that opens or closes onclick based on current state
 menuBtn.addEventListener("click", () => {
   if (!menuOpen) {
     menuOpen = true;
