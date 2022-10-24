@@ -1,6 +1,6 @@
 import "./App.css";
-import Video from "./component/video";
-import NavBar from "./component/navbar";
+import Video from "../jsx/video";
+import NavBar from "../jsx/navbar";
 
 function App() {
   function Navitem(props) {
