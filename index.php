@@ -37,7 +37,9 @@ include 'common/head.html';
                 <div class="swiper-slide">
                     <img src="resources/image/img2.jpg" alt="" />
                 </div>
-                ...
+
+
+
             </div>
 
             <!-- swiper pagination buttons-->
@@ -49,6 +51,19 @@ include 'common/head.html';
         </div>
     </div>
 
+        <div class="centered">
+            <p>Welcome to</p><br>
+            <p>Saint Margaret's Bay Conservation Site</p>
+
+            <button type="submit">SUBMIT</button>
+        </div>
+
+    </div>
+
+
+    <!--div class=" main-content">
+        <div class="info-text"></div>
+        </div-->
 
 
     <?php
