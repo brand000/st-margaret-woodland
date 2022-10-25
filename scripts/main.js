@@ -1,4 +1,3 @@
-//hamburger navbar open
 function openNav() {
   document.getElementById("nav-bar").style.width = "25%";
 }
