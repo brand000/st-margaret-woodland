@@ -4,6 +4,8 @@
  * Process the login form data and set up the necassary session data 
  * for the user to shop. If incorrect login information (bad username and/or
  * bad password) is entered, the user is redirected back to login form.
+ * 
+ * Author: Rahabar Mahmud(A00446187)
  */
 session_start();
 if(isset($_SESSION['customer_id']))

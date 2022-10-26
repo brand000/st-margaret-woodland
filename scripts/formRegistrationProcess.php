@@ -2,7 +2,10 @@
 /**
  * FormRegistrationProcess.php
  * 
- * This file is used to send in the registration information for a customer
+ * This is done to get the registration information from the registration page
+ * and pass on an the answers to the database.
+ * 
+ * Author: Rahabar Mahmud(A00446187)
  */
 
 //initializing everything

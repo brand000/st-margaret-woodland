@@ -1,3 +1,4 @@
+//Author: Devon Leigh
 function openNav() {
   document.getElementById("nav-bar").style.width = "25%";
 }
