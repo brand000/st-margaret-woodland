@@ -9,8 +9,7 @@ session_start();
 if(isset($_SESSION['customer_id']))
     header("Location: ../pages/estore.php");
 
-    //echo $_POST['loginPassword'];
-    //echo "ABC";
+
     
 //saved values used to fill in login form values if 
 //we have to go back to the login form and try again
@@ -23,12 +22,12 @@ $numRecords = mysqli_num_rows($rowsWithMatchingLoginName);
 
 if($numRecords == 0)
 {
-    //echo $_POST['loginPassword'];
-    //echo "ABC";
+
     //No records retrieved; username entered not in database; go back to form
     header("Location: ../pages/formLogin.php?retrying=true");
 }
 
+//matching the values from the database
 if($numRecords == 1)
 {
     $row = mysqli_fetch_array($rowsWithMatchingLoginName, MYSQLI_ASSOC);

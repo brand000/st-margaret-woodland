@@ -1,43 +1,54 @@
 <?php 
 /**
- * FormRegistrationProcess
+ * FormRegistrationProcess.php
+ * 
+ * This file is used to send in the registration information for a customer
  */
 
+//initializing everything
 $salutation = $firstName = $middleInitial = $lastName = "";
 $gender = $email = $phone = $street = "";
 $city = $region = $postalCode = "";
 $loginName = $password1 = $password2 = "";
 
-
+//This is used to post information to the SQL database and uses regular expressions
+//to ensure all that proper values are used in each case
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-
+    //posting the salutations to the server
     $salutation = sanitized_input($_POST["salutation"]);
 
+    //posting the user's first name
     $firstName = sanitized_input($_POST["firstName"]);
     if(!preg_match("/^[A-Z][A-Za-z '-]*$/", $firstName))
     die("Bad first name!");
 
+    //posting the user's middle name
     $middleInitial = sanitized_input($_POST["middleInitial"]);
     if(!empty($_POST['middleInitial']) && 
     !preg_match("/^[A-Z](\.)?$/", $middleInitial))
     die("Bad middle initial!");
 
+    //posting the last name
     $lastName = sanitized_input($_POST["lastName"]);
     if(!preg_match("/^[A-Z][A-Za-z '-]*$/", $lastName))
     die("Bad last name!");
 
+    //the gender
     $gender = sanitized_input($_POST["gender"]);
 
+    //positing the user's email
     $email = sanitized_input($_POST["email"]);
     if(!preg_match("/^\w+([.-]?\w+)*@\w([.-]?\w+)*(\.\w{2,3})$/", $email))
     die("Bad e-mai!");
 
+    //posting the user's phone number
     $phone = sanitized_input($_POST["phone"]);
     if(!empty($_POST['phone']) && 
     !preg_match("/^((\d{3}-)?\d{3}-\d{4})|\(\d{3}\)\d{3}-\d{4}$/", $phone))
     die("Bad phone number!");
 
+    //posting the address
     $street = sanitized_input($_POST["street"]);
     if(empty($_POST['street']))
     die("Missing street address!");
@@ -55,17 +66,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     !preg_match("/^[A-Z]\d[A-Z] ?\d[A-Z]\d$/", $postalCode))
     die("Bad postal code!");
 
+    //the login name
     $loginName = sanitized_input($_POST["loginName"]);
     if(!preg_match("/^[A-Za-z][A-Za-z0-9]{5,14}$/", $loginName))
     die("Bad login Name!");
 
-    
+    //posting the password from the user
     $password1 = sanitized_input($_POST["password1"]);
     $regex = "/^(?=.*\d)(?=.*[@^_+=[\]:])(?=.*[A-Z])(?=.*[a-z])\S{8,15}$/";
     if(!preg_match($regex, $password1))
         die("Bad first password!");
 
 
+    //asking for the password a second time to see if they match
     $password2 = sanitized_input($_POST["password2"]);
     $regex = "/^(?=.*\d)(?=.*[@^_+=[\]:])(?=.*[A-Z])(?=.*[a-z])\S{8,15}$/";
     if(!preg_match($regex, $password2))
@@ -74,6 +87,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 }
 
+/**
+ * This is used to trim the spaces, slashes and other special characters before posting the
+ * data
+ */
 function sanitized_input($data)
 {
     $data = trim($data);
@@ -84,18 +101,22 @@ function sanitized_input($data)
 }
 
 //==============main script===================
+
+//the message if the email entered by the user already exists for an account
 if (emailAlreadyExists($db, $_POST['email']))
 {
     echo "<h3>Sorry, but your e-mail address is already registered
     in our database.To register, you must use a different e-mail address.</h3>";
     
 }
+//if the 2 passwords entered does not match
 else if($_POST['password1'] != $_POST['password2']) 
 {
     echo "<h3>Sorry, but the passwords you entered do not match.
     Your attempt to register has failed. Please try again.</h3>"; 
     
 }
+//posting everything to the database
 else
 {
    $loginDateTime = date('Y-m-d h:i:s');
@@ -128,7 +149,7 @@ else
 
     if (mysqli_query($db, $query))
     {
-        echo "<h3>Thank you for registering with Innovative Inventory.<br>
+        echo "<h3>Thank you for registering at Saint Margaret's Bay conservation Site.<br>
         Your login userame for our website is
         \"$uniqueLoginName\".<br>
         Remember to record the password you supplied in a safe place.<br>
@@ -145,7 +166,11 @@ else
 mysqli_close($db);
 
 
-
+/**
+ * This function checks if the email entered by the user already exists.
+ * It checks the customer table's email column and checks to find any matching or same
+ * email address.
+ */
 function emailAlreadyExists($db, $email)
 {
     $query =
@@ -160,6 +185,11 @@ function emailAlreadyExists($db, $email)
     
 }
 
+/**
+ * This function checks if the username entered by the user is unique.
+ * If the name is non-unique, then it modifies the name slightly by adding numbers
+ * to the end of the name to make the name unique. 
+ */
 function getUniqueLoginName($db, $loginName)
 {
     $uniqueLoginName = $loginName;
