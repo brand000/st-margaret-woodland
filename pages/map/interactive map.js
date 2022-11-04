@@ -19,9 +19,3 @@ function detail_block(){
   document.getElementById("detail_description").style.visibility = "visible";
 }
 
-$("#map").mouseup(
-  function(event){
-    if(event.target.id != "detail_description")
-    { #("#detail_description").style.visibility = "hidden";}
-  }
-)
