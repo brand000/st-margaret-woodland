@@ -51,12 +51,12 @@ include 'common/head.html';
         </div>
     </div>
 
-        <div class="centered">
-            <p>Welcome to</p><br>
-            <p>Saint Margaret's Bay Conservation Site</p>
+    <div class="centered">
+        <p>Welcome to</p><br>
+        <p>Saint Margaret's Bay Conservation Site</p>
 
-            <button type="submit">SUBMIT</button>
-        </div>
+        <button type="submit">SUBMIT</button>
+    </div>
 
     </div>
 

@@ -17,5 +17,12 @@ function invisible(){
 
 function detail_block(){
   document.getElementById("detail_description").style.visibility = "visible";
+$(document).ready( function() {
+  $('.some-class').on('click', slideonlyone('sms_box'));
+  // OR //
+  $('.some-class').click(slideonlyone('sms_box'));
+});
+
 }
+
 
