@@ -10,16 +10,16 @@
 <body onload="setup()">
     
 
-        <img src="map.jpg" id="map">
+        <img src="map.jpg" id="map" onclick="detect_Click(event)">
 
-        <div class="blocks" id="detail_description">
+        <div id="detail_description">
 
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" id="marker" onclick="detail_block()" onmouseover = "visible()" onmouseout="invisible()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill mywid" viewBox="0 0 16 16" id="marker" onclick="detail_block()" onmouseover = "visible()" onmouseout="invisible()">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
         </svg>
 
-        <div id="description">
+        <div class="description_blocks" id="description1">
             <p>1</p>
         </div>
 </body>

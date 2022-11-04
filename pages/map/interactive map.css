@@ -13,19 +13,23 @@
       top: 0px;
     }
     
-    #description{
-      height: 100px;
-      width: 200px;
+    .description_blocks{
+      height: 150px;
+      width: 250px;
       background-color: aliceblue;
       position: absolute;
       border: 1px solid black;
-      top:90px;
-      left:350px;
     }
 
-    #marker{
+    #description1{
+       top:60px;
+       left:300px;
+    }
+
+    .mywid{
       position: absolute;
       top: 224px;
       left: 396px;
       color: aliceblue;
-    }
+      cursor: pointer;
+    } /*the markers class*/
