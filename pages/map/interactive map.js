@@ -69,21 +69,6 @@ function detect_Click(event){
    
   }
 }
->>>>>>> 3d8fd1dd9dcd55824158293afee0b6e5e82eaf7a
-
-/* the part above is about the functions of detail block which is located on the left of  map*/
-
-
-
-
-
-
-
-
-
-
-
-
 /* the part above is about the functions of detail block which is located on the left of  map*/
 
 
