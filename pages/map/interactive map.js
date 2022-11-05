@@ -6,7 +6,7 @@ function setup(){
 }
 
 function timer(id){
-  myTimeout = setTimeout(function(){invisible(id)}, 10000);
+  myTimeout = setTimeout(function(){invisible(id)}, 1000);
   
 }
 
