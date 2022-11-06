@@ -4,38 +4,51 @@
 <title></title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="interactive map.css" rel="stylesheet">
+<link href="./styles/interactive map.css" rel="stylesheet">
+<link href="./resources/jquery-mobile-theme-184549-0/themes/St_Margaret's_Map.css" rel="stylesheet">
+<link href="./styles/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+<link href="./resources/jquery-mobile-theme-184549-0/themes/jquery.mobile.icons.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<script src="./jquery-3.6.0.js"></script>
-<script src="./interactive map.js"></script>
+<script src="./jquery-3.6.1.min.js""></script>
+<!-- <script src="./jquery-3.6.0.js"></script> -->
+<script src="./script/jquery-1.11.1.min.js"></script>
+<script src="./script/jquery.mobile-1.4.5.min.js"></script>
+<script src="./script/interactive map.js"></script>
 </head>
 <body onload="setup()">
     
+    <div data-role="page">
+        <div class="ui-content" id="ui-content">
+            <div class="ui-grid-a ui-responsive">
+                <img src="./resources/image/map.jpg" id="map" onclick="detect_Click(event)">
 
-        <img src="map.jpg" id="map" onclick="detect_Click(event)">
+                <div id="detail_block">
+                <p>1</p>
+                </div>
 
-        <div id="detail_block">
-        <p>1</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill mywid" viewBox="0 0 16 16" id="marker1" onclick="detail_block_call()" onmouseover = "moveover_marker1()" onmouseleave="moveout_marker1()">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+
+                <div class="description_blocks" id="description1" class="infowin" onmouseenter="moveover_description1()" onmouseleave="moveout_description1()">
+                    
+                </div>
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill mywid" viewBox="0 0 16 16" id="marker2" onclick="detail_block_call()" onmouseenter = "moveover_marker2()" onmouseleave="moveout_marker2()">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+
+                <div class="description_blocks" id="description2" class="infowin" onmouseenter="moveover_description2()" onmouseleave="moveout_description2()">
+                    
+                </div>
+            </div>
+            <div class="ui-grid-b ui-responsive">
+                <div class="slider-container">
+                    <input id="pathslider" type="range" value="1" min="1" max="10" ui-slider-input="false" data-highlight="true" data-theme="a" data-track-theme="a">
+                </div>
+            </div>
         </div>
-
-
-
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill mywid" viewBox="0 0 16 16" id="marker1" onclick="detail_block_call()" onmouseover = "moveover_marker1()" onmouseleave="moveout_marker1()">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-        </svg>
-
-        <div class="description_blocks" id="description1" class="infowin" onmouseenter="moveover_description1()" onmouseleave="moveout_description1()">
-            
-        </div>
-
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill mywid" viewBox="0 0 16 16" id="marker2" onclick="detail_block_call()" onmouseenter = "moveover_marker2()" onmouseleave="moveout_marker2()">
-            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-        </svg>
-
-        <div class="description_blocks" id="description2" class="infowin" onmouseenter="moveover_description2()" onmouseleave="moveout_description2()">
-            
-        </div>
+    </div>
 </body>
 </html>
