@@ -1,6 +1,14 @@
+/* jQuery Mobile classes              */
+/* Background colour                  */
+.ui-page,
+.ui-header {
+  background: #cedbce !important;
+}
+
 #map{
       position:relative;
-      height:750px; width: 1536px;
+      height: 100vh; width: 100%;
+      
     }
     
     #detail_block{
@@ -47,4 +55,24 @@
       left: 482px;
     }
 
-    
+
+#image-container{
+  height: 100%;
+  width: 100vw;
+  margin-right: 3%;
+
+}
+
+#slider-container{
+  padding-left: 70%;
+}
+
+
+
+
+.ui-slider-track {
+  margin-left: 20px;
+  width: 200px;
+}
+
+
