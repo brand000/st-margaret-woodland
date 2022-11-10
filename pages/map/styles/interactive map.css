@@ -12,13 +12,13 @@
     }
     
     #detail_block{
-      height: 750px;
+      height: 755px;
       width: 300px;
       border: 2px solid black;
       background-color: aliceblue;
       position: absolute;
-      left: 0px;
-      top: 0px;
+      left: 15px;
+      top: 16px;
     }
     
     .description_blocks{
@@ -27,16 +27,17 @@
       background-color: aliceblue;
       position: absolute;
       border: 1px solid black;
+      border-radius: 5px;
     }
 
     #description1{
-       top:60px;
-       left:300px;
+       top:11%;
+       left:25%;
     }
 
     #description2{
-      top:130px;
-      left:480px;
+      top:18%;
+      left:30%;
    }
 
     .mywid{
@@ -46,15 +47,70 @@
     } /*the markers class*/
 
     #marker1{
-      top: 224px;
-      left: 396px;
+      top: 30.5%;
+      left: 27.1%;
     }
 
     #marker2{
-      top: 282px;
-      left: 482px;
+      top: 38.1%;
+      left: 32.8%;
     }
 
+    .slideshow-container{
+      height: 80px;
+      width: 250px;
+      border-radius: 5px 5px 0 0; 
+    }
+
+    .slideshow_image{
+      height: 80px;
+      width: 248px;
+      border-radius: 5px 5px 0 0; 
+      position: relative;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    .prev{
+      height: 80px;
+      width: 25px;
+      cursor: pointer;
+      position: absolute;
+      color: white;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      border-radius: 5px 0 0 0;
+      top: 0;
+      left: 0;
+      text-align: left;
+    }
+    
+    .next{
+      height: 80px;
+      width: 25px;
+      cursor: pointer;
+      position: absolute;
+      color: white;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      border-radius: 0 5px 0 0;
+      top:0;
+      right: 0;
+      text-align: right;
+     
+    }
+    
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
 
 #image-container{
   height: 100%;
