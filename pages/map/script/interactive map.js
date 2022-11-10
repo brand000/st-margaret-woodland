@@ -1,11 +1,14 @@
 var myTimeout;
 var slideIndex = 1;
 
+
+/* the part below is about the common functions which will be used in so many times*/
 function setup(){
   document.getElementById("description1").style.display = "none";
   document.getElementById("description2").style.display = "none";
   document.getElementById("detail_block").style.display = "none";
   document.getElementById("slideshow_imageA2").style.display = "none";
+  document.getElementById("slideshow_imageB2").style.display = "none";
 }
 
 function timer(id){
@@ -33,10 +36,12 @@ function invisible(id){
 function visible(id){
   document.getElementById(id).style.display = "inline";
 }
-/* the part above is about the common functions which will be used in so many times*/
 
 
 
+
+
+/* the part below is about the functions about marker and description parts*/
 /* marker 1*/
 function moveover_marker1(){
   let x = document.getElementById("marker1");
@@ -67,16 +72,16 @@ function moveout_description1(){
   invisible(x);
 }
 
-function slideCount(n){
+function slideCountA(n){
   slideIndex = slideIndex + n;
   if(slideIndex < 1){slideIndex = 2;}
   if(slideIndex > 2){slideIndex = 1;}
   console.log(slideIndex);
-  slideshow(slideIndex);
+  slideshowA(slideIndex);
   
 }
 
-function slideshow(n){
+function slideshowA(n){
     if(n == 1){
       document.getElementById("slideshow_imageA1").style.display="block";
       document.getElementById("slideshow_imageA2").style.display="none";
@@ -86,7 +91,6 @@ function slideshow(n){
     }
 }
    
-
 
 
 /* marker 2*/
@@ -118,10 +122,29 @@ function moveout_description2(){
   let x = document.getElementById("description2")?.id;
   invisible(x);
 }
-/* the part above is about the functions about marker and description parts*/
+
+function slideCountB(n){
+  slideIndex = slideIndex + n;
+  if(slideIndex < 1){slideIndex = 2;}
+  if(slideIndex > 2){slideIndex = 1;}
+  console.log(slideIndex);
+  slideshowB(slideIndex);
+  
+}
+
+function slideshowB(n){
+    if(n == 1){
+      document.getElementById("slideshow_imageB1").style.display="block";
+      document.getElementById("slideshow_imageB2").style.display="none";
+    }else if(n == 2){
+      document.getElementById("slideshow_imageB1").style.display="none";
+      document.getElementById("slideshow_imageB2").style.display="block";
+    }
+}
 
 
 
+/* the part below is about the functions of detail block which is located on the left of  map*/
 function detail_block_call(){
   document.getElementById("detail_block").style.display = "inline";
   
@@ -135,12 +158,6 @@ function detect_Click(event){
    
   }
 }
-/* the part above is about the functions of detail block which is located on the left of  map*/
-
-
-
-
-
 
 
 
