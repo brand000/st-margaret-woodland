@@ -49,19 +49,29 @@
     #marker1{
       top: 30.5%;
       left: 27.1%;
-    }
+    }/*marker1's location*/
 
     #marker2{
       top: 38.1%;
       left: 32.8%;
-    }
+    }/*marker2's location*/
 
+
+
+
+
+
+
+
+
+   /*The top part of the description block*/
     .slideshow-container{
       height: 80px;
       width: 250px;
       border-radius: 5px 5px 0 0; 
     }
 
+    /*The part for the animation of slideshow in the description block*/
     .slideshow_image{
       height: 80px;
       width: 248px;
@@ -72,11 +82,11 @@
     }
 
     @keyframes fade {
-      
       from {opacity: .4} 
       to {opacity: 1}
     }
     
+   /*The part for the "next" and "previous" button of slideshow in the description block*/
     .prev{
       height: 80px;
       width: 25px;
@@ -90,7 +100,7 @@
       top: 0;
       left: 0;
       text-align: left;
-    }
+    }/*"previous" button*/
     
     .next{
       height: 80px;
@@ -106,11 +116,46 @@
       right: 0;
       text-align: right;
      
-    }
+    }/*"next" button*/
     
     .prev:hover, .next:hover {
       background-color: rgba(0,0,0,0.8);
     }
+
+
+
+
+
+
+
+
+   /*The bottom part of inside the description block */
+    .information_container{
+      height: 80px;
+      width: 250px;
+      border-radius: 0 0 5px 5px; 
+    }
+    .brief_description{
+     width: 160px;
+     height: 70px;
+     border-right: 1px solid black;
+     float:left;
+     border-radius: 0 0 0 5px; 
+     
+    } /*The brief information inside the description block */
+
+    .button_group{
+    width: 90px;
+    height: 69px;
+    float: left;
+    border-radius: 0 0 5px 0;
+    padding-top: 45px;
+    }/*The button group on the right of the description block */
+
+
+
+
+
 
 #image-container{
   height: 100%;
