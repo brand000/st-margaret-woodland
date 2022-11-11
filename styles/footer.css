@@ -1,19 +1,13 @@
-@import url("https://rsms.me/inter/inter.css");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 /**
+@import url("https://rsms.me/inter/inter.css");
 * https://www.youtube.com/watch?v=YOb67OKw62s
 */
-body{
-	line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
-}
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
-.container{
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container1{
 	max-width: 1170px;
 	margin:auto;
 }
@@ -64,7 +58,7 @@ ul{
 	transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-	color: green;
+	color: #ffffff;
 	padding-left: 8px;
 }
 .footer-col .social-links a{
@@ -96,3 +90,7 @@ ul{
     width: 100%;
 }
 }
+
+
+
+
