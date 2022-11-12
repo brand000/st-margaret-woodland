@@ -4,10 +4,12 @@
     <link rel="stylesheet" href="styles/header.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="styles/footer.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="styles/index.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="styles/estore.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="scripts/main.js"></script>
@@ -24,7 +26,7 @@
     <body>
         <header>
             <?php
-            include 'common/menu.html';
+            include 'common/menu2.html';
             ?>
         </header>
 
@@ -70,7 +72,7 @@
 
 
         <?php
-        include 'common/footer.html';
+        include 'common/footer2.html';
         ?>
     </body>
 
