@@ -1,37 +1,38 @@
 @import url("https://rsms.me/inter/inter.css");
-html {
-  font-family: "Inter", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Spartan');
 
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-  }
+html {
+  font-family: "spartan", sans-serif;
 }
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: "spartan";
 }
 
 html,
 body {
+  display: flex;
   background-color: white;
-  font-family: "Inter";
   color: black;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
   overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-content {
   visibility: visible;
-  position: absolute;
+  display: block;
   opacity: 1;
   transition: opacity 0.3s linear;
-  height: 90%;
   width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -64,58 +65,353 @@ a:hover {
   opacity: 100% !important;
 }
 
-.slideshow-containter{
-  position: relative;
-}
-
-.centered{
+.centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-  button{
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size:15px;
-    cursor: pointer;
-  }
-
-
+button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
 
 .swiper {
   width: 100%;
-  height: fit-content;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-.swiper-slide img {
+.swiper-button-prev, .swiper-button-next{
+  color: white !important;
+}
+
+.swiper-button-prev:hover {
+  color: #69f0ae !important;
+  transition: all linear 0.3s;
+}
+
+.swiper-button-next:hover {
+  color: #69f0ae !important;
+  transition: all linear 0.3s;
+}
+
+
+
+.swiper-text{
+  width: 100%;
+  color: white;
+  font-size: 2.5vw;
+  text-align: center;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.about-section {
+  display: inline-block;
   width: 100%;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: white !important;
-  transition: 0.3s;
+.burial-text,
+.burial-photo {
+  width: 50%;
+  display: inline-table;
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  color: green !important;
+.burial-photo img {
+  width: 100%;
+  border-radius: 15px;
 }
 
-.swiper-pagination-bullet {
-  background-color: white !important;
+.burial-photo {
+  margin-right: 1vmin;
+}
+
+.burial-text {
+  margin-left: 1vmin;
+}
+
+.burial-text {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.burial-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.burial-title {
+  text-align: center;
+}
+
+.about-container {
+  display: inline-block;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.ecosystem-section {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.photo-side {
+  display: inline-table;
+  width: 50%;
+}
+
+.photo-side img {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.article-side {
+  display: inline-table;
+  width: 50%;
+  margin-left: 1vmin;
+}
+.first-article,
+.second-article {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.second-article {
+  margin-top: 1vmin;
+}
+.history-card,
+.flora-card,
+.fauna-card {
+  aspect-ratio: 1 / 1.6;
+  border: 0.3vmin solid black;
+  cursor: pointer;
+  position: relative;
+  width: 50vmin;
+}
+
+.flora-card:hover:before {
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  background-image: url(https://www.wilsonbrosgardens.com/assets/images/betula-alleghaniensis-yellow-birch-tree-fall-1.jpg);
+}
+
+.fauna-card:hover:before {
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  background-image: url(https://www.animalfunfacts.net/images/stories/photos/mammals/ungulates/deer/white_tailed_deer_l.jpg);
+}
+
+.history-card:before,
+.flora-card:before,
+.fauna-card:before {
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(60, 161, 51, 1) 100%
+  );
+  background-position: 0% 0%;
+  background-size: 300% 300%;
+  content: "";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: background-position 450ms ease, transform 450ms ease;
+  width: 100%;
+  z-index: 1;
+}
+
+.history-content,
+.flora-content,
+.fauna-content {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 20%,
+    transparent 8%
+  );
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  height: 100%;
+  padding: 5vmin;
+  position: relative;
+  transition: background-position 450ms ease;
+  width: 100%;
+  z-index: 2;
+}
+
+.history-card:hover > .history-content {
+  background-position: -10% 0%;
+}
+
+.flora-card:hover > .flora-content {
+  background-position: -10% 0%;
+}
+
+.fauna-card:hover > .fauna-content {
+  background-position: -10% 0%;
+}
+
+.history-card:hover .history-title {
+  transition: 0.2s;
+  color: black !important;
+  font-size: 8vmin;
+}
+
+.flora-card:hover .flora-title {
+  transition: 0.2s;
+  color: black !important;
+  font-size: 8vmin;
+}
+
+.fauna-card:hover .fauna-title {
+  transition: 0.2s;
+  color: black !important;
+  font-size: 8vmin;
+}
+
+.history-title,
+.history-subtitle,
+.flora-title,
+.flora-subtitle,
+.fauna-title,
+.fauna-subtitle {
+  color: black;
+  font-weight: 400;
+  margin: 0px;
+}
+.history-title,
+.flora-title,
+.fauna-title {
+  font-size: 6vmin;
+}
+
+.history-subtitle,
+.flora-subtitle,
+.fauna-subtitle {
+  font-size: 3vmin;
+  margin-top: 2vmin;
+}
+
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 0.3vmin solid black;
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  color: black; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 22px; /* Increase font size */
   transition: 0.2s;
 }
 
-.swiper-pagination-bullet:hover {
-  background-color: green !important;
+#topBtn:hover {
+  background-color: green; /* Add a dark-grey background on hover */
 }
 
+.news-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 15px;
+}
+.card {
+  background: #f4ffe8;
+  width: 480px;
+  margin: 10px;
+  border-radius: 15px;
+  border: 0.1vmin solid black;
+  height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card-image {
+  background-color: aqua;
+  height: 220px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 10px;
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.card-1 {
+  background-image: url("https://media.istockphoto.com/id/182686524/photo/nap-time.jpg?s=612x612&w=0&k=20&c=1kSSuM1_42hi9jSamitj5zKGaouEVzBEyaYAZZtox3A=");
+}
+
+.card-2 {
+  background-image: url("https://images.pexels.com/photos/1446076/pexels-photo-1446076.jpeg?cs=srgb&dl=pexels-ralph-w-lambrecht-1446076.jpg&fm=jpg");
+}
+
+.card-3 {
+  background-image: url("https://previews.123rf.com/images/kavram/kavram1708/kavram170800291/84397381-flooded-coastal-birch-groves-rocky-mountains-of-canada-in-the-indian-summer-magnificent-turquoise-ab.jpg");
+}
+
+.card h2 {
+  padding: 10px;
+}
+
+.card p {
+  padding: 10px;
+}
+
+.card a {
+  background-color: green;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 50px;
+  border-radius: 15px;
+
+}
+
+.card:hover {
+  background-color: #798c64;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+.card:hover > .card-image{
+  height: 400px;
+}
+
+.about-container a {
+  background-color: green;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  margin: 20px 50px;
+  border-radius: 15px;
+}
+
+.about-container a:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}

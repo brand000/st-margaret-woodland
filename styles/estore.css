@@ -40,57 +40,6 @@ p{
 }
 
 
-/**Header*/
-
-#header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 80px;
-    background: #E3E6f3;
-    box-shadow: 0 5px 15px rgba(0,0,0, 0.06);
-}
-
-#header img{
-    width:150px;
-    height: 80px;
-}
-
-#navbar{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#navbar li{
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-}
-
-#navbar li a{
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    transition: 0.3s ease;
-}
-#navbar li a:hover, 
-#navbar li a.active{
-    color: #088178;
-}
-
-#navbar li a.active::after,
-#navbar li a:hover::after {
-    content: "";
-    width: 50%;
-    height: 2px;
-    background: #088178;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-}
-
 /**Hero section*/
 .section-p1 {
     padding:40px 80px;
@@ -103,15 +52,6 @@ p{
 
 body{
     width:100%;
-}
-
-#header{
-    display: flex;
-    z-index:999;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: white;
 }
 
 #hero{
@@ -338,64 +278,6 @@ body{
     position: absolute;
     bottom: 20px;
     right: 10px;
-}
-
-/**Footer*/
-
-footer{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #282d32 ;
-}
-
-footer .col{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-footer h4{
-    font-size: 14px;
-    padding-bottom: 20px;
-    color:#f0f9ff;
-
-}
-footer p{
-    font-size: 13px;
-    margin: 0 0 8px 0;
-    color: #f5f7e6;
-
-}
-
-footer a{
-    font-size: 13px;
-    text-decoration: none;
-    color:#f5f7e6;
-    margin-bottom: 10px;
-}
-
-footer .follow i{ 
-    display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-
-footer .follow i:hover{
-    color: #24262b;
-	background-color: #ffffff;
-}
-
-footer .copyright{
-    width: 100%;
-    text-align: center;
 }
 
 

@@ -1,6 +1,6 @@
 //Author: Devon Leigh
 function openNav() {
-  document.getElementById("nav-bar").style.width = "25%";
+  document.getElementById("nav-bar").style.width = "40%";
 }
 
 //hamburger navbar close
@@ -22,6 +22,7 @@ menuBtn.addEventListener("click", () => {
     menuOpen = true;
     menuBtn.classList.add("open");
     mainContent.classList.add("open");
+    navBar.classList.add("open");
     openNav();
   } else {
     menuOpen = false;
