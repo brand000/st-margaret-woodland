@@ -56,8 +56,8 @@ body{
 
 #hero{
     background-image: url("../resources/products/hero2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: left;
+
     background-attachment: fixed;
     height:85vh;
     width:100%;
