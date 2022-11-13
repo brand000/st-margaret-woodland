@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Spartan');
+@import url("https://fonts.googleapis.com/css?family=Spartan");
 
 html {
   font-family: "Spartan", sans-serif;
 }
-
 
 header {
   position: fixed;
@@ -36,23 +35,32 @@ header {
   display: flex;
 }
 
-.org-name p{
+.org-name p {
   margin-top: 2rem;
   margin-left: 1rem;
 }
 
-.org-logo{
+.org-logo {
   background-size: cover;
   background-image: url(https://i.ibb.co/pyf3smd/logo-black.png);
   height: 5rem;
   width: 5rem;
+  transition: all linear 0.3s;
 }
 
-.org-logo img{
+.org-logo:hover {
+  background-image: url(https://i.ibb.co/M2BP9Xt/logo-green.png);
+  background-size: cover;
+  height: 5rem;
+  width: 5rem;
+  transition: all linear 0.3s;
+}
+
+.org-logo img {
   width: 100%;
   height: 100%;
 }
-.org-logo:hover{
+.org-logo:hover {
   color: green;
 }
 
