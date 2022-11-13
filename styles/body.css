@@ -1,5 +1,5 @@
 @import url("https://rsms.me/inter/inter.css");
-@import url('https://fonts.googleapis.com/css?family=Spartan');
+@import url("https://fonts.googleapis.com/css?family=Spartan");
 
 html {
   font-family: "spartan", sans-serif;
@@ -33,6 +33,7 @@ body {
   height: fit-content;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 a {
@@ -96,7 +97,8 @@ button {
   flex-direction: column;
 }
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   color: white !important;
 }
 
@@ -110,9 +112,7 @@ button {
   transition: all linear 0.3s;
 }
 
-
-
-.swiper-text{
+.swiper-text {
   width: 100%;
   color: white;
   font-size: 2.5vw;
@@ -149,6 +149,8 @@ button {
   margin: auto;
   width: 50%;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .burial-content {
@@ -271,12 +273,6 @@ button {
   background-position: -10% 0%;
 }
 
-.history-card:hover .history-title {
-  transition: 0.2s;
-  color: black !important;
-  font-size: 8vmin;
-}
-
 .flora-card:hover .flora-title {
   transition: 0.2s;
   color: black !important;
@@ -287,29 +283,6 @@ button {
   transition: 0.2s;
   color: black !important;
   font-size: 8vmin;
-}
-
-.history-title,
-.history-subtitle,
-.flora-title,
-.flora-subtitle,
-.fauna-title,
-.fauna-subtitle {
-  color: black;
-  font-weight: 400;
-  margin: 0px;
-}
-.history-title,
-.flora-title,
-.fauna-title {
-  font-size: 6vmin;
-}
-
-.history-subtitle,
-.flora-subtitle,
-.fauna-subtitle {
-  font-size: 3vmin;
-  margin-top: 2vmin;
 }
 
 #topBtn {
@@ -386,7 +359,6 @@ button {
   text-align: center;
   margin: 20px 50px;
   border-radius: 15px;
-
 }
 
 .card:hover {
@@ -397,7 +369,7 @@ button {
   transition: all 0.3s ease;
 }
 
-.card:hover > .card-image{
+.card:hover > .card-image {
   height: 400px;
 }
 
@@ -407,11 +379,174 @@ button {
   padding: 15px 20px;
   display: block;
   text-align: center;
-  margin: 20px 50px;
   border-radius: 15px;
+  width: 100%;
 }
 
 .about-container a:hover {
-  transform: scale(1.03);
-  transition: all 0.3s ease;
+  background-color: lightgrey;
+  color: green;
+}
+
+.ecosystem-about {
+  margin-top: 15vmin;
+  display: inline-block;
+  width: 75%;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.ecosystemabout-title {
+  width: 100%;
+  text-align: center;
+}
+
+.ecosystem-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ecosystem-text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ecosystem-text p {
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.flora-container,
+.fauna-container {
+  width: 50%;
+  height: 100%;
+  display: inline-table;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  display: inline-table;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  margin-top: 0.4em;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg) scale(1.03);
+}
+
+/* Position the front and back side */
+.flip-card-birchfront,
+.flip-card-back,
+.flip-card-applefront,
+.flip-card-goosefront,
+.flip-card-salamanderfront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-birchfront {
+  background-image: url(https://inaturalist-open-data.s3.amazonaws.com/photos/151650387/original.jpg);
+  background-size: cover;
+  background-position: 40% 50%;
+}
+
+.flip-card-applefront {
+  background-image: url(https://images.unsplash.com/photo-1541600708691-a6e4123f8baa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGFwcGxlJTIwdHJlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+  background-size: cover;
+  background-position: 40% 50%;
+}
+
+.flip-card-goosefront {
+  background-image: url(https://images.unsplash.com/photo-1605476249213-d7a5d0722411?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-size: cover;
+  background-position: 40% 50%;
+}
+
+.flip-card-salamanderfront {
+  background-image: url(https://inaturalist-open-data.s3.amazonaws.com/photos/150039411/large.jpg);
+  background-size: cover;
+  background-position: 40% 50%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #c1e1c1;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  color: black;
+}
+
+.flip-card-back h1 {
+  margin-top: 2em;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.flip-card-back p {
+  margin-top: 2em;
+}
+
+.ecosystemcontent-title h4 {
+  margin-top: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+
+.history-section, .mission-section, .rules-section {
+  display: inline-block;
+  justify-items: center;
+  width: 75%;
+}
+
+.history-title, .mission-title {
+}
+
+.history-text p, .mission-text p, .rules-text p {
+  color: black;
+}
+
+.aboutpage-container{
+  width: 100%;
+  display: inline-block;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
