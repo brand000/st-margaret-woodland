@@ -1,0 +1,14 @@
+#heroCart{
+    background-image: url("../resources/products/cart.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    height:56vh;
+    width:100%;
+    background-position: top 2% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
