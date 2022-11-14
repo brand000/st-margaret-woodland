@@ -112,7 +112,7 @@ button {
   transition: all linear 0.3s;
 }
 
-.swiper-text {
+.swiper-text h2{
   width: 100%;
   color: white;
   font-size: 2.5vw;
@@ -126,39 +126,56 @@ button {
   width: 100%;
 }
 
-.burial-text,
-.burial-photo {
+.burial-text, about-title{
+  display:flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.about-title{
+  margin: 10px;
+}
+
+.burial-content{
+    width: 50%;
+    display: inline-table;
+    padding: 20px;
+  }
+
+
+.burial-photo{
   width: 50%;
   display: inline-table;
-}
+  padding: 10px;
 
-.burial-photo img {
-  width: 100%;
-  border-radius: 15px;
-}
 
-.burial-photo {
+  background-image: url("../resources/bg2.avif");
+  height:500px;
+  border-radius: 60px;
+  background-position: bottom;
+  background-repeat:repeat;
+  background-attachment:fixed;
   margin-right: 1vmin;
 }
 
-.burial-text {
-  margin-left: 1vmin;
-}
+
 
 .burial-text {
   margin: auto;
-  width: 50%;
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-left: 1vmin;
+  padding:10px;
 }
 
-.burial-content {
+.burial-container {
   display: flex;
   justify-content: space-between;
 }
 
 .burial-title {
+  width:50%;
   text-align: center;
 }
 
@@ -314,7 +331,7 @@ button {
 }
 .card {
   background: #f4ffe8;
-  width: 480px;
+  width: 440px;
   margin: 10px;
   border-radius: 15px;
   border: 0.1vmin solid black;
@@ -365,12 +382,12 @@ button {
   background-color: #798c64;
   color: white;
   cursor: pointer;
-  transform: scale(1.03);
+  transform: scale(1.02);
   transition: all 0.3s ease;
 }
 
 .card:hover > .card-image {
-  height: 400px;
+  height: 350px;
 }
 
 .about-container a {

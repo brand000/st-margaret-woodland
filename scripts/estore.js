@@ -55,7 +55,7 @@ function updateCartTotal() {
     var cartRow = cartRows[i];
     var priceElement = cartRow.getElementsByClassName("cart-price")[0];
     var quantityElement =
-      cartRow.getElementsByClassName("cart-quanity-input")[0];
+      cartRow.getElementsByClassName("cart-quantity-input")[0];
     var price = parseFloat(priceElement.innerText.replace("$", ""));
 
     var quantity = quantityElement.value;
