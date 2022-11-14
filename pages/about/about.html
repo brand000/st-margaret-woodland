@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
@@ -29,12 +30,36 @@
     
         <!--Linking the javascript file-->
         <script defer src="/scripts/estore.js"></script>
+        <script>
+          function seniorFunction(){
+
+var x = document.getElementById("senior").innerHTML;
+
+
+if (x== "Senior Citizen Mode"){
+  console.log(document.getElementsByClassName('main-container').length);
+document.getElementById("senior").innerHTML = "Normal View";
+document.getElementsByClassName('main-container')[0].style.backgroundColor='black';
+let len = document.getElementsByClassName('main-container').length;
+for(i=0; i<len; i++){
+  document.getElementsByClassName('main-container')[i].style.color='yellow';
+  document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+}
+
+}
+else {
+window.location.reload();
+}
+}   
+        </script>
         <script defer src="/scripts/main.js"></script>
     
         <title>Saint Margaret's Bay Store</title>
 </head>
 
 <header>
+  <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; color: white; font-weight: bolder;
+           font-size: large; border: none; background-color:MediumSeaGreen;">Senior Citizen Mode</button>
   <div class="header-container">
     <div class="org-name">
       <a class="org-logo" href="/index.php">
@@ -60,31 +85,35 @@
 
 
 <body>
-    <div class="main-content burial" >
+  
+    <div id= "main-content" class="main-content burial main-container" >
 
-    <div class="aboutpage-container">
+    <div class="aboutpage-container".style.color= "yellow">
       <div class="history-section">
-        <div class="history-title">
-          <h1>HISTORY</h1>
+        <div  class="history-title">
+          <h1 class="main-container">HISTORY</h1>
         </div>
-        <div class="history-text">
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div  class="history-text">
+          <p class="main-container">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
       </div>
-      <div class="mission-section">
-        <div class="mission-title">
-          <h1>OUR MISSION</h1>
+      <div  class="mission-section">
+        <div  class="mission-title">
+          
+            <h1 class="main-container">
+              OUR MISSION</h1>
+          
         </div>
         <div class="mission-text">
-          <p>"To preserve a dynamic and unique system of natural and cultural resources, and to develop innovative educational, recreational and cultural opportunities of regional value, while exercising environmental and fiscal responsibility."</p>
+          <p class="main-container">"To preserve a dynamic and unique system of natural and cultural resources, and to develop innovative educational, recreational and cultural opportunities of regional value, while exercising environmental and fiscal responsibility."</p>
         </div>
       </div>
       <div class="rules-section">
-        <div class="rules-title">
-          <h1>ORDINANCES, RULES & REGULATIONS</h1>
+        <div  class="rules-title">
+          <h1 class="main-container">ORDINANCES, RULES & REGULATIONS</h1>
         </div>
-        <div class="rules-text">
-          <p>The general purpose of these Regulations is to set forth rules and regulations governing the use of District Property that are intended to protect and preserve District Property and the flora, fauna, and scenic beauties therein, and to provide opportunities for the education, pleasure, and recreation of the public.</p>
+        <div  class="rules-text">
+          <p class="main-container">The general purpose of these Regulations is to set forth rules and regulations governing the use of District Property that are intended to protect and preserve District Property and the flora, fauna, and scenic beauties therein, and to provide opportunities for the education, pleasure, and recreation of the public.</p>
         </div>
       </div>
     </div>

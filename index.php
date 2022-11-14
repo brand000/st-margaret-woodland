@@ -8,6 +8,24 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+ function seniorFunction(){
+
+var x = document.getElementById("senior").innerHTML;
+document.getElementById('main-content').style.backgroundColor='black';
+document.getElementById('card1').style.backgroundColor='black';
+document.getElementById('card2').style.backgroundColor='black';
+document.getElementById('card3').style.backgroundColor='black';
+document.getElementById('main-content').style.color='yellow';
+document.getElementById('main-content').style.fontSize = 'x-large';
+if (x== "Senior Citizen Mode"){
+document.getElementById("senior").innerHTML = "Normal View";
+}
+else {
+window.location.reload();
+}
+}   
+</script>
 <script defer src="/scripts/main.js"></script>
 
 
@@ -21,6 +39,9 @@ include 'common/head.html';
 
 <body>
     <header>
+    <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; color: white; font-weight: bolder;
+           font-size: large; border: none; background-color:MediumSeaGreen;">Senior Citizen Mode</button>
+
         <?php
         include 'common/menu.html';
         ?>
@@ -29,7 +50,7 @@ include 'common/head.html';
 
 
 
-    <div class="main-content">
+    <div id= "main-content" class="main-content">
 
         <!-- Slider main container -->
         <div class="swiper">
@@ -88,21 +109,21 @@ include 'common/head.html';
                 <h1>NEWS</h1>
             </div>
             <div class="news-section">
-                <div class="card">
+                <div id= "card1" class="card1">
                     <div class="card-image card-1"></div>
                     <h2>Deer does thing</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <p>
                         <a href="">READ MORE</a>
                 </div>
-                <div class="card">
+                <div id= "card2" class="card2">
                     <div class="card-image card-2"></div>
                     <h2>Storm does thing</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <p>
                         <a href="">READ MORE</a>
                 </div>
-                <div class="card">
+                <div id= "card3" class="card3">
                     <div class="card-image card-3"></div>
                     <h2>Coastal Birch!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
