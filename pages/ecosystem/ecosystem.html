@@ -31,18 +31,24 @@
         <script defer src="/scripts/estore.js"></script>
         <script>
           function seniorFunction(){
-         
-         var x = document.getElementById("senior").innerHTML;
-         document.getElementById('main-content').style.backgroundColor='black';
-         document.getElementById('ecosystem-about').style.color='yellow';
-         document.getElementById('ecosystem-about').style.fontSize = 'x-large';
-         if (x== "Senior Citizen Mode"){
-         document.getElementById("senior").innerHTML = "Normal View";
-         }
-         else {
-         window.location.reload();
-         }
-         }   
+
+var x = document.getElementById("senior").innerHTML;
+
+
+if (x== "Senior Citizen Mode"){
+  console.log(document.getElementsByClassName('main-container').length);
+document.getElementById("senior").innerHTML = "Normal View";
+document.getElementsByClassName('main-container')[0].style.backgroundColor='black';
+let len = document.getElementsByClassName('main-container').length;
+for(i=0; i<len; i++){
+  document.getElementsByClassName('main-container')[i].style.color='yellow';
+  document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+}
+}
+else {
+window.location.reload();
+}
+}   
          </script>
         <script defer src="/scripts/main.js"></script>
     
@@ -77,30 +83,30 @@
 
 
 <body>
-    <div id="main-content" class="main-content">
+    <div id="main-content" class="main-content main-container">
       <div id="ecosystem-about" class="ecosystem-about">
         <div class="ecosystemabout-title">
-          <h1>ECOSYSTEM</h1>
+          <h1 class="main-container">ECOSYSTEM</h1>
         </div>
         <div id="ecosystem-text" class="ecosystem-text">
-          <p><b>French Village Forest Conservation</b> is home to a diverse ecosystem. With historic and interesting flora and fauna, there is something to see for everyone. Whether you are interested in the historic coastal yellow birch that Nova Scotia is famous for, or our small reptile friends that take refuge under rocks; the diversity never stops astonishing.</p>
+          <p class="main-container"><b>French Village Forest Conservation</b> is home to a diverse ecosystem. With historic and interesting flora and fauna, there is something to see for everyone. Whether you are interested in the historic coastal yellow birch that Nova Scotia is famous for, or our small reptile friends that take refuge under rocks; the diversity never stops astonishing.</p>
         </div>
       </div>
       <div class="ecosystemcontent-title">
-        <h4>Hover over the circles for more information!</h4>
+        <h4 class="main-container">Hover over the circles for more information!</h4>
       </div>
       <div class="ecosystem-content">
 
         <div class="flora-container">
           <div class="flora-title">
-            <h2>Flora</h2>
+            <h2 class="main-container">Flora</h2>
           </div>
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-birchfront"></div>
               <div class="flip-card-back">
-                <h1>Coastal Yellow<br> Birch</h1>
-                <p>Coastal Yellow birch is Nova Scotia's longest-lived hardwood species dating over 300 years.</p>
+                <h1 class="main-container">Coastal Yellow<br> Birch</h1>
+                <p class="main-container">Coastal Yellow birch is Nova Scotia's longest-lived hardwood species dating over 300 years.</p>
               </div>
             </div>
             
@@ -109,22 +115,22 @@
             <div class="flip-card-inner">
               <div class="flip-card-applefront"></div>
               <div class="flip-card-back">
-                <h1>Apple Trees<br></h1>
-                <p>French Village is home to some of the largest apple trees in eastern Canada</p>
+                <h1 class="main-container">Apple Trees<br></h1>
+                <p class="main-container">French Village is home to some of the largest apple trees in eastern Canada</p>
               </div>
             </div>
           </div>
           </div>
           <div class="fauna-container">
             <div class="fauna-title">
-              <h2>Fauna</h2>
+              <h2 class="main-container">Fauna</h2>
             </div>
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-goosefront"></div>
                 <div class="flip-card-back">
-                  <h1>Canada Goose</h1>
-                  <p>At French Village Conservation, you will find a Canadian staple, the Canada Goose.</p>
+                  <h1 class="main-container">Canada Goose</h1>
+                  <p class="main-container">At French Village Conservation, you will find a Canadian staple, the Canada Goose.</p>
                 </div>
               </div>
             </div>
@@ -132,8 +138,8 @@
               <div class="flip-card-inner">
                 <div class="flip-card-salamanderfront"></div>
                 <div class="flip-card-back">
-                  <h1>Eastern<br>Red-backed<br> Salamander</h1>
-                  <p>One of our many scaly friends on the conservation, these guys are a small salamander that inhabits wooded slopes.</p>
+                  <h1 class="main-container">Eastern<br>Red-backed<br> Salamander</h1>
+                  <p class="main-container">One of our many scaly friends on the conservation, these guys are a small salamander that inhabits wooded slopes.</p>
                 </div>
               </div>
             </div>
