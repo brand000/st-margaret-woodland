@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-   
-        <!--Linking the css file-->
-        <link rel="stylesheet" href="../../styles/body.css" />
-        <link rel="stylesheet" href="../../styles/nav.css" />
-        <link rel="stylesheet" href="../../styles/header.css" />
-        <link rel="stylesheet" href="../../styles/footer.css" />
-        <link rel="stylesheet" href="../../styles/index.css" />
-        <link rel="stylesheet" href="../../styles/estore.css" />
-        <link rel="stylesheet" href="../../styles/cart.css" />
-    
-        <link
-          rel="stylesheet"
-          href="path/to/font-awesome/css/font-awesome.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-    
-        <!--Linking the javascript file-->
-        <script defer src="../../scripts/estore.js"></script>
-        <script defer src="../../scripts/main.js"></script>
-    
-        <title>Saint Margaret's Bay Store</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
 
-<!--The menu bar-->
-<header>
+    <!--Linking the css file-->
+    <link rel="stylesheet" href="../../styles/body.css" />
+    <link rel="stylesheet" href="../../styles/nav.css" />
+    <link rel="stylesheet" href="../../styles/header.css" />
+    <link rel="stylesheet" href="../../styles/footer.css" />
+    <link rel="stylesheet" href="../../styles/index.css" />
+    <link rel="stylesheet" href="../../styles/estore.css" />
+    <link rel="stylesheet" href="../../styles/cart.css" />
+
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--Linking the javascript file-->
+    <script defer src="../../scripts/estore.js" async></script>
+    <!--script defer src="../../scripts/main.js"></script-->
+
+    <title>French Village's Shopping Cart</title>
+  </head>
+
+  <!--The menu bar-->
+  <header>
     <div class="header-container">
       <div class="org-name">
         <div class="org-logo"></div>
@@ -62,41 +62,44 @@
         </div>
       </div>
     </div>
-</header>
+  </header>
 
-
-<body>
-`
+  <body>
+    `
     <!--All the stuff will be in the main content-->
     <div class="main-content">
-
       <section id="heroCart">
         <h2 style="color: white">Shopping Cart</h2>
-        <p style="color:white">View your Shopping Items</p>
+        <p style="color: white">View your Shopping Items</p>
       </section>
-
 
       <section id="cart" class="section-p1">
         <table width="100%">
           <thead>
-            <tr>Image</tr>
-            <tr>Product</tr>
-            <tr>Price</tr>
-            <tr>Quantity</tr>
-            <tr>SubTotal</tr>
-            <tr>Remove</tr>
+            <tr>
+              <td>Image</td>
+              <td>Product</td>
+              <td>Price</td>
+              <td>Quantity</td>
+              <td>SubTotal</td>
+              <td>Remove</td>
+            </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
+            <tr>  
+              <td><img src="../../resources/products/mug1.jpg" alt=""></td>
+              <td>Designer Mug 1</td>
+              <td>$45</td>
+              <td><input type="number" value="1"></td>
+              <td>$45</td>
+              <td><button type="button" class="btn-close">Remove Item</button></td>
             </tr>
           </tbody>
-
+        </table>
       </section>
 
-
-    <!--The footer-->
-    <footer class="section-p1">
+      <!--The footer-->
+      <footer class="section-p1">
         <div class="col">
           <h4>Contact Us</h4>
           <p>
@@ -105,7 +108,7 @@
           <p><strong>Phone:</strong> 111 222 333/ (+1) 444 555 666</p>
           <p><strong>Hours:</strong> 10:00 - 16:00; Mon - Sat</p>
         </div>
-  
+
         <div class="col">
           <h4>Useful Links</h4>
           <a href="#">Quiz</a>
@@ -113,7 +116,7 @@
           <a href="#">MarketPlace</a>
           <a href="#">Map</a>
         </div>
-  
+
         <div class="col">
           <div class="follow">
             <h4>Follow us</h4>
@@ -126,13 +129,11 @@
             </div>
           </div>
         </div>
-  
+
         <div class="copyright">
           <p>Ⓒ SMU Software Engineering Group F</p>
         </div>
-    </footer>
-
+      </footer>
     </div>
-    
-</body>
+  </body>
 </html>
