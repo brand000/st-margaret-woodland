@@ -69,7 +69,23 @@ body{
     padding: 0 80px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#heroHome{
+    background-image: url("../resources/market3.webp");
+    background-position: left;
+
+    background-attachment: fixed;
+    height:85vh;
+    width:100%;
+    background-position: top 2% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
 }
@@ -138,6 +154,10 @@ body{
 
 }
 
+#heroHome h1{
+    color:#08e7e3;
+}
+
 #hero h4{
     padding-bottom:15px;
 }
@@ -172,9 +192,26 @@ body{
     cursor: pointer;
 }
 
+#heroHome Button{
+    text-decoration: none;
+    color: #0e8ca5;
+    background: rgb(241, 239, 232);
+    padding: 15px 30px;
+    border-radius: 30px;
+    border-color: #199fba;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
 #hero  .glow-button:hover {
     color: rgba(255, 255, 255, 1);
     background: #088178;
+  }
+
+  #heroHome  .glow-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background: #199fba;
   }
 
 #feature{
