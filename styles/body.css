@@ -150,6 +150,23 @@ button {
 
 
   background-image: url("../resources/bg2.avif");
+  background-size: auto;
+  height:500px;
+  border-radius: 60px;
+  background-position: bottom;
+  background-repeat:repeat;
+  background-attachment:fixed;
+  margin-right: 1vmin;
+}
+
+.map-photo{
+  width: 50%;
+  display: inline-table;
+  padding: 10px;
+
+
+  background-image: url("../resources/map1.jpg");
+  background-size: auto;
   height:500px;
   border-radius: 60px;
   background-position: bottom;
@@ -308,19 +325,21 @@ button {
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
-  border: 0.3vmin solid black;
+  border: 0.3vmin solid green;
   outline: none; /* Remove outline */
   background-color: transparent; /* Set a background color */
-  color: black; /* Text color */
+  color: green; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
   font-size: 22px; /* Increase font size */
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 #topBtn:hover {
   background-color: green; /* Add a dark-grey background on hover */
+  color:white;
+  border-color: white;
 }
 
 .news-section {
@@ -331,7 +350,7 @@ button {
 }
 .card {
   background: #f4ffe8;
-  width: 440px;
+  width: 450px;
   margin: 10px;
   border-radius: 15px;
   border: 0.1vmin solid black;
@@ -341,9 +360,9 @@ button {
 
 .card-image {
   background-color: aqua;
-  height: 220px;
+  height: 250px;
   margin-bottom: 15px;
-  background-size: cover;
+  background-size:cover;
   border-radius: 10px;
   transform: scale(1.03);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
