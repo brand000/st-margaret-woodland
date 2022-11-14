@@ -25,7 +25,7 @@
     />
 
     <!--Linking the javascript file-->
-    <script defer src="../../scripts/estore.js" async></script>
+    <script src="../../scripts/estore.js" async></script>
     <!--script defer src="../../scripts/main.js"></script-->
 
     <title>French Village's Shopping Cart</title>
@@ -83,7 +83,20 @@
           </thead>
           <tbody class="cart-items">
             <tr class="cart-row">  
+              <td><img class="cart-item-image" src="../../resources/products/mug1.jpg" alt=""></td>
+              <td><span class="cart-item-title">Designer Mug 1</span></td>
+              <td><span class="cart-price cart-column">$45</span></td>
+              <td><input class="cart-quantity-input" type="number" value="1"></td>
+              <td><button type="button" id="removeClose" class="btn-close">Remove
+            </tr>
 
+
+            <tr class="cart-row">  
+              <td><img class="cart-item-image" src="../../resources/products/mug2.jpg" alt=""></td>
+              <td><span class="cart-item-title">Designer Mug 2</span></td>
+              <td><span class="cart-price cart-column">$40</span></td>
+              <td><input class="cart-quantity-input" type="number" value="1"></td>
+              <td><button type="button" id="removeClose" class="btn-close">Remove
             </tr>
           </tbody>
         </table>
@@ -111,7 +124,7 @@
             </tr>
             <tr>
               <td><strong>Total</strong></td>
-              <td><strong><span class ="cart-total-price">$45</span></strong></td>
+              <td><strong><span class ="cart-total-price">$N/A</span></strong></td>
             </tr>
           </table>
         </div>

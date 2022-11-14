@@ -87,7 +87,7 @@ function addToCartClicked(event) {
 }
 
 function addItemToCart(title, price, imageSrc) {
-  var cartRow = document.createElement("tr");
+  var cartRow = document.createElement("td");
   cartRow.classList.add("cart-row");
   var cartItems = document.getElementsByClassName("cart-items")[0];
   var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
@@ -97,7 +97,8 @@ function addItemToCart(title, price, imageSrc) {
       return;
     }
   }
-  var cartRowContents = `<td><img class="cart-item-image" src="${imageSrc}" alt=""></td>
+  var cartRowContents = `
+        <td><img class="cart-item-image" src="${imageSrc}" alt=""></td>
         <td><span class="cart-item-title">${title}</span></td>
         <td><span class="cart-price cart-column">${price}</span></td>
         <td><input class="cart-quantity-input" type="number" value="1"></td>
