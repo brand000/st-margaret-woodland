@@ -92,8 +92,7 @@ art table td:nth-child(1){
 
     
     
-#cart table tbody tr td  .btn-close:hover,
-#cart table tbody tr td  .btn-close:focus {
+#cart table tbody tr td  .btn-close:hover {
       background-color:rgb(220, 169, 169);
       color: white;
       transition: 0.3s;

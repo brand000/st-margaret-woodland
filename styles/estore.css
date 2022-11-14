@@ -281,18 +281,24 @@ body{
     color: #088178;
 }
 
-#product1 .pro .cart{
-    width: 40px;
+#shoppingCart{
+    width: 80%;
     height: 40px;
-    line-height: 40px;
+    line-height: 0px;
     border-radius: 50px;
     background-color: #e8f6ea;
     font-weight: 500;
     color: #088178;
     border: 1px solid #cce7d0;
     position: absolute;
-    bottom: 20px;
-    right: 10px;
+    top: 400px;
+    right: 10%;
+ 
+}
+
+#shoppingCart:hover{
+    background-color: rgb(92, 172, 172);
+    color:white;
 }
 
 
