@@ -499,6 +499,7 @@ button {
 .flip-card-birchfront,
 .flip-card-back,
 .flip-card-applefront,
+.flip-card-pearfront,
 .flip-card-goosefront,
 .flip-card-salamanderfront {
   position: absolute;
@@ -517,6 +518,12 @@ button {
 
 .flip-card-applefront {
   background-image: url(https://images.unsplash.com/photo-1541600708691-a6e4123f8baa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGFwcGxlJTIwdHJlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+  background-size: cover;
+  background-position: 40% 50%;
+}
+
+.flip-card-pearfront {
+  background-image: url(https://media.istockphoto.com/id/172198935/photo/fresh-pears-growing-on-a-tree-branch.jpg?s=612x612&w=is&k=20&c=gnKI0pcy87BNEMM8NtwM90VVnxoaHVpjEcRHOL62PM4=);
   background-size: cover;
   background-position: 40% 50%;
 }
