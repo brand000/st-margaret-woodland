@@ -570,6 +570,7 @@ button {
 }
 
 .aboutpage-container{
+  margin-top: 5vmin;
   width: 100%;
   display: inline-block;
   align-items: center;
