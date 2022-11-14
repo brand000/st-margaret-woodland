@@ -105,115 +105,161 @@
                 onclick="detect_Click(event)"
               />
             </div>
-
+            
             <div id="detail_block">
-              <div class="boxes_picture"></div>
-              <div class="detail_block_information"></div>
+
+
+              <div class="boxes_picture">
+                <img src="" id="picture_part">
+              </div>
+
+
+             <div class="detail_block_information">
+                    <div id="information_part">
+                      <div id="name_part">
+                        <p id="location_name"></p>
+                      </div>
+                      <div id="star_rate_part">
+                        <span>5.0</span>
+                        <span class="icon_check">★</span>
+                        <span class="icon_check">★</span>
+                        <span class="icon_check">★</span>
+                        <span class="icon_check">★</span>
+                        <span class="icon_check">★</span>
+                        <span id="review" onclick="">reviews</span>
+                      </div>
+                    </div>
+
+                    <div id="introduction_part">
+                     <p id="introduction"></p>
+
+                    </div>
+
+              </div>
+
+
               <div class="detail_block_buttons">
-                <input type="button" value="Burial" class="btn" /><input
-                  type="button"
-                  value="Learn more"
-                  class="btn"
-                />
+                <input type="button" value="Burial" class="btn">
+                <input type="button" value="Learn more" class="btn">
+               </div>
+
+               <div id="comment"></div>
+
+
               </div>
+
             </div>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-geo-alt-fill mywid"
-              viewBox="0 0 16 16"
-              id="marker1"
-              onclick="detail_block_call()"
-              onmouseover="moveover_marker1()"
-              onmouseleave="moveout_marker1()"
-            >
-              <path
-                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
-              />
-            </svg>
 
-            <div
-              class="description_blocks"
-              id="description1"
-              class="infowin"
-              onmouseenter="moveover_description1()"
-              onmouseleave="moveout_description1()"
-            >
-              <div class="slideshow-container">
-                <div class="slideshow-image" id="slideshow_imageA1">
-                  <img
-                    src="../resources/image/landscape1.jpg"
-                    class="slideshow_image"
-                  />
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker1" onclick="marker1_click()" onmouseover = "moveover_marker1()" onmouseleave="moveout_marker1()">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+
+          <div class="description_blocks infowin" id="description1" onmouseenter="moveover_description1()" onmouseleave="moveout_description1()">
+                <div class="slideshow-container">
+                  <div class="slideshow-image" id="slideshow_imageA1" >
+                   <img src="../resources/image/hazelnut tree1.jpg" class="slideshow_image">
+                  </div>
+                   
+                  <div class="slideshow-image" id="slideshow_imageA2" >
+                    <img src="../resources/image/hazelnut tree2.jpg" class="slideshow_image">
+                   </div>
+                   
+                   <b class="prev" onclick="slideCountA(-1)"><br>&#10094;</b>
+                   <b class="next" onclick="slideCountA(1)"><br>&#10095;</b>
                 </div>
-
-                <div class="slideshow-image" id="slideshow_imageA2">
-                  <img
-                    src="../resources/image/landscape2.jpg"
-                    class="slideshow_image"
-                  />
+                <div class="information_container">
+                <div class="brief_description">
+                  <b>Hazelnut tree</b>
+                  <br>
+                  <span style="font-size: 10px;">5.0</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
                 </div>
-
-                <b class="prev" onclick="slideCountA(-1)"><br />&#10094;</b>
-                <b class="next" onclick="slideCountA(1)"><br />&#10095;</b>
-              </div>
-              <div class="information_container">
-                <div class="brief_description">qweqweqwe</div>
                 <div class="button_group"><a href="">Learn more</a></div>
-              </div>
-            </div>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-geo-alt-fill mywid"
-              viewBox="0 0 16 16"
-              id="marker2"
-              onclick="detail_block_call()"
-              onmouseenter="moveover_marker2()"
-              onmouseleave="moveout_marker2()"
-            >
-              <path
-                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
-              />
-            </svg>
-
-            <div
-              class="description_blocks"
-              id="description2"
-              class="infowin"
-              onmouseenter="moveover_description2()"
-              onmouseleave="moveout_description2()"
-            >
-              <div class="slideshow-container">
-                <div class="slideshow-image" id="slideshow_imageB1">
-                  <img
-                    src="../resources/image/landscape1.jpg"
-                    class="slideshow_image"
-                  />
                 </div>
-
-                <div class="slideshow-image" id="slideshow_imageB2">
-                  <img
-                    src="../resources/image/landscape2.jpg"
-                    class="slideshow_image"
-                  />
-                </div>
-
-                <b class="prev" onclick="slideCountB(-1)"><br />&#10094;</b>
-                <b class="next" onclick="slideCountB(1)"><br />&#10095;</b>
-              </div>
-              <div class="information_container">
-                <div class="brief_description">qweqweqwe</div>
-                <div class="button_group"><a href="">Learn more</a></div>
-              </div>
-            </div>
           </div>
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker2" onclick="marker2_click()" onmouseenter = "moveover_marker2()" onmouseleave="moveout_marker2()">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+
+            <div class="description_blocks" id="description2" class="infowin" onmouseenter="moveover_description2()" onmouseleave="moveout_description2()">
+                <div class="slideshow-container">
+                    <div class="slideshow-image" id="slideshow_imageB1" >
+                     <img src="../resources/image/apple tree1.jpg" class="slideshow_image">
+                    </div>
+                     
+                    <div class="slideshow-image" id="slideshow_imageB2" >
+                      <img src="../resources/image/apple tree2.jpg" class="slideshow_image">
+                    </div>
+                     
+                     <b class="prev" onclick="slideCountB(-1)"><br>&#10094;</b>
+                     <b class="next" onclick="slideCountB(1)"><br>&#10095;</b>
+                </div>
+                <div class="information_container">
+                <div class="brief_description">
+                  <b>Big apple tree</b>
+                  <br>
+                  <span style="font-size: 10px;">5.0</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                </div>
+                <div class="button_group"><a href="">Learn more</a></div>
+                </div>
+            </div>
+
+
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker3" onclick="marker3_click()" onmouseover = "moveover_marker3()" onmouseleave="moveout_marker3()">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+
+           <div class="description_blocks infowin" id="description3" onmouseenter="moveover_description3()" onmouseleave="moveout_description3()">
+              <div class="slideshow-container">
+                <div class="slideshow-image" id="slideshow_imageC1" >
+                 <img src="../resources/image/pear tree1.jpg" class="slideshow_image">
+                </div>
+                 
+                <div class="slideshow-image" id="slideshow_imageC2" >
+                  <img src="../resources/image/pear tree2.jpg" class="slideshow_image">
+                 </div>
+                 
+                 <b class="prev" onclick="slideCountC(-1)"><br>&#10094;</b>
+                 <b class="next" onclick="slideCountC(1)"><br>&#10095;</b>
+              </div>
+              <div class="information_container">
+              <div class="brief_description">
+                  <b>Pear tree</b>
+                  <br>
+                  <span style="font-size: 10px;">5.0</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+                  <span class="small_icon_check">★</span>
+              </div>
+              <div class="button_group"><a href="">Learn more</a></div>
+              </div>
+          </div>
+            
+
+            
+
+               
+             
+
+                
+        </div>
 
           <!-- <div class="ui-block-b ui-responsive">
                       <div id="slider-container">
@@ -261,3 +307,4 @@
     </div>
   </body>
 </html>
+
