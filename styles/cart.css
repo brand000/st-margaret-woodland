@@ -78,25 +78,74 @@ art table td:nth-child(1){
 }
 
 #cart table tbody tr td .btn-close {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    background: hsl(216, 100, 50);
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+
+    text-decoration: none;
+    color: black;
+    background: rgb(230, 242, 243);
+    padding: 8px 8px;
+    border-radius: 30px;
+    border-color: grey;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
-    transition: all 150ms;
 }
+
     
     
-    .btn-close:hover,
-    .btn-close:focus {
-      transform: rotateZ(90deg);
-      background: hsl(216, 100, 40);
+#cart table tbody tr td  .btn-close:hover,
+#cart table tbody tr td  .btn-close:focus {
+      background-color:rgb(220, 169, 169);
+      color: white;
+      transition: 0.3s;
     }
+
+#cart-add{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#return{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#return button{
+    background-color: #088178;
+    color:#fff;
+    padding: 30px 30px;
+}
+
+#return button:hover{
+    background-color: rgb(64, 73, 210);
+
+}
+
+#return h3{
+    padding-bottom: 15px;
+}
+
+#sub-total{
+    width: 50%;
+    margin-bottom:30px;
+    border: 1px solid #e3e9e1;
+    padding: 30px;
+}
+
+#sub-total table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+#sub-total table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
   

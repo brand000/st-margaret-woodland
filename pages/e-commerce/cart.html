@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=
-    , initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--Linking the css file-->
     <link rel="stylesheet" href="../../styles/body.css" />
@@ -81,21 +77,47 @@
               <td>Product</td>
               <td>Price</td>
               <td>Quantity</td>
-              <td>SubTotal</td>
+
               <td>Remove</td>
             </tr>
           </thead>
-          <tbody>
-            <tr>  
-              <td><img src="../../resources/products/mug1.jpg" alt=""></td>
-              <td>Designer Mug 1</td>
-              <td>$45</td>
-              <td><input type="number" value="1"></td>
-              <td>$45</td>
+          <tbody class="cart-items">
+            <tr class="cart-row">  
+              <td><img class="cart-item-image" src="../../resources/products/mug1.jpg" alt=""></td>
+              <td><span class="cart-item-title">Designer Mug 1</span></td>
+              <td><span class="cart-price cart-column">$45</span></td>
+              <td><input class="cart-quantity-input" type="number" value="1"></td>
               <td><button type="button" class="btn-close">Remove Item</button></td>
             </tr>
           </tbody>
         </table>
+      </section>
+
+      <section id="cart-add" class="section-p1">
+
+        <div id="return">
+          <h3>Continue Shopping</h3>
+          <button type="button" class="return">MarketPlace</button>
+        </div>
+
+        <div id="sub-total">
+
+          <h3>Cart Totals</h3>
+          <table>
+            <tr>
+              <td>Cart Subtotals</td>
+              <td>$ 335</td>
+            </tr>
+            <tr>
+              <td>Shipping</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td><strong>$335</strong></td>
+            </tr>
+          </table>
+        </div>
       </section>
 
       <!--The footer-->
