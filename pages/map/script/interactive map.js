@@ -229,6 +229,7 @@ function marker1_click(){
   document.getElementById("introduction").innerHTML = "A Hazelnut tree is here!";
   marker_color_cleaner();
   document.getElementById("marker1").style.color = "red";
+  document.getElementById("detail_block").scrollTop = 0;
 }
 
 function marker2_click(){
@@ -238,6 +239,7 @@ function marker2_click(){
   document.getElementById("introduction").innerHTML = "A big apple tree is here!";
   marker_color_cleaner();
   document.getElementById("marker2").style.color = "red";
+  document.getElementById("detail_block").scrollTop = 0;
 }
 
 function marker3_click(){
@@ -247,5 +249,19 @@ function marker3_click(){
   document.getElementById("introduction").innerHTML = "A Pear tree is here!";
   marker_color_cleaner();
   document.getElementById("marker3").style.color = "red";
+  document.getElementById("detail_block").scrollTop = 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
