@@ -7,7 +7,6 @@ function setup(){
   document.getElementById("description1").style.display = "none";
   document.getElementById("description2").style.display = "none";
   document.getElementById("description3").style.display = "none";
-  document.getElementById("detail_block").style.display = "none";
   document.getElementById("slideshow_imageA2").style.display = "none";
   document.getElementById("slideshow_imageB2").style.display = "none";
   document.getElementById("slideshow_imageC2").style.display = "none";
@@ -216,7 +215,7 @@ function slideshowC(n){
 
 function detect_Click(event){
   if (event.target != document.getElementById("detail_block")){
-    document.getElementById("detail_block").style.display = "none";
+    document.getElementById("detail_block").style.width = "0px";
     marker_color_cleaner();
   } else{
    
@@ -224,7 +223,7 @@ function detect_Click(event){
 }
 
 function marker1_click(){
-  document.getElementById("detail_block").style.display = "inline";
+  document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/hazelnut tree1.jpg";
   document.getElementById("location_name").innerHTML = "Hazelnut tree";
   document.getElementById("introduction").innerHTML = "A Hazelnut tree is here!";
@@ -233,7 +232,7 @@ function marker1_click(){
 }
 
 function marker2_click(){
-  document.getElementById("detail_block").style.display = "inline";
+  document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/apple tree1.jpg";
   document.getElementById("location_name").innerHTML = "Big apple tree";
   document.getElementById("introduction").innerHTML = "A big apple tree is here!";
@@ -242,44 +241,11 @@ function marker2_click(){
 }
 
 function marker3_click(){
-  document.getElementById("detail_block").style.display = "inline";
+  document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/pear tree1.jpg";
   document.getElementById("location_name").innerHTML = "Pear tree";
   document.getElementById("introduction").innerHTML = "A Pear tree is here!";
   marker_color_cleaner();
   document.getElementById("marker3").style.color = "red";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
