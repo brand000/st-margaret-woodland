@@ -13,13 +13,14 @@
     
     #detail_block{
       height: 755px;
-      width: 300px;
+      width: 0px;
       background-color: aliceblue;
       position: absolute;
       overflow-y: scroll; 
       overflow-x: hidden; 
       left: 15px;
       top: 16px;
+      transition: width 2s;
     }
     
     .description_blocks{
