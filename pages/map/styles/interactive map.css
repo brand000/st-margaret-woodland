@@ -23,6 +23,14 @@
       transition: width 2s;
     }
     
+    .short_description_blocks{
+      height: 200px;
+      width: 250px;
+      background-color: aliceblue;
+      position: absolute;
+      border-radius: 5px;
+    }
+
     .description_blocks{
       height: 250px;
       width: 250px;
@@ -31,22 +39,56 @@
       border-radius: 5px;
     }
 
+    #description1{
+      top:8%;
+      left:30%;
+   }
     
 
-    #description1{
+    #description2{
       top:8%;
       left:34.5%;
    }
 
-   #description2{
+   #description3{
     top:10%;
     left:35%;
    }
 
-   #description3{
+   #description4{
        top:13%;
        left:40%;
     }
+
+    #description5{
+      top:15%;
+      left:41%;
+   }
+
+   #description6{
+    top:35%;
+    left:22%;
+ }
+
+  #description7{
+  top:20%;
+  left:45%;
+ }
+
+ #description8{
+  top:25%;
+  left:48%;
+ }
+
+ #description9{
+  top:28%;
+  left:53.5%;
+ }
+
+ #description11{
+  top:38%;
+  left:59%;
+ }
 
     .mywid{
       position: absolute;
@@ -58,30 +100,56 @@
       animation-fill-mode: both; 
     } /*the markers class*/
 
-   
-
     #marker1{
-      top: 25.5%;
-      left: 32.7%;
-    }/*marker1's location*/
-    
-    #marker2{
-      top: 31.5%;
-      left: 35.3%;
+      top: 20.3%;
+      left: 27.1%;
     }/*marker2's location*/
 
-     #marker3{
+    #marker2{
+      top: 25.5%;
+      left: 32.7%;
+    }/*marker2's location*/
+    
+    #marker3{
+      top: 31.5%;
+      left: 35.3%;
+    }/*marker3's location*/
+
+     #marker4{
       top: 32%;
       left: 38.6%;
-    }/*marker3's location*/
+    }/*marker4's location*/
   
+    #marker5{
+      top: 35%;
+      left: 39.5%;
+    }/*marker5's location*/
 
 
+    #marker6{
+      top: 39%;
+      left: 39.2%;
+    }/*marker6's location*/
 
+    #marker7{
+      top: 39%;
+      left: 43%;
+    }/*marker7's location*/
 
+    #marker8{
+      top: 42.8%;
+      left: 47.6%;
+    }/*marker8's location*/
 
+    #marker9{
+      top: 45%;
+      left: 51.5%;
+    }/*marker9's location*/
 
-
+    #marker11{
+      top: 50.9%;
+      left: 56.6%;
+    }/*marker11's location*/
 
 
 
@@ -154,7 +222,7 @@
     }
     .brief_description{
       padding-left: 5px;
-      font-size: 20px;
+      font-size: 18px;
      width: 250px;
      height: 100px;
      border-radius: 0 0 0 5px; 
@@ -203,7 +271,7 @@
 
     #picture_part{
       width: 300px;
-      height: 300px;
+      height: 200px;
     }
 
     #information_part{
@@ -218,7 +286,7 @@
     }
 
     #location_name{
-      font-size: 150%;
+      font-size: 120%;
       margin-left: 20px;
       margin-top: 0px;
       color: black;
