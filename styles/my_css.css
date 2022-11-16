@@ -28,12 +28,12 @@
 }
 
 div.question input:hover{
-  color:rgb(26, 101, 26);
+  color:rgb(26, 101, 26, 0.9);
   opacity:0.5
- 
+  
 }
 div.question div>input:hover{
-  color:rgb(52, 91, 41);
+  color:rgb(52, 91, 41, 0.9);
   opacity:0.5
 }
 
@@ -44,16 +44,18 @@ div.question input{
   display:inline-block;
   width: 325px;
   background-size:325px 190px;
-  color:rgb(26, 51, 72);
+  color:rgb(244, 249, 253, 0.9);
   font-size:2em;
+  -webkit-text-fill-color:transparent;
 }
 div.question div>input{
   display:block;
   width: 450px;
   background-size:450px 190px;
   margin:auto;
-  color:rgb(18, 33, 47);
+  color:rgb(18, 33, 47, 0.9);
   font-size:4em;
+  -webkit-text-fill-color:transparent;
 }
 div.question .qhead{
   font-weight: lighter;
@@ -81,7 +83,7 @@ div.question .qhead{
   border: 2px outset black ;
 }
 .mod{
-  height: 220px;
+  height: 250px;
 }
 
 .dot{
@@ -93,6 +95,20 @@ div.question .qhead{
 }
 .qnum{
   text-decoration: wavy;
+}
+.wrong{
+  border:2px outset black;
+  border-radius: 10%;
+  background-color: rgb(177, 65, 65);
+  width:500px;
+  margin:auto;
+}
+.right{
+  border:2px outset black;
+  border-radius: 10%;
+  background-color: rgb(92, 155, 111);
+  width:500px;
+  margin:auto;
 }
 /* The following styles were added for Amazing Stuff version 5: */
 table.item { border-spacing: 2px; } /* cellspacing */

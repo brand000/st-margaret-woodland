@@ -38,9 +38,9 @@ function carousel()
    
    
    console.log("Then")
-  if(index>=6){
+  if(index>=8){
     console.log("Here")
-    modchange.style.display ="none";
+    modchange[0].style.display ="none";
     
   }
    

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../../styles/index.css" />
     <link rel="stylesheet" href="./../../styles/my_css.css" />
     <link rel="stylesheet" href="../../styles/estore.css" />
+	<link rel="stylesheet" href="../../styles/cart.css" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -83,15 +84,21 @@
 
 
 <div class="main-content">
+<div class="popup" id="popup" style="background-color:white">
+        
+        <h3>Game Over!</h3>
+        <p style="color:black">Results with correct answer are given below</p>
+        <a href="../../index.html"><button type="button" onclick="closePopup()">Back to Homepage</button></a>
+      </div>
 
     <main>
 	    <div>
 			  <article>
-				  <h3 style="color: black">
+				  <h3>
 					  Fun play of the Day
           </h3>
 					  
-						 <p style="color: black">
+						 <p>
 						   Whether you are a explorer or looking for a trip to relax and 
 							 enjoy with no concerns there. We have got questions for you
 							   
@@ -101,7 +108,7 @@
 		    echo "
 			<div id=\"ex1\" class=\"modal mod\">
 			<p class=\"change\"><img src=\"./../../resources/image/poly.jpeg\" width=\"60px\" height=\"70px\" </p>
-			<p class=\"txt\" style=\"color: black\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p class=\"txt\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			<a href=\"./../../index.html#idburial\">Skip Quiz to Read More</a>
 			<a href=\"#\" rel=\"modal:close\"><button type='button' style='background-color:black;color:grey;'>Close</button></a>
 		    </div>

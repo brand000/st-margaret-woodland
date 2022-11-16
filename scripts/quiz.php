@@ -183,10 +183,8 @@ else
         //requesting time updates from the server(time.php).
         //and to make the created buttons functionable
         //By Toufiq
-        let arr =[];
-        function result(all){
 
-        }
+        var counter =0;
         var request = null;
         function getCurrentTime()
         {
@@ -210,13 +208,44 @@ else
 				
 				// function get the current time from the sever
         function set(a) {
-  let abcObj = document.getElementById("abc");
-    
+  let Obj = document.getElementsByClassName("qhead");
+    console.log(Obj);
     if(a.value == a.className){
-        arr.push(a);
-      carousel()
+      
+       if(a.value != "Play Quiz"){
+        q = Obj[counter].cloneNode(true);
+        q.setAttribute("class","null");
+      l = s.appendChild(q); 
+       g = s.appendChild(document.createElement("p"));
+       
+       g.setAttribute("class","right");
+       
+       g.innerText=a.value;
+       counter++;
+       }
+       console.log(counter);
+      carousel();
+      if(counter == 5){
+        openPopup();
+      }
     }else{
-      alert('Wrong');
+     
+       if(a.value != "Play Quiz"){
+        y = Obj[counter].cloneNode(true);
+        y.setAttribute("class","null");
+        z = s.appendChild(y);
+        x = s.appendChild(document.createElement("p"));
+        x.setAttribute("class","wrong");
+       
+       x.innerText=a.value;
+       counter++;
+      }
+      console.log(counter);
+       carousel();
+       if(counter == 5){
+        openPopup();
+      }
+
     }
     
  // result(arr);
@@ -245,6 +274,19 @@ c.style.display="block";
 c.style.fontSize="x-large";
 c.style.height="50px";
 c.style.borderRadius="25px";
+c.style.webkitTextFillColor="#32a2a8";
+
+pa=document.createElement("div");
+s = play[0].parentElement.appendChild(pa);
+s.setAttribute("class","question");
+
+function openPopup(){
+  popup.classList.add('open-popup');
+}
+
+function closePopup(){
+  popup.classList.remove('open-popup');
+}
 
 </script>
       

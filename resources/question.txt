@@ -1,5 +1,5 @@
 Wednesday, November 16th
- Identify the image with correct class name
+ Which of these would you like to gossip about with friends? 
 option1
 ans1
 "background-image:url('./../../resources/image/poly.jpeg');height:190px;"
@@ -11,7 +11,7 @@ ans2
 "background-image:url('./../../resources/image/birch.jpeg');height:190px;"
 option22
 option23
- What else can fly better than other squirrel in name?
+ What else can fly better other than squirrels?
 option3
 ans4
 "background-image:url('./../../resources/image/bird3.jpeg');height:190px;"
