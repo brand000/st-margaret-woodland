@@ -572,7 +572,7 @@ function marker9_click(){
   document.getElementById("location_name").innerHTML = "Big Grove";
   document.getElementById("introduction").innerHTML = "You already entered the Big Grove!";
   marker_color_cleaner();
-  document.getElementById("marker8").style.color = "red";
+  document.getElementById("marker9").style.color = "red";
   document.getElementById("detail_block").scrollTop = 0;
 }
 
@@ -582,11 +582,7 @@ function marker11_click(){
   document.getElementById("location_name").innerHTML = "Very big apple tree";
   document.getElementById("introduction").innerHTML = "A very very big apple tree, it is bigger than ever before!";
   marker_color_cleaner();
-  document.getElementById("marker8").style.color = "red";
+  document.getElementById("marker11").style.color = "red";
   document.getElementById("detail_block").scrollTop = 0;
 }
-
-
-
-
 
