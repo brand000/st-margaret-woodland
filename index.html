@@ -33,6 +33,33 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      function seniorFunction(){
+     
+     var x = document.getElementById("senior").innerHTML;
+     document.getElementById("card1").style.backgroundColor='dimgrey';
+     document.getElementById("card2").style.backgroundColor='dimgrey';
+     document.getElementById("card3").style.backgroundColor='dimgrey';
+     document.getElementById("maps").style.fontSize = '60px';
+     document.getElementById("mapstext").style.fontSize = '30px';
+     document.getElementById("outdoors").style.fontSize = '60px';
+    
+     
+     if (x== "Senior Citizen Mode"){
+       console.log(document.getElementsByClassName('main-container').length);
+     document.getElementById("senior").innerHTML = "Normal View";
+     document.getElementsByClassName('main-container')[0].style.backgroundColor='dimgrey';
+     let len = document.getElementsByClassName('main-container').length;
+     for(i=0; i<len; i++){
+       document.getElementsByClassName('main-container')[i].style.color='rgb(225,225,80)';
+       document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+     }
+     }
+     else {
+     window.location.reload();
+     }
+     }   
+     </script>
 
     <!--Linking the javascript file-->
     <script src="/scripts/estore.js" async></script>
@@ -43,6 +70,8 @@
 
 <body>
     <header>
+      <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; position: absolute; left: 1400px; color: white; font-weight: bolder;
+           font-size: large; border: none; background-color:MediumSeaGreen;">Senior Citizen Mode</button>
       <div class="header-container">
         <div class="org-name">
           <a class="org-logo" href="/index.html">
@@ -69,7 +98,7 @@
 
 
 
-    <div class="main-content">
+    <div id="main-content" class="main-content burial main-container">
 
         <!-- Slider main container -->
         <div class="swiper">
@@ -103,13 +132,13 @@
             <div class="swiper-button-next"></div>
         </div>
 
-        <div class="about-container section-p1">
+        <div id="about-container" class="about-container section-p1">
 
             <div class="about-section section-p1">
                 <div class="burial-container">
                     <div class="burial-content">
                       <div class="about-title">
-                        <h2>EXPLORE THE OUTDOORS</h2>
+                        <h2 id="outdoors">EXPLORE THE OUTDOORS</h2>
                     </div>
                         <div class="burial-text">
                             The French Village Forest Preserve is located directly in a small community located in Saint Margaret's Bay. 
@@ -141,9 +170,9 @@
                 </div>
                   <div class="burial-content">
                     <div class="about-title">
-                      <h2>Check out our Interactive Map!</h2>
+                      <h2 id="maps">Check out our Interactive Map!</h2>
                   </div>
-                      <div class="burial-text">
+                      <div id="mapstext" class="burial-text">
                           The French Village Forest Preserve is located directly in a small community located in Saint Margaret's Bay. 
                           This conservation is home to the first green natural burial in all of Canada, this process is done without embalming 
                           and allowing nature to organically recycle the body. With it's impressive flora and flauna, spanning trees and remote location; it is truly one of a kind.
@@ -172,27 +201,27 @@
 
         <div class="news-container section-p2">
             <div class="news-title">
-                <h1>NEWS</h1>
+                <h1 class="main-container">NEWS</h1>
             </div>
             <div class="news-section">
-                <div class="card">
+                <div  id= "card1" class="card1">
                     <div class="card-image card-1"></div>
-                    <h2>Deer does thing</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <h2 class="main-container">Deer does thing</h2>
+                    <p class="main-container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <p>
                         <a href="">READ MORE</a>
                 </div>
-                <div class="card">
+                <div id="card2" class="card2">
                     <div class="card-image card-2"></div>
-                    <h2>Storm does thing</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <h2 class="main-container">Storm does thing</h2>
+                    <p class="main-container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <p>
                         <a href="">READ MORE</a>
                 </div>
-                <div class="card">
+                <div id="card3" class="card3">
                     <div class="card-image card-3"></div>
-                    <h2>Coastal Birch!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <h2 class="main-container">Coastal Birch!</h2>
+                    <p class="main-container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <p>
                         <a href="">READ MORE</a>
                 </div>

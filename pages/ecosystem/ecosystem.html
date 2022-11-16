@@ -28,7 +28,11 @@
         />
     
         <!--Linking the javascript file-->
+<<<<<<< Updated upstream
         <script defer src="/scripts/estore.js"></script>
+=======
+        <script defer src="../../scripts/estore.js"></script>
+>>>>>>> Stashed changes
         <script>
           function seniorFunction(){
 
@@ -38,11 +42,20 @@ var x = document.getElementById("senior").innerHTML;
 if (x== "Senior Citizen Mode"){
   console.log(document.getElementsByClassName('main-container').length);
 document.getElementById("senior").innerHTML = "Normal View";
+<<<<<<< Updated upstream
 document.getElementsByClassName('main-container')[0].style.backgroundColor='black';
 let len = document.getElementsByClassName('main-container').length;
 for(i=0; i<len; i++){
   document.getElementsByClassName('main-container')[i].style.color='yellow';
   document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+=======
+
+let len = document.getElementsByClassName('main-container').length;
+for(i=0; i<len; i++){
+  document.getElementsByClassName('main-container')[i].style.color='rgb(225,225,80)';
+  document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+  document.getElementsByClassName('main-container')[i].style.backgroundColor="dimgrey";
+>>>>>>> Stashed changes
 }
 }
 else {
@@ -50,13 +63,21 @@ window.location.reload();
 }
 }   
          </script>
+<<<<<<< Updated upstream
         <script defer src="/scripts/main.js"></script>
+=======
+        <script defer src="../../scripts/main.js"></script>
+>>>>>>> Stashed changes
     
         <title>Saint Margaret's Bay Store</title>
 </head>
 
 <header>
+<<<<<<< Updated upstream
   <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; color: white; font-weight: bolder;
+=======
+  <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; position: absolute; left: 1400px; color: white; font-weight: bolder;
+>>>>>>> Stashed changes
            font-size: large; border: none; background-color:MediumSeaGreen;">Senior Citizen Mode</button>
   <div class="header-container">
     <div class="org-name">
@@ -84,11 +105,19 @@ window.location.reload();
 
 <body>
     <div id="main-content" class="main-content main-container">
+<<<<<<< Updated upstream
       <div id="ecosystem-about" class="ecosystem-about">
         <div class="ecosystemabout-title">
           <h1 class="main-container">ECOSYSTEM</h1>
         </div>
         <div id="ecosystem-text" class="ecosystem-text">
+=======
+      <div class="ecosystem-about">
+        <div class="ecosystemabout-title">
+          <h1 class="main-container">ECOSYSTEM</h1>
+        </div>
+        <div class="ecosystem-text">
+>>>>>>> Stashed changes
           <p class="main-container"><b>French Village Forest Conservation</b> is home to a diverse ecosystem. With historic and interesting flora and fauna, there is something to see for everyone. Whether you are interested in the historic coastal yellow birch that Nova Scotia is famous for, or our small reptile friends that take refuge under rocks; the diversity never stops astonishing.</p>
         </div>
       </div>
@@ -120,6 +149,24 @@ window.location.reload();
               </div>
             </div>
           </div>
+<<<<<<< Updated upstream
+=======
+
+
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-pearfront"></div>
+              <div class="flip-card-back">
+                <h1 class="main-container">Pear Trees<br></h1>
+                <p class="main-container">French Village is home to some of the largest apple trees in eastern Canada</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+>>>>>>> Stashed changes
           </div>
           <div class="fauna-container">
             <div class="fauna-title">

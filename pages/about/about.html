@@ -29,7 +29,11 @@
         />
     
         <!--Linking the javascript file-->
+<<<<<<< Updated upstream
         <script defer src="/scripts/estore.js"></script>
+=======
+        <script defer src="../../scripts/estore.js"></script>
+>>>>>>> Stashed changes
         <script>
           function seniorFunction(){
 
@@ -39,6 +43,7 @@ var x = document.getElementById("senior").innerHTML;
 if (x== "Senior Citizen Mode"){
   console.log(document.getElementsByClassName('main-container').length);
 document.getElementById("senior").innerHTML = "Normal View";
+<<<<<<< Updated upstream
 document.getElementsByClassName('main-container')[0].style.backgroundColor='black';
 let len = document.getElementsByClassName('main-container').length;
 for(i=0; i<len; i++){
@@ -46,19 +51,35 @@ for(i=0; i<len; i++){
   document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
 }
 
+=======
+document.getElementsByClassName('main-container')[0].style.backgroundColor='dimgrey';
+let len = document.getElementsByClassName('main-container').length;
+for(i=0; i<len; i++){
+  document.getElementsByClassName('main-container')[i].style.color='rgb(225,225,80)';
+  document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+}
+>>>>>>> Stashed changes
 }
 else {
 window.location.reload();
 }
 }   
         </script>
+<<<<<<< Updated upstream
         <script defer src="/scripts/main.js"></script>
+=======
+        <script defer src="../../scripts/main.js"></script>
+>>>>>>> Stashed changes
     
         <title>Saint Margaret's Bay Store</title>
 </head>
 
 <header>
+<<<<<<< Updated upstream
   <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; color: white; font-weight: bolder;
+=======
+  <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; position: absolute; left: 1400px; color: white; font-weight: bolder;
+>>>>>>> Stashed changes
            font-size: large; border: none; background-color:MediumSeaGreen;">Senior Citizen Mode</button>
   <div class="header-container">
     <div class="org-name">
@@ -85,6 +106,7 @@ window.location.reload();
 
 
 <body>
+<<<<<<< Updated upstream
   
     <div id= "main-content" class="main-content burial main-container" >
 
@@ -103,17 +125,40 @@ window.location.reload();
             <h1 class="main-container">
               OUR MISSION</h1>
           
+=======
+    <div class="main-content burial main-container" >
+    <div class="aboutpage-container".style.color= "rgb(225,225,80)">
+      <div class="history-section">
+        <div class="history-title">
+          <h1 class="main-container">HISTORY</h1>
+        </div>
+        <div class="history-text">
+          <p class="main-container">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+      </div>
+      <div class="mission-section">
+        <div class="mission-title">
+          <h1 class="main-container">OUR MISSION</h1>
+>>>>>>> Stashed changes
         </div>
         <div class="mission-text">
           <p class="main-container">"To preserve a dynamic and unique system of natural and cultural resources, and to develop innovative educational, recreational and cultural opportunities of regional value, while exercising environmental and fiscal responsibility."</p>
         </div>
       </div>
       <div class="rules-section">
+<<<<<<< Updated upstream
         <div  class="rules-title">
           <h1 class="main-container">ORDINANCES, RULES & REGULATIONS</h1>
         </div>
         <div  class="rules-text">
           <p class="main-container">The general purpose of these Regulations is to set forth rules and regulations governing the use of District Property that are intended to protect and preserve District Property and the flora, fauna, and scenic beauties therein, and to provide opportunities for the education, pleasure, and recreation of the public.</p>
+=======
+        <div class="rules-title">
+          <h1 class="main-container">ORDINANCES, RULES & REGULATIONS</h1>
+        </div>
+        <div class="rules-text">
+          <p class="main-container"> The general purpose of these Regulations is to set forth rules and regulations governing the use of District Property that are intended to protect and preserve District Property and the flora, fauna, and scenic beauties therein, and to provide opportunities for the education, pleasure, and recreation of the public.</p>
+>>>>>>> Stashed changes
         </div>
       </div>
     </div>
