@@ -1,0 +1,107 @@
+* my_css.css */
+
+.quote {
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.homePageImage {
+  width: 100%;
+}
+
+.bodyQuiz {
+  /**max-width: 750px;*/
+  margin:auto;
+}
+
+.question {
+  display: none;
+  
+}
+
+.myLabels {
+  display: none;
+}
+
+.error {
+  color: #F00;
+}
+
+div.question input:hover{
+  color:rgb(26, 101, 26);
+  opacity:0.5
+ 
+}
+div.question div>input:hover{
+  color:rgb(52, 91, 41);
+  opacity:0.5
+}
+
+
+
+div.question input{
+  margin:10px;
+  display:inline-block;
+  width: 325px;
+  background-size:325px 190px;
+  color:rgb(26, 51, 72);
+  font-size:2em;
+}
+div.question div>input{
+  display:block;
+  width: 450px;
+  background-size:450px 190px;
+  margin:auto;
+  color:rgb(18, 33, 47);
+  font-size:4em;
+}
+div.question .qhead{
+  font-weight: lighter;
+  height:100px;
+  text-align: center;
+  border-style: inset;
+}
+.mystyle{
+  width:450px;
+  height:300px;
+  margin:auto;
+  background-image:url('./../resources/image/poly.jpeg');
+  background-size:450px 300px;
+
+}
+.Play{
+  display:block;
+  margin:auto;
+}
+#im{
+  width:200px;
+  height:100px;
+  display:block;
+  margin:auto;
+  border: 2px outset black ;
+}
+.mod{
+  height: 220px;
+}
+
+.dot{
+  height:25px;
+  width:25px;
+  
+  border-radius: 50%;
+  display:inline-block;
+}
+.qnum{
+  text-decoration: wavy;
+}
+/* The following styles were added for Amazing Stuff version 5: */
+table.item { border-spacing: 2px; } /* cellspacing */
+table.item th, table.item td { padding: 4px; } /* cellpadding */
+table.item { margin-bottom: 5px; }
+
+table.item th { border: 2px solid black; }
+table.item td { border: 2px solid black; }
+
+td.right { text-align: right; }
+td.left { text-align: left; }
+td.center { text-align: center; }
