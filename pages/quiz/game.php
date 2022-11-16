@@ -87,11 +87,11 @@
     <main>
 	    <div>
 			  <article>
-				  <h3>
+				  <h3 style="color: black">
 					  Fun play of the Day
           </h3>
 					  
-						 <p>
+						 <p style="color: black">
 						   Whether you are a explorer or looking for a trip to relax and 
 							 enjoy with no concerns there. We have got questions for you
 							   
@@ -101,7 +101,7 @@
 		    echo "
 			<div id=\"ex1\" class=\"modal mod\">
 			<p class=\"change\"><img src=\"./../../resources/image/poly.jpeg\" width=\"60px\" height=\"70px\" </p>
-			<p class=\"txt\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p class=\"txt\" style=\"color: black\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			<a href=\"./../../index.html#idburial\">Skip Quiz to Read More</a>
 			<a href=\"#\" rel=\"modal:close\"><button type='button' style='background-color:black;color:grey;'>Close</button></a>
 		    </div>

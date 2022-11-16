@@ -68,7 +68,7 @@ function updateCartTotal() {
 }
 
 function purchaseClicked() {
-  alert("Thank you for your purchase");
+  /**alert("Thank you for your purchase");*/
   var cartItems = document.getElementsByClassName("cart-items")[0];
   while (cartItems.hasChildNodes()) {
     cartItems.removeChild(cartItems.firstChild);
@@ -114,4 +114,14 @@ function addItemToCart(title, price, imageSrc) {
   cartRow
     .getElementsByClassName("cart-quantity-input")[0]
     .addEventListener("change", quantityChanged);
+}
+
+let popup = document.getElementById('popup');
+
+function openPopup(){
+  popup.classList.add('open-popup');
+}
+
+function closePopup(){
+  popup.classList.remove('open-popup');
 }

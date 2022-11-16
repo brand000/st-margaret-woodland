@@ -64,6 +64,15 @@
     `
     <!--All the stuff will be in the main content-->
     <div class="main-content">
+      
+      <div class="popup" id="popup" style="background-color:antiquewhite">
+        <img src="../../resources/products/tick.png">
+        <h3>Thank You For Shopping!</h3>
+        <p style="color:black">Please come back again to check our newest items</p>
+        <a href="../../index.html"><button type="button" onclick="closePopup()">Back to Homepage</button></a>
+      </div>
+
+
       <section id="heroCart">
         <h2 style="color: white">Shopping Cart</h2>
         <p style="color: white">View your Shopping Items</p>
@@ -108,7 +117,7 @@
         <div id="return">
           <h3>Continue Shopping ?</h3>
           <a href ="estore.html"><button type="button" class="return">MarketPlace</button></a>
-          <button type="button" class="return btn-purchase">Check Out</button>
+          <button type="button" class="return btn-purchase" onclick="openPopup()">Check Out</button>
         </div>
 
         <div id="sub-total">
