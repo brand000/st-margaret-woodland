@@ -1,13 +1,11 @@
 /* jQuery Mobile classes              */
 /* Background colour                  */
 .ui-page,
-.ui-header {
-  /* background: #cedbce !important; */
-}
+
 
 #map{
-      position:relative;
-      height: 100vh; width: 100%;
+     
+      height: 100%; width: 100%;
       
     }
     
@@ -18,7 +16,7 @@
       position: absolute;
       overflow-y: scroll; 
       overflow-x: hidden; 
-      left: 15px;
+      left: 0px;
       top: 16px;
       transition: width 2s;
     }
@@ -40,54 +38,54 @@
     }
 
     #description1{
-      top:8%;
-      left:30%;
+      top:9%;
+      left:28%;
    }
     
 
     #description2{
-      top:8%;
-      left:34.5%;
+      top:9%;
+      left:32.5%;
    }
 
    #description3{
-    top:10%;
+    top:12%;
     left:35%;
    }
 
    #description4{
-       top:13%;
-       left:40%;
+       top:19%;
+       left:39%;
     }
 
     #description5{
-      top:15%;
-      left:41%;
+      top:24%;
+      left:39.5%;
    }
 
    #description6{
-    top:35%;
+    top:62%;
     left:22%;
  }
 
   #description7{
-  top:20%;
-  left:45%;
+  top:29%;
+  left:44%;
  }
 
  #description8{
-  top:25%;
-  left:48%;
+  top:38%;
+  left:44%;
  }
 
  #description9{
-  top:28%;
-  left:53.5%;
+  top:40%;
+  left:51.5%;
  }
 
  #description11{
-  top:38%;
-  left:59%;
+  top:55%;
+  left:57%;
  }
 
     .mywid{
@@ -101,54 +99,54 @@
     } /*the markers class*/
 
     #marker1{
-      top: 20%;
-      left: 27%;
+      top: 29.5%;
+      left: 25.6%;
     }/*marker2's location*/
 
     #marker2{
-      top: 25%;
-      left: 32.6%;
+      top: 37.5%;
+      left: 31.2%;
     }/*marker2's location*/
     
     #marker3{
-      top: 30.8%;
-      left: 35.2%;
+      top: 46.7%;
+      left: 33.8%;
     }/*marker3's location*/
 
      #marker4{
-      top: 31%;
-      left: 38.5%;
+      top: 47.3%;
+      left: 37.1%;
     }/*marker4's location*/
   
     #marker5{
-      top: 34.3%;
-      left: 39.4%;
+      top: 52%;
+      left: 37.8%;
     }/*marker5's location*/
 
 
     #marker6{
-      top: 38.3%;
-      left: 39.3%;
+      top: 58.6%;
+      left: 37.7%;
     }/*marker6's location*/
 
     #marker7{
-      top: 38.3%;
-      left: 43%;
+      top: 58.6%;
+      left: 41.5%;
     }/*marker7's location*/
 
     #marker8{
-      top: 42%;
-      left: 47.5%;
+      top: 64.5%;
+      left: 45.9%;
     }/*marker8's location*/
 
     #marker9{
-      top: 44%;
-      left: 51.5%;
+      top: 68%;
+      left: 49.8%;
     }/*marker9's location*/
 
     #marker11{
-      top: 50%;
-      left: 56.7%;
+      top: 77%;
+      left: 55%;
     }/*marker11's location*/
 
 
@@ -376,10 +374,10 @@
 
 
 #image-container{
-  height: 100%;
-  width: 100vw;
+  height: 755px;
+  width: 1500px;
   margin-right: 3%;
-
+  position:relative;
 }
 
 #slider-container{
