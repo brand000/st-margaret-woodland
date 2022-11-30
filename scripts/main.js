@@ -1,16 +1,21 @@
-//Author: Devon Leigh
-//This script file contains intilization and functions called in the index of the webpage, this provides functionality to certain features depicted below by comments
+/*
+Author: Devon Leigh 
+Purpose: This script file contains intilization and functions called in multiple pages of the website, this provides functionality to certain elements depicted below by comments
+Contains intilization for the swiper.js javascript library (https://swiperjs.com/)
+*/
 
+
+//sets mobile nav-bar width to 40%
 function openNav() {
   document.getElementById("nav-bar").style.width = "40%";
 }
 
-//hamburger navbar close
+//hamburger navbar close, sets mobile nav-bar width to 0%
 function closeNav() {
   document.getElementById("nav-bar").style.width = "0%";
 }
 
-/* change menuBtn to menuBtn.open to navbar */
+//constants declared and assigned to certain divs
 const menuBtn = document.querySelector(".menu-btn");
 const navBar = document.querySelector(".nav-bar");
 const mainContent = document.querySelector(".main-content");
@@ -20,13 +25,16 @@ let menuOpen = false;
 
 //event listener that opens or closes onclick based on current state
 menuBtn.addEventListener("click", () => {
+  //if the menu is not open and menubtn is clicked, adds open to divs and calls openNav function
   if (!menuOpen) {
     menuOpen = true;
     menuBtn.classList.add("open");
     mainContent.classList.add("open");
     navBar.classList.add("open");
     openNav();
-  } else {
+  } 
+  //if the menu is open and menubtn is clicked, removes open to divs and calls closeNav function
+  else {
     menuOpen = false;
     menuBtn.classList.remove("open");
     navBar.classList.remove("open");
@@ -35,7 +43,7 @@ menuBtn.addEventListener("click", () => {
   }
 });
 
-//swiper init
+//intilization for the Swiper javascript library for carousel controls
 const swiper = new Swiper(".swiper", {
   loop: true,
 
@@ -45,33 +53,35 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 
-  // nav arrows init
+  // Optional JS to populate next and previous swiper buttons
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 
-  // autoplay init
+  // Optional JS to set an autoplay delay on the pictures
   autoplay: {
     delay: 5000,
   },
 });
 
-// button declaration
-let mybutton = document.getElementById("topBtn");
+// Return to top button declaration
+let topbutton = document.getElementById("topBtn");
 
 
 //scrolling down the page causes the button to appear
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    //changes the css to display: block for the button
+    topbutton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    //changes the css to display: none for the button
+    topbutton.style.display = "none";
   }
 }
 
-// function to return to top of page on button click
+// function to return to top of page on button click by resetting position to 0
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0; 
