@@ -1,3 +1,11 @@
+/*
+Purpose: Provides styling for the body div as well as much of the content in index.html
+Author(s) / Work Done: 
+Rahabar Mahmud - HTML element styling
+Devon Leigh - HTML element styling
+*/
+
+/*developer defined ids*/
 #heroCart{
     background-image: url("../resources/products/cart.jpg");
     background-position: center;
@@ -63,6 +71,7 @@ art table td:nth-child(1){
 
 #cart table thead td{
     font-weight: 700;
+    /*changes font to uppercase*/
     text-transform: uppercase;
     font-size: 13px;
     padding: 18px 0;
@@ -85,6 +94,7 @@ art table td:nth-child(1){
     border-radius: 30px;
     border-color: grey;
     font-weight: normal;
+    /*transition for animation smoothing*/
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
@@ -94,6 +104,7 @@ art table td:nth-child(1){
 #cart table tbody tr td  .btn-close:hover {
       background-color:rgb(220, 169, 169);
       color: white;
+      /*transition for animation smoothing*/
       transition: 0.3s;
     }
 
@@ -146,6 +157,7 @@ art table td:nth-child(1){
     text-align: center;
 }
 
+/*developer defined classes*/
 .popup{
     width: 400px;
     background-color: white;
@@ -153,11 +165,13 @@ art table td:nth-child(1){
     position: absolute;
     top: 0;
     left: 50%;
+    /*transforms the position of the popup and scales*/
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
     visibility: hidden;
+    /*transition for popup animation and smoothing*/
     transition: transform 0.4s, top 0.4s;
     box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 
@@ -166,6 +180,7 @@ art table td:nth-child(1){
 .open-popup{
     visibility: visible;
     top: 45%;
+    /*transforms the position of the popup and scales when opened*/
     transform: translate(-50%, -50%) scale(1);
 
 }

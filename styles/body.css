@@ -1,6 +1,15 @@
+/*
+Purpose: Provides styling for the body div as well as much of the content in index.html
+Author(s) / Work Done: 
+Devon Leigh - HTML element styling
+Rahabar Mahmud - HTML element styling
+*/
+
+/*import custom fonts from google api and rsms*/
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://fonts.googleapis.com/css?family=Spartan");
 
+/*html elements section*/
 html {
   font-family: "spartan", sans-serif;
 }
@@ -24,34 +33,14 @@ body {
   align-items: center;
 }
 
-.main-content {
-  visibility: visible;
-  display: block;
-  opacity: 1;
-  transition: opacity 0.3s linear;
-  width: 100%;
-  height: fit-content;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 a {
   color: black;
+  /*link transition for all browsers*/
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.main-content.open {
-  opacity: 0.3;
-  transition: opacity 0.3s linear;
-}
-
-.name-center {
-  text-align: center;
 }
 
 a:link {
@@ -66,11 +55,36 @@ a:hover {
   opacity: 100% !important;
 }
 
+/*developer defined classes*/
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
+  /*transform for centering of div*/
   transform: translate(-50%, -50%);
+}
+
+.main-content {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  /*opacity transition for smoothnes*/
+  transition: opacity 0.3s linear;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-content.open {
+  opacity: 0.3;
+  /*transition for opacity when main content is set to open for navbar*/
+  transition: opacity 0.3s linear;
+}
+
+.name-center {
+  text-align: center;
 }
 
 button {
@@ -104,15 +118,17 @@ button {
 
 .swiper-button-prev:hover {
   color: #69f0ae !important;
+  /*added for hover transition smoothing*/
   transition: all linear 0.3s;
 }
 
 .swiper-button-next:hover {
   color: #69f0ae !important;
+  /*added for hover transition smoothing*/
   transition: all linear 0.3s;
 }
 
-.swiper-text h2{
+.swiper-text h2 {
   width: 100%;
   color: white;
   font-size: 2.5vw;
@@ -126,56 +142,52 @@ button {
   width: 100%;
 }
 
-.burial-text, about-title{
-  display:flex;
+.burial-text,
+about-title {
+  display: flex;
   flex-direction: column;
   padding: 10px;
 }
 
-.about-title{
+.about-title {
   margin: 10px;
 }
 
-.burial-content{
-    width: 50%;
-    display: inline-table;
-    padding: 20px;
-  }
+.burial-content {
+  width: 50%;
+  display: inline-table;
+  padding: 20px;
+}
 
-
-.burial-photo{
+.burial-photo {
   width: 50%;
   display: inline-table;
   padding: 10px;
-
 
   background-image: url("../resources/bg2.avif");
   background-size: auto;
-  height:500px;
+  height: 500px;
   border-radius: 60px;
   background-position: bottom;
-  background-repeat:repeat;
-  background-attachment:fixed;
+  background-repeat: repeat;
+  background-attachment: fixed;
   margin-right: 1vmin;
 }
 
-.map-photo{
+.map-photo {
   width: 50%;
   display: inline-table;
   padding: 10px;
 
-
   background-image: url("../resources/map1.jpg");
   background-size: auto;
-  height:500px;
+  height: 500px;
   border-radius: 60px;
   background-position: bottom;
-  background-repeat:repeat;
-  background-attachment:fixed;
+  background-repeat: repeat;
+  background-attachment: fixed;
   margin-right: 1vmin;
 }
-
-
 
 .burial-text {
   margin: auto;
@@ -183,7 +195,7 @@ button {
   justify-content: center;
   align-items: center;
   margin-left: 1vmin;
-  padding:10px;
+  padding: 10px;
 }
 
 .burial-container {
@@ -192,7 +204,7 @@ button {
 }
 
 .burial-title {
-  width:50%;
+  width: 50%;
   text-align: center;
 }
 
@@ -273,6 +285,7 @@ button {
   position: absolute;
   top: 0px;
   left: 0px;
+  /*interval for background-position and transform with ease property*/
   transition: background-position 450ms ease, transform 450ms ease;
   width: 100%;
   z-index: 1;
@@ -290,56 +303,39 @@ button {
   height: 100%;
   padding: 5vmin;
   position: relative;
+  /*interval for background-position with ease propery*/
   transition: background-position 450ms ease;
   width: 100%;
   z-index: 2;
 }
 
 .history-card:hover > .history-content {
+  /*shifts background position on hover*/
   background-position: -10% 0%;
 }
 
 .flora-card:hover > .flora-content {
+  /*shifts background position on hover*/
   background-position: -10% 0%;
 }
 
 .fauna-card:hover > .fauna-content {
+  /*shifts background position on hover*/
   background-position: -10% 0%;
 }
 
 .flora-card:hover .flora-title {
+  /*transition for smoothness of title color change*/
   transition: 0.2s;
   color: black !important;
   font-size: 8vmin;
 }
 
 .fauna-card:hover .fauna-title {
+  /*transition for smoothness of title color change*/
   transition: 0.2s;
   color: black !important;
   font-size: 8vmin;
-}
-
-#topBtn {
-  display: none; 
-  position: fixed;
-  bottom: 20px; 
-  right: 30px; 
-  z-index: 99; 
-  border: 0.3vmin solid green;
-  outline: none; 
-  background-color: transparent; 
-  color: green;
-  cursor: pointer; 
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 22px; 
-  transition: 0.4s;
-}
-
-#topBtn:hover {
-  background-color: green; 
-  color:white;
-  border-color: white;
 }
 
 .news-section {
@@ -362,8 +358,9 @@ button {
   background-color: aqua;
   height: 250px;
   margin-bottom: 15px;
-  background-size:cover;
+  background-size: cover;
   border-radius: 10px;
+  /*scaling the card-image up*/
   transform: scale(1.03);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -401,7 +398,9 @@ button {
   background-color: #798c64;
   color: white;
   cursor: pointer;
+  /*scales the card size on hover*/
   transform: scale(1.02);
+  /*transition for smoothness on hover*/
   transition: all 0.3s ease;
 }
 
@@ -488,11 +487,14 @@ button {
   width: 100%;
   height: 100%;
   text-align: center;
+  /*interval for transform on hover*/
   transition: transform 0.8s;
+  /*indicates the element should be in a 3d space (gives it the 3d effect)*/
   transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
+  /*rotates the flipcard inner outward and scales*/
   transform: rotateY(180deg) scale(1.03);
 }
 
@@ -566,17 +568,20 @@ button {
   text-align: center;
 }
 
-
-.history-section, .mission-section, .rules-section {
+.history-section,
+.mission-section,
+.rules-section {
   display: inline-block;
   justify-items: center;
   width: 75%;
 }
-.history-text p, .mission-text p, .rules-text p {
+.history-text p,
+.mission-text p,
+.rules-text p {
   color: black;
 }
 
-.aboutpage-container{
+.aboutpage-container {
   width: 100%;
   display: inline-block;
   align-items: center;
