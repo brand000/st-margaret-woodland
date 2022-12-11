@@ -1,3 +1,8 @@
+/*
+Author: Rahabar Mahmud
+Purpose: This script file contains intilization and functions called in the ecommerce pages of the site
+*/
+
 /**
  * https://www.youtube.com/watch?v=YeFzkC2awTM
  */

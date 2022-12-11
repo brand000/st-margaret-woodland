@@ -1,6 +1,9 @@
+
+
 <?php
 /*connectToDatabase.php
-Handles the connection to the Innovative Inventories database.
+Author: Rahabar Mahmud
+Purpose: Handles the connection to the Innovative Inventories database.
 Values for $dbLocation, $dbUsername, $dbPassword, and
 $dbName are assigned in the file mysqldb.inc, which
 must be included from a "safe" (but readable) location

@@ -1,25 +1,28 @@
-<!-- formRegistrationResponse.php for Innovative Inventory, version 4 -->
+<!-- 
+Author: Rahbar Mahmud
+Purpose: Provide repsonse from registration form
+ -->
 <!DOCTYPE html>
 
 <html lang="en">
 <!-- document_head.html -->
 <?php
-    session_start();
-   include '../common/document_head.html'; 
-  ?>
+session_start();
+include '../common/document_head.html';
+?>
 
 <body class="body w3-auto">
     <header class="w3-container">
         <!-- banner.html -->
-        <?php 
-       include '../common/banner.php';      
-      ?>
+        <?php
+        include '../common/banner.php';
+        ?>
 
         <!-- menus.html -->
-        <?php 
-       include '../common/menus.html';
-       include 'connectToDatabase.php'; 
-      ?>
+        <?php
+        include '../common/menus.html';
+        include 'connectToDatabase.php';
+        ?>
     </header>
 
     <main class="w3-container">
@@ -27,14 +30,14 @@
                  w3-border-black w3-blue">
             <?php
             $_SESSION['POST_SAVE'] = $_POST;
-            include("../scripts/formRegistrationProcess.php"); 
+            include("../scripts/formRegistrationProcess.php");
             ?>
         </article>
     </main>
 
     <!--footer.html -->
-    <?php 
-     include '../common/footer.html';  
+    <?php
+    include '../common/footer.html';
     ?>
 
 </body>

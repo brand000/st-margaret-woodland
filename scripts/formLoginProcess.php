@@ -1,7 +1,8 @@
 <?php
 /**
+ * Author: Rahabar Mahmud
  * formLoginProcess.php
- * Process the login form data and set up the necassary session data 
+ * Purpose: Process the login form data and set up the necassary session data 
  * for the user to shop. If incorrect login information (bad username and/or
  * bad password) is entered, the user is redirected back to login form.
  * 
