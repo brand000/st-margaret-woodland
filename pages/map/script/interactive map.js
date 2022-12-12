@@ -1,3 +1,8 @@
+//  Purpose: Interactive map by using the static image provided of the preservation
+//  Authors: 
+//  Zilong Wang  - functions content, structure
+//  Brandon Watson - functions content, structure
+
 var myTimeout;
 var slideIndex = 1;
 
@@ -432,6 +437,7 @@ function slideCount9(n){
   
 }
 
+
 function slideshow9(n){
     if(n == 1){
       document.getElementById("slideshow_image9A").style.display="block";
@@ -464,16 +470,18 @@ function moveout_marker11(){
   let y = document.getElementById("description11")?.id;
   timer(y);
 }
-
+// check if mouse is over discription box
 function moveover_description11(){
   clearTimeout(myTimeout);
   
 }
 
+// check if mouse is move out of discription box
 function moveout_description11(){
   let x = document.getElementById("description11")?.id;
   invisible(x);
 }
+
 
 function slideCount11(n){
   slideIndex = slideIndex + n;
@@ -514,6 +522,8 @@ function empty_tips() {
   window.alert("No extra information for this location, try others!")
   }
 
+
+// Detect when marker on the map is clicked
 function marker2_click(){
   document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/hazelnut tree1.jpg";
@@ -524,6 +534,7 @@ function marker2_click(){
   document.getElementById("detail_block").scrollTop = 0;
 }
 
+// Detect when marker on the map is clicked
 function marker3_click(){
   document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/apple tree1.jpg";
@@ -534,6 +545,7 @@ function marker3_click(){
   document.getElementById("detail_block").scrollTop = 0;
 }
 
+// Detect when marker on the map is clicked
 function marker4_click(){
   document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/pear tree1.jpg";
@@ -544,6 +556,7 @@ function marker4_click(){
   document.getElementById("detail_block").scrollTop = 0;
 }
 
+// Detect when marker on the map is clicked
 function marker5_click(){
   document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/Cherry-Honeysuckle Arch1.jpg";
@@ -565,7 +578,7 @@ function marker7_click(){
   document.getElementById("detail_block").scrollTop = 0;
 }
 
-
+// Detect when marker on the map is clicked
 function marker9_click(){
   document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/biggrove1.jpg";
@@ -576,6 +589,7 @@ function marker9_click(){
   document.getElementById("detail_block").scrollTop = 0;
 }
 
+// Detect when marker on the map is clicked
 function marker11_click(){
   document.getElementById("detail_block").style.width = "300px";
   document.getElementById("picture_part").src="../resources/image/apple tree1.jpg";
