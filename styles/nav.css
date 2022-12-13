@@ -1,4 +1,10 @@
+/*
+Purpose: Provides styling for specifically the navbar and it's responsive components
+Author(s) / Work Done: 
+Devon Leigh - HTML element styling
+*/
 
+/*developer defined classes*/
 .nav-bar {
   display: flex;
   align-items: center;
@@ -19,9 +25,10 @@ ul {
 .nav-bar a {
   color: black;
   opacity: 100%;
+  /*text color transition*/
   transition: color 400ms ease-out;
   line-height: 1;
-  font-size: 1rem;
+  font-size: 1rem;  
 }
 
 .nav-bar a:link {
@@ -32,6 +39,7 @@ ul {
   color: green;
 }
 
+/*when max-width is less than 768px, adjust content to be responsive*/
 @media screen and (max-width: 768px) {
   .nav-bar {
     display: flex;
@@ -43,6 +51,7 @@ ul {
     height: 1000px;
     overflow-x: hidden;
     text-align: right;
+    /*applys a transition to nav-bar for smoothing*/
     transition: 0.3s;
     z-index: 9999;
   }
@@ -57,6 +66,7 @@ ul {
     color: black;
     padding: 8px 8px 8px 32px;
     font-size: 26px;
+    /*transition for all link elements, specified specifically for each browser type4*/
     -o-transition: 0.5s;
     -ms-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -64,6 +74,7 @@ ul {
     transition: 0.5s;
   }
 
+  /*when max-width is less than 568px, adjust content to be responsive*/
   @media screen and (max-width: 568px) {
     .nav-bar a {
       font-size: 1rem;

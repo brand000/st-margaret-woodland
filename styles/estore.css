@@ -1,8 +1,14 @@
+/*
+Purpose: Provides styling for the ecommerce web store section
+Author(s) / Work Done: 
+Rahabar Mahmud - HTML element styling
+Devon Leigh - HTML element styling
+*/
+
+/*import custom font from google api*/
 @import url('https://fonts.googleapis.com/css?family=Spartan');
 
-/**
-https://www.youtube.com/watch?v=P8YuWEkTeuE
-*/
+/*html elements section*/
 *{
     margin: 0;
     padding: 0;
@@ -58,6 +64,7 @@ body{
     width:100%;
 }
 
+/*developer defined ids*/
 #hero{
     background-image: url("../resources/products/hero2.jpg");
     background-position: left;
@@ -188,6 +195,7 @@ body{
     border-radius: 30px;
     border-color: #088178;
     font-weight: normal;
+    /*transition for animation smoothing*/
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
@@ -200,6 +208,7 @@ body{
     border-radius: 30px;
     border-color: #199fba;
     font-weight: normal;
+    /*transition for animation smoothing*/
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
@@ -270,6 +279,7 @@ body{
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
     margin: 15px 0;
+    /*transition for animation smoothing*/
     transition: 0.2s ease;
     position: relative;
 

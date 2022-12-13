@@ -1,3 +1,8 @@
+/*
+Author: 
+Purpose: 
+*/
+
 //carousel.js
 
 function carousel()

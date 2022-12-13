@@ -1,3 +1,8 @@
+<!--
+  Purpose: Unused but was meant to be an error page
+  Authors: 
+-->
+
 <!DOCTYPE html>
 <link rel="stylesheet" href="../../styles/body.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="../../styles/nav.css?v=<?php echo time(); ?>">

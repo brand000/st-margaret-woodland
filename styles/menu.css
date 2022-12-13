@@ -1,5 +1,12 @@
+/*
+Purpose: Provides styling for the header-navbarmenu section of webpages
+Author(s) / Work Done: 
+Devon Leigh - HTML element styling
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/*html elements section*/
 *{
     padding: 0;
     margin: 0;
@@ -28,6 +35,7 @@ header{
     z-index: 999;
 }
 
+/*developer defined classes*/
 .logo-container img{
     width:300px;
     height: 200px;
@@ -84,6 +92,7 @@ header{
     border-radius: 2rem;
     line-height: 1;
     margin: 0 .2rem;
+    /*transition for animation smoothing*/
     transition: .3s;
     text-transform: uppercase;
 }
@@ -117,6 +126,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /*transition for animation smoothing*/
     transition: .5s;
 }
 
@@ -136,6 +146,7 @@ header{
     transform: translateY(10px);
     opacity: 0;
     pointer-events: none;
+    /*transition for animation smoothing*/
     transition: .5s;
 }
 
@@ -151,6 +162,7 @@ header{
     font-size: .9rem;
     align-items: center;
     justify-content: space-between;
+    /*transition for animation smoothing*/
     transition: .3s;
 }
 
@@ -176,6 +188,7 @@ header{
     background-color: #fff;
     transform: rotate(45deg);
     cursor: pointer;
+    /*transition for animation smoothing*/
     transition: .3s;
     z-index: -1;
 }
@@ -230,6 +243,7 @@ header{
     background-color: #fff;
     position: relative;
     z-index: 1001;
+    /*transition for animation smoothing*/
     transition: .5s;
 }
 
@@ -241,6 +255,7 @@ header{
     height: inherit;
     background-color: #fff;
     border-radius: 3px;
+    /*transition for animation smoothing*/
     transition: .5s;
 }
 
@@ -277,6 +292,7 @@ header{
     transform: translateY(0) rotate(45deg);
 }
 
+/*toyed around with keyframes to animate the menubtn, keyframes from 0 opacity and a y translation*/
 @keyframes animation{
     from{
         opacity: 0;
@@ -310,6 +326,7 @@ header{
         overflow-x: hidden;
         overflow-y: auto;
         transform: translateX(100%);
+        /*transition for animation smoothing*/
         transition: .65s;
     }
 
@@ -317,6 +334,7 @@ header{
         transform: translateX(0);
     }
 
+    /*if check for checked is passed our keyframed animation plays*/
     #check:checked ~ .nav-btn .nav-link,
     #check:checked ~ .nav-btn .log-sign{
         animation: animation .5s ease forwards var(--i);
@@ -394,6 +412,7 @@ header{
         background-color: #69bde7;
         left: 10%;
         transform: scale(1.1) rotate(45deg);
+        /*transition for animation smoothing*/
         transition: .5s;
     }
 

@@ -1,0 +1,119 @@
+
+/*  Purpose: burial sytling
+    Authors: 
+    zilong wang  - styling
+    Brandon Watson - styling */
+
+
+
+#information_container{
+   
+    width: 1490px;
+    height: 1500px;
+    background-color: aliceblue;
+
+
+}
+
+#background_image{
+   
+    width: 1490px;
+    height: 650px;
+    position: relative;
+}
+
+#title{
+    font-size: 50px;
+    color: aliceblue;
+    position:absolute;
+    top: 325px;
+    left: 300px;
+}
+
+#information{
+    background-color: aliceblue;
+    width: 1490px;
+    height: 650px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#information_title{
+   color: green;
+   font-size: 40px;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+#information_content{
+  color:black ;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+#button_div{
+    width: 1490px;
+    height: 200px;
+   
+}
+
+#button{
+    height: 100px;
+    width: 300px;
+    margin-top: 0px;
+    margin-left: 590px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#agreement{
+    width: 500px;
+    height: 520px;
+    background-color: aliceblue;
+    top: 200px;
+    left: 500px;
+    border: 1px solid black;
+    position: fixed;
+    padding: 10px;
+    background-image: url(../../resources/image/formbackground.jpg) ;
+    background-size: 500px 520px;
+    border-radius: 5px;
+}
+
+#agreement_information{
+    width: 480px;
+    height: 400px;
+    overflow: auto;
+    margin-top: 10px;
+    background-color: aliceblue;
+    border: 1px solid grey;
+}
+
+#button_group{
+    width: 500px;
+    height: 90px;
+    
+}
+
+#back_button{
+    margin-top:10px;
+    margin-bottom:10px;
+    height: 70px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    border: 1px solid grey;
+  
+}
+
+#agree_button{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left: 75px;
+    height: 70px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    border: 1px solid grey;
+    
+}

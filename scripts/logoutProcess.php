@@ -1,3 +1,7 @@
+<!-- 
+Author: Rahbar Mahmud
+Purpose: Provide repsonse for logging out
+ -->
 <?php
 
 $query = "SELECT my_Order.order_id,
