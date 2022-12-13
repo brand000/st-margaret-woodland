@@ -77,22 +77,22 @@ function retrieve_question()
               . "/resources/question.txt", "w");
     fwrite($f, date("l, F jS") . "\n");
     
-    print_r(count($images));
+    
     $random = array_rand($quotes_data,5);
     shuffle($random);
     $count = 0;
     foreach($random as $i){
-    $text =$quotes_data[$i][1];
+    $text[$count] =$quotes_data[$i][1];
 		$option1[$count] = $quotes_data[$i][0];
 		$option2[$count] = $quotes_data[$i][2];
     $display[$count] = $quotes_data[$i][3];
     $option3[$count] = $quotes_data[$i][4];
     $option4[$count] = $quotes_data[$i][5];
-    $images[$i]=$display[$count];
+    $images[strval($count+1)]=$display[$count];
 		//$GLOBALS["$option2"] = $option2;
 		//createButtons($option1, $option2, $text, $display, $option3, $option4);
     
-    $question_today =$text."\n"
+    $question_today =$text[$count]."\n"
     .$option1[$count]."\n"
     .$option2[$count]."\n"
     .$display[$count]."\n"
@@ -104,8 +104,8 @@ function retrieve_question()
     }
     $count2=0;
     foreach($random as $key){
-      
-      createButtons($option1[$count2], $option2[$count], $text[$count], $display[$count], $option3[$count], $images, $key);
+      $imageIndex = strval($count2+1);
+      createButtons($option1[$count2], $option2[$count2], $text[$count2], $display[$count2], $option3[$count2], $images, $imageIndex);
       $count2++;
     }
     fclose($f);
@@ -139,10 +139,10 @@ if (file_exists($_SERVER['CONTEXT_DOCUMENT_ROOT']
         $op4[$i] = fgets($f, 2000);
         $op5[$i] = fgets($f, 2000);
         
+        
         $k =$i+1;
         
-        
-        $img[$k]=$disp[$i];
+        $img[strval($k)]=$disp[$i];
 				//createButtons( $op2, $op3, $op1, $disp, $op4, $op5);
         
       }
@@ -165,13 +165,13 @@ if (file_exists($_SERVER['CONTEXT_DOCUMENT_ROOT']
         unlink($_SERVER['CONTEXT_DOCUMENT_ROOT']
               . "/Web"
               . "/resources/question.txt");
-        echo retrieve_question();
+         retrieve_question();
     }
 }
 else
 {
   
-    echo retrieve_question();
+     retrieve_question();
 }
 ?>				
           

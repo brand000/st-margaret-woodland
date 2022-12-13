@@ -68,7 +68,7 @@
 
 
     <?php
-			echo '<div style="display:none;">';
+			echo '<div>';
 			echo '<h6 id="datetime">';
 					  
 						echo "It's ".date("i, F jS").".<br>";
