@@ -269,6 +269,7 @@ about-title {
   background-image: url(https://www.animalfunfacts.net/images/stories/photos/mammals/ungulates/deer/white_tailed_deer_l.jpg);
 }
 
+/*before state of cards*/
 .history-card:before,
 .flora-card:before,
 .fauna-card:before {
@@ -291,6 +292,7 @@ about-title {
   z-index: 1;
 }
 
+/*card content*/
 .history-content,
 .flora-content,
 .fauna-content {
@@ -309,16 +311,19 @@ about-title {
   z-index: 2;
 }
 
+/*container content position shift on hover*/
 .history-card:hover > .history-content {
   /*shifts background position on hover*/
   background-position: -10% 0%;
 }
 
+/*container content position shift on hover*/
 .flora-card:hover > .flora-content {
   /*shifts background position on hover*/
   background-position: -10% 0%;
 }
 
+/*container content position shift on hover*/
 .fauna-card:hover > .fauna-content {
   /*shifts background position on hover*/
   background-position: -10% 0%;
@@ -344,6 +349,7 @@ about-title {
   flex-wrap: wrap;
   border-radius: 15px;
 }
+/*general styling for card container*/
 .card {
   background: #f4ffe8;
   width: 450px;
@@ -354,6 +360,7 @@ about-title {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+/*styling for card image*/
 .card-image {
   background-color: aqua;
   height: 250px;
@@ -364,6 +371,7 @@ about-title {
   transform: scale(1.03);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+/*stock photo for cards*/
 .card-1 {
   background-image: url("https://media.istockphoto.com/id/182686524/photo/nap-time.jpg?s=612x612&w=0&k=20&c=1kSSuM1_42hi9jSamitj5zKGaouEVzBEyaYAZZtox3A=");
 }
@@ -384,6 +392,7 @@ about-title {
   padding: 10px;
 }
 
+/*card link styling*/
 .card a {
   background-color: green;
   color: white;
@@ -394,6 +403,7 @@ about-title {
   border-radius: 15px;
 }
 
+/*card on hover*/
 .card:hover {
   background-color: #798c64;
   color: white;
@@ -404,6 +414,7 @@ about-title {
   transition: all 0.3s ease;
 }
 
+/*scaling image on card hover*/
 .card:hover > .card-image {
   height: 350px;
 }
@@ -469,6 +480,7 @@ about-title {
   text-align: center;
 }
 
+/*general styling for card*/
 .flip-card {
   background-color: transparent;
   width: 400px;
@@ -482,6 +494,7 @@ about-title {
   margin-top: 0.4em;
 }
 
+/*"inside" of the card styling, inner transforms out using 3-d transform style*/
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -494,10 +507,11 @@ about-title {
 }
 
 .flip-card:hover .flip-card-inner {
-  /*rotates the flipcard inner outward and scales*/
+  /*rotates the flipcard inner outward and scales up*/
   transform: rotateY(180deg) scale(1.03);
 }
 
+/*holds styling for each individual flip card*/
 .flip-card-birchfront,
 .flip-card-back,
 .flip-card-applefront,
@@ -512,6 +526,7 @@ about-title {
   border-radius: 50%;
 }
 
+/*flip card images populating*/
 .flip-card-birchfront {
   background-image: url(https://inaturalist-open-data.s3.amazonaws.com/photos/151650387/original.jpg);
   background-size: cover;
@@ -542,6 +557,7 @@ about-title {
   background-position: 40% 50%;
 }
 
+/*styling for back of flip card*/
 .flip-card-back {
   background-color: #c1e1c1;
   color: black;
