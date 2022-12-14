@@ -1,7 +1,7 @@
 /*
 estore.js
 
-Description: This is the javascript page for our e-store page. This script file is called in the
+Purpose/Work Done: This is the javascript page for our e-store page. This script file is called in the
 header of all our e-commerce pages.
 This file is use to make our cart page functional. It keeps track of all the items present in the 
 shopping cart. This also calculates the final price that the user has to pay. It can update the price 
