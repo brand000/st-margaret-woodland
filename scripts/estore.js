@@ -1,25 +1,36 @@
 /*
+estore.js
 Author: Rahabar Mahmud
 Purpose: This script file contains intilization and functions called in the ecommerce pages of the site
+This is the main javascript file that makes the estore functional. 
+
 */
 
 /**
  * https://www.youtube.com/watch?v=YeFzkC2awTM
  */
 
+//a
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
 } else {
   ready();
 }
 
+/**
+ * The ready function. This function is called when the body is loaded.
+ * Author: Rahabar Mahmud (A00446187)
+ */
 function ready() {
+
+  //this checks if the remove item from cart button has been clicked. 'btn-close' is the id of the remove button.
   var removeCartItemButtons = document.getElementsByClassName("btn-close");
   for (var i = 0; i < removeCartItemButtons.length; i++) {
     var button = removeCartItemButtons[i];
     button.addEventListener("click", removeCartItem);
   }
 
+  //
   var quantityInputs = document.getElementsByClassName("cart-quantity-input");
   for (var i = 0; i < quantityInputs.length; i++) {
     var input = quantityInputs[i];
@@ -37,6 +48,10 @@ function ready() {
     .addEventListener("click", purchaseClicked);
 }
 
+/**
+ * 
+ * @param {*} event 
+ */
 function quantityChanged(event) {
   var input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
@@ -45,12 +60,19 @@ function quantityChanged(event) {
   updateCartTotal();
 }
 
+/**
+ * 
+ * @param {*} event the clicking of the remove button
+ */
 function removeCartItem(event) {
   var buttonClicked = event.target;
   buttonClicked.parentElement.parentElement.remove();
   updateCartTotal();
 }
 
+/**
+ * 
+ */
 function updateCartTotal() {
   var cartItemContainer = document.getElementsByClassName("cart-items")[0];
   var cartRows = cartItemContainer.getElementsByClassName("cart-row");
@@ -72,6 +94,10 @@ function updateCartTotal() {
     "$" + total;
 }
 
+
+/**
+ * 
+ */
 function purchaseClicked() {
   /**alert("Thank you for your purchase");*/
   var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -81,6 +107,11 @@ function purchaseClicked() {
   updateCartTotal();
 }
 
+
+/**
+ * 
+ * @param {*} event 
+ */
 function addToCartClicked(event) {
   var button = event.target;
   var shopItem = button.parentElement.parentElement;
@@ -91,6 +122,13 @@ function addToCartClicked(event) {
   updateCartTotal();
 }
 
+/**
+ * 
+ * @param {*} title 
+ * @param {*} price 
+ * @param {*} imageSrc 
+ * @returns 
+ */
 function addItemToCart(title, price, imageSrc) {
   var cartRow = document.createElement("tr");
   cartRow.classList.add("cart-row");
