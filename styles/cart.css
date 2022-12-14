@@ -1,14 +1,13 @@
 /*
-Purpose: Provides styling for the body div as well as much of the content in index.html
-Author(s) / Work Done: 
+Purpose: Provides styling for the cart in estore.
 Rahabar Mahmud - HTML element styling
 */
 
-/*developer defined ids*/
+/*Styling the banner on the cart page*/
 #heroCart{
     background-image: url("../resources/products/cart.jpg");
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /*Makes the background image fixed*/
     height:56vh;
     width:100%;
     background-position: top 2% right 0;
@@ -20,6 +19,7 @@ Rahabar Mahmud - HTML element styling
 
 }
 
+/*Setting the table for items*/
 #cart table{
     width: 80%;
     border-collapse: collapse;
@@ -27,11 +27,13 @@ Rahabar Mahmud - HTML element styling
     white-space: nowrap;
 }
 
+/*Image in the table*/
 #cart table img{
     width: 70px;
     height: 70px;
 }
 
+/*Adjusting width of different columns in the table*/
 art table td:nth-child(1){
     width: 150px;
     text-align: center;
@@ -62,6 +64,7 @@ art table td:nth-child(1){
     padding: 10px 5px 10px 15px;
 }
 
+/*Adjusting the table styles*/
 #cart table thead{
     border: 1px solid #e2e9e1;
     border-left:none;
@@ -107,13 +110,14 @@ art table td:nth-child(1){
       transition: 0.3s;
     }
 
+    /*Adding items to the cart*/
 #cart-add{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-
+/*The return button styling*/
 #return{
     width: 50%;
     margin-bottom: 30px;
@@ -134,6 +138,7 @@ art table td:nth-child(1){
     padding-bottom: 15px;
 }
 
+/*Styling the subtotal box*/
 #sub-total{
     width: 50%;
     margin-bottom:30px;
@@ -156,7 +161,8 @@ art table td:nth-child(1){
     text-align: center;
 }
 
-/*developer defined classes*/
+/*The popup class is used to style the popup div. Intially its size is set to scale 0.1
+ and it hidden under the menu bar.*/
 .popup{
     width: 400px;
     background-color: white;
@@ -169,6 +175,7 @@ art table td:nth-child(1){
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
+    /*The popup is hidden initially*/
     visibility: hidden;
     /*transition for popup animation and smoothing*/
     transition: transform 0.4s, top 0.4s;
@@ -176,6 +183,9 @@ art table td:nth-child(1){
 
 }
 
+/*When the user checks out, open-popup class is added to the popup. This is styling would
+make the popup appear and visible in front of the user screen. When the user closes the div,
+the open-popup function is removed and the popup shrinks and goes back to its initial hidden form*/
 .open-popup{
     visibility: visible;
     top: 45%;
@@ -184,6 +194,7 @@ art table td:nth-child(1){
 
 }
 
+/*Styling the popup div*/
 .popup img{
     width: 100px;
     margin-top: -50px;
