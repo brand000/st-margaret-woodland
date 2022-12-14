@@ -1,3 +1,9 @@
+<!--
+  Purpose: burial booking
+  Authors: 
+  Zilong Wang  - styling, content, structure
+  Brandon Watson - styling, content, structure
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,9 +36,9 @@
       rel="stylesheet"
       href="./styles/jquery.mobile.structure-1.4.5.min.css"
     />
-    <script src="./jquery-3.6.1.min.js"></script>
+    
     <script src=" ./script/jquery-1.11.1.min.js"></script>
-    <script src="./script/jquery.mobile-1.4.5.min.js"></script>
+    
 
     <!--Linking the css file-->
     <link rel="stylesheet" href="../../styles/body.css" />
@@ -55,14 +61,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="./styles/burial.css" />
+    <link rel="stylesheet" href="./styles/burial_information.css" />
 
     <!--Linking the javascript file-->
-    <script defer src="../../scripts/estore.js"></script>
-    <script defer src="../../scripts/main.js"></script>
+   
+   
+    <script src="./script/burial information.js"></script>
   </head>
 
-  <header>
+  <header id="header">
     <div class="header-container">
       <div class="org-name">
         <a class="org-logo" href="../../index.html">
@@ -89,73 +96,73 @@
   <body onload="setup()">
     <div data-role="page">
       <div class="ui-content" id="ui-content">
-        <div class="main-content-burial">
-          <div id="form-container">
-            <form id="form" action="/action_page.php">
-              <h1 id="book-title">Book burial</h1>
-              <br />
-              <br />
-              <label for="fname">First name:</label>
-              <input type="text" id="fname" name="fname" value="" /><br /><br />
-              <label for="lname">Last name:</label>
-              <input
-                type="text"
-                id="lname"
-                data-clear-btn="true"
-                name="lname"
-                value=""
-              /><br /><br />
-              <label for="email-2">Email:</label>
-              <input
-                type="email"
-                data-clear-btn="true"
-                name="email-2"
-                id="email-2"
-                value=""
-              /><br /><br />
-              <label for="tel-2">Tel:</label>
-              <input
-                type="tel"
-                data-clear-btn="true"
-                name="tel-2"
-                id="tel-2"
-                value=""
-              /><br /><br />
-              <p>select burial location</p>
-              <br />
-              <label for="Pear_tree">Pear tree</label><br />
-              <input
-                type="radio"
-                id="Pear_tree"
-                name="fav_language"
-                value="Apple_tree"
-              />
-              <br />
-              <label for="hazelnut_tree">Hazelnut tree</label><br />
-              <input
-                type="radio"
-                id="hazelnut_tree"
-                name="fav_language"
-                value="hazelnut_tree"
-                checked="checked"
-              />
-              <label for="Apple_tree">Apple tree</label><br />
-              <input
-                type="radio"
-                id="Apple_tree"
-                name="fav_language"
-                value="Apple_tree"
-              /><br />
-              <input type="submit" value="Submit" />
-            </form>
+        
+            <div id="information_container" class="change_part">
+              <div id="background_image">
+                <img src="../resources/image/background_image.jpg" style="width:100%; height:100%; opacity: 80%;">
+                <b id="title">THE BURIAL YOU SHOULD KNOW</b>
+              </div>
 
-            <p>
-              Click the "Submit" button when finish we will contact you in 3
-              days.
-            </p>
-          </div>
+              <div id="information">
+                 <center><p id="information_title">Want a natural burial?</p></center>
+                 <p id="information_content"><b>Our conservation provied the green-burial service, </b>If you actually have the demand for it. Please call us at 352-317-7307 to discuss your personal situation. 
+                  In this page, we will simply introduce our service and the process of online booking. We trust it will save a lot of time for you. 
+                  The main content of the process is a form you need to fill. 
+                  Before you enter the form, there is an agreement you should sign. We trust this agreement can actually protect your right, so please read carefully. 
+                  <br>
+                  <br>
 
-          <footer class="section-p1">
+                  If you would like to prepay for your burial, some funeral homes can include our cost in a plan with their services. 
+                  There are other options as well, such as CDs payable upon death or dedicated savings accounts.
+                  Prepaying a funeral home is a choice some people make, but the most important thing to do is to make and share a plan.
+                  To understand the decisions involved in arranging a natural burial please review our Burial Planning Guide, look at our FAQ page, and/or give us a call. 
+                 </p>
+
+                 <center><video width="400px" height="300px" controls>
+                 <source src="../resources/video/green_burial.mp4" type="video/mp4"></center>
+              </div>
+
+              <div id="button_div">
+                 <button type="button" id="button" onclick="clickable()" onmouseover="color_change()" onmouseout="color_back()">Start Burial Booking</button>
+              </div>
+            </div>
+          
+
+            <div id="agreement">
+              <div id="agreement_information">
+                Licensing Agreement
+                This License Agreement (this “Agreement”) is made effective as of [Insert Date Here] between [Insert Name of Owner of Property to be Licensed], of [Insert Full Address Here], and [Insert Name of the Party Who Will Use the Licensed Property], of [Insert Full Address Here].
+                <br>
+                In the Agreement, the party who is granting the right to use the licensed property will be referred to as “[Insert Name of Owner of Property to be Licensed],” and the party who is receiving the right to use the licensed property will be referred to as “[Insert Name of the Party Who Will Use the Licensed Property].”
+                <br>
+                The parties agree as follows:
+                <br>
+                1. GRANT OF LICENSE.
+                [Insert Name of Owner of Property to be Licensed] owns [Describe the Property to be Licensed] (the “Authored Work”). In accordance with this Agreement, [Insert Name of Owner of Property to be Licensed] grants [Insert Name of the Party Who Will Use the Licensed Property] an exclusive license to use the Authored Work. [Insert Name of Owner of Property to be Licensed] retains title and ownership of the Authored Work and derivative works will be assigned to Licensor by Licensee.
+                <br>
+                2. PAYMENT OF ROYALTY.
+                [Insert Name of the Party Who Will Use the Licensed Property] will pay to [Insert Name of Owner of Property to be Licensed] a royalty which shall be calculated as follows: [Describe How the Payment to the Licensor in Exchange for the Use of the Licensed Property Will be Determined]
+                <br>
+                3. MODIFICATIONS.
+                [Insert Name of the Party Who Will Use the Licensed Property] may not modify or change the Authored Work in any manner.
+
+              </div>
+
+              <div id="button_group">
+                <button type="button" id="back_button" onclick="go_back()">Back</button>
+                <button type="button" id="agree_button" onclick="next()">I agree</button>
+              </div>
+            </div>
+
+            
+        
+
+
+
+
+
+
+          <footer id="footer">
             <div class="col">
               <h4>Contact Us</h4>
               <p>
@@ -191,7 +198,7 @@
               <p>Ⓒ SMU Software Engineering Group F</p>
             </div>
           </footer>
-        </div>
+        
       </div>
     </div>
   </body>

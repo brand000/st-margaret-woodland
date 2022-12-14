@@ -1,5 +1,10 @@
-/* jQuery Mobile classes              */
-/* Background colour                  */
+/* 
+  Purpose: Interactive map by using the static image provided of the preservation
+  Authors: 
+  Zilong Wang  - styling
+  Brandon Watson - styling
+ */
+
 .ui-page,
 
 
@@ -366,13 +371,6 @@
     height: 50px;
    }
 
-
-
-
-
-
-
-
 #image-container{
   height: 755px;
   width: 1500px;
@@ -387,9 +385,6 @@
 
 
 
-.ui-slider-track {
-  margin-left: 20px;
-  width: 200px;
-}
+
 
 

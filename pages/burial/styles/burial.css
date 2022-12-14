@@ -1,3 +1,8 @@
+/*  Purpose: burial styling
+    Authors:
+    Zilong Wang  - styling
+    Brandon Watson - styling*/
+
 .main-content-burial{
     background-image: url("../../resources/image/formbackground.jpg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */

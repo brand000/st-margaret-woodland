@@ -1,7 +1,15 @@
+//   Purpose: Interactive map by using the static image provided of the preservation
+//   Authors: 
+//   Zilong Wang  - functions, styling, content, structure
+//   Brandon Watson - function, styling, content, structure
+
+
 
 function setup(){
     document.getElementById("agreement").style.display = "none";
 }
+
+// show booking aggreement
 
 function clickable(){
     document.getElementById("agreement").style.display = "block";

@@ -1,3 +1,11 @@
+<!--
+  Purpose: The html and php scripts in this file used to provide the visible structure and content of the the page for the quiz game.
+  Consists embedded styling to provide styles in addition to those provided by the external css file
+  Authors / Work Done: 
+  Rahabar Mahmud - common menu section, pop up- styling, structure, functionality
+  Toufiq Abir Farhan Tufan - Styling, structure, content, functionality of the rest of the sections
+  
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,11 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.google.com/specimen/Inter" />
-
+    
+    <!--Linking the thrid party css  custom font libraries from the web-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-
+    <!--Linking the css files -->
     <link rel="stylesheet" href="../../styles/body.css" />
     <link rel="stylesheet" href="../../styles/nav.css" />
     <link rel="stylesheet" href="../../styles/header.css" />
@@ -20,30 +29,31 @@
     <link rel="stylesheet" href="./../../styles/my_css.css" />
     <link rel="stylesheet" href="../../styles/estore.css" />
     <link rel="stylesheet" href="../../styles/cart.css" />
-
+    <!--Linking the third party  css and js libraries from the web where it is found -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+    
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+     <!--Linking the third party css and js libraries for custom modal from the web where it is found -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
+    
+    <!--Linking the javascript file for functionality of the menu -->
     <script defer src="scripts/main.js"></script>
+
+    <!--Linking the javascript file for functionality of the quiz-->
     <script src="./../../scripts/carousel.js"></script>
-
-
-
-
-
 
     <title>St. Margeret's Bay Woodland Conservation</title>
 </head>
 
 <header>
+    <!--Menu section constituting the head of the game page for navigation-->
+
     <div class="header-container" style="height: 100px">
         <div class="org-name">
             <a class="org-logo" href="/index.html">
@@ -67,9 +77,15 @@
     </div>
 
 
-    <?php
-			echo '<div style="display:none;">';
-			echo '<h6 id="datetime">';
+</header>
+<!-- main content section - the game body.
+     The body tag calls the function that set's up the game as a screen of questions displayed one at a time to the user-->
+<body class="bodyQuiz" onload="carousel()">
+<!-- Current date and time display from the server as a content of the html -->
+<?php
+			echo '<div class="timer" style="position:absolute;top:94px;left: 0px;display:initial">';
+            # html over written by getcurrent date function ( in quiz.php) with new information of date and time  for display
+			echo '<h6 id="datetime" style="color:blue">';
 					  
 						echo "It's ".date("i, F jS").".<br>";
 						echo "Our time is ".date('g:ia').".";
@@ -80,23 +96,20 @@
 			
 			?>
 
-</header>
-
-<body class="bodyQuiz" onload="carousel()">
-
-
     <div class="main-content">
+
+        <!-- A pop up to be displayed at the end of the quiz game in the results screen -->
         <div class="popup" id="popup" style="background-color:white">
 
             <h3>Thank you for playing!</h3>
             <p style="color:black">Results with correct answer are given below</p>
             <button type="button" onclick="closePopup()">Check Answers</button>
         </div>
-
+        <!--Some textual content for the body of initial screen of the game page-->
         <main>
             <div>
                 <article>
-                    <h3>
+                    <h3 style="color:black">
                         Fun play of the Day
                     </h3>
 
@@ -106,7 +119,12 @@
 
                     </p>
                 </article>
+                <!-- script containing The more information modal's content(some text and link) that uses the third part js library and css for  functioning as a modal for each screen in the of the game 
+                     The script ends by including the quiz. php script that provides functioning of the elements here in game.php that calls it's(script's) functions.-->
                 <?php 
+                # the class- modal label's the div tag html for modification by js and css of the libraries imported. Once the link to the modal is clocked(info button).The rel:open pseudo selector  open's the modal due to the js library 
+                # with the content (html in the div tag labelled as modal)
+                # When the close button as part of the modal's content is clicked, the rel:close pesudo attribute, functionalble due to the thrd pary js library, causes it to close the modal
 		    echo "
 			<div id=\"ex1\" class=\"modal mod\">
 			<p class=\"change\"><img src=\"./../../resources/image/poly.jpeg\" width=\"60px\" height=\"70px\" </p>
@@ -116,7 +134,7 @@
 			<a href=\"#\" rel=\"modal:close\"><button type='button' style='background-color:black;color:grey;'>Close</button></a>
 		    </div>
 		    
-		    <!-- Link to open the modal -->
+		    
 		    <div class='moreinfo'><a href=\"#ex1\"  class='callmod' rel=\"modal:open\" role=\"button\"><img id=\"im\" src=\"./../../resources/image/info.jpeg\"></a></div>";
 				
             include("./../../scripts/quiz.php");
@@ -125,7 +143,7 @@
 
         </main>
 
-
+        <!-- footer section of the game page -->
 
         <footer class="section-p1" style="display:flex; justify-content: space-between;">
             <div class="col" style="width:25%">
