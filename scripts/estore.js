@@ -1,13 +1,24 @@
 /*
 estore.js
-Author: Rahabar Mahmud
+
 Description: This is the javascript page for our e-store page. This script file is called in the
 header of all our e-commerce pages.
+This file is use to make our cart page functional. It keeps track of all the items present in the 
+shopping cart. This also calculates the final price that the user has to pay. It can update the price 
+if the user changes the quantity of items, remove or add items to cart while shopping. After the user is
+done shopping, they can checkout which will clear their account and prompt them to go back to the estore 
+page again.
+We do not have our database ready yet, but once we do, this script file will be used to store the items
+the user wants on the database. When the user adds an item to cart from any of the shopping cart pages,
+the item will be stored on the database. Then we will get the information on the database and update our cart
+accordingly. That is still a work in progress as we havent initialed our database yet.
+
+Author: Rahabar Mahmud
 
 */
 
 
-//a
+//it checks if the page has been loaded yet, if everything is loaded, then it calls the ready function
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
 } else {
@@ -16,32 +27,35 @@ if (document.readyState == "loading") {
 
 /**
  * The ready function. This function is called when the body is loaded.
+ * This function calls the remove cart item function when the remove button is clicked.
+ * It calls the quantity changed function to check the quantity of each item
+ * It calls the add to cart function when something new is added to cart
  * Author: Rahabar Mahmud (A00446187)
  */
 function ready() {
 
-  //this checks if the remove item from cart button has been clicked. 'btn-close' is the id of the remove button.
+  //this checks if the remove item from cart button has been clicked. It calls the remove cart item function
   var removeCartItemButtons = document.getElementsByClassName("btn-close");
   for (var i = 0; i < removeCartItemButtons.length; i++) {
     var button = removeCartItemButtons[i];
     button.addEventListener("click", removeCartItem);
   }
 
-  //
+  //it checks if the quantity of all the items in the cart is set properly. It calls the quantity change function
   var quantityInputs = document.getElementsByClassName("cart-quantity-input");
   for (var i = 0; i < quantityInputs.length; i++) {
     var input = quantityInputs[i];
     input.addEventListener("change", quantityChanged);
   }
 
-  //
+  //it checks if an item is being added to the cart. It calls the add to cart function
   var addToCartButtons = document.getElementsByClassName("shop-item-button");
   for (var i = 0; i < addToCartButtons.length; i++) {
     var button = addToCartButtons[i];
     button.addEventListener("click", addToCartClicked);
   }
 
-  //
+  
   document
     .getElementsByClassName("btn-purchase")[0]
     .addEventListener("click", purchaseClicked);
