@@ -1,14 +1,11 @@
 /*
 estore.js
 Author: Rahabar Mahmud
-Purpose: This script file contains intilization and functions called in the ecommerce pages of the site
-This is the main javascript file that makes the estore functional. 
+Description: This is the javascript page for our e-store page. This script file is called in the
+header of all our e-commerce pages.
 
 */
 
-/**
- * https://www.youtube.com/watch?v=YeFzkC2awTM
- */
 
 //a
 if (document.readyState == "loading") {
@@ -51,8 +48,11 @@ function ready() {
 }
 
 /**
+ * THis function is used to check on the quantity of each item added to cart. This function
+ * also makes sure that the quanity of each item cannot be set to anything less than 1.
+ * @param {*} event changing of the quantity
  * 
- * @param {*} event 
+ * Author: Rahabar Mahmud
  */
 function quantityChanged(event) {
   var input = event.target;
@@ -121,7 +121,7 @@ function updateCartTotal() {
 
 /**
  * This function is called when the checkout button is called. It uses a while loop to
- * emptu all the items in the shopping cart. It then updates the cart again by the
+ * empty all the items in the shopping cart. It then updates the cart again by the
  * update cart function to show the new price of the empty cart, which would now be 0.
  * 
  * Author: Rahabar Mahmud
@@ -136,7 +136,14 @@ function purchaseClicked() {
 
 
 /**
+ * This is the add to cart function. When the user adds an item to the cart from any of the
+ * page on our website, this function will check where the item has been added to cart from and
+ * then call the add Item to cart function. This function is not completely functional yet as we have
+ * yet to design a database for our project. Once we the database, then this function will store
+ * the item details on the database and then we can use to call the add item to cart function.
+ * This also calls the update cart total function to update the total cart price.
  * 
+ * Authors: Rahabar Mahmud
  * @param {*} event 
  */
 function addToCartClicked(event) {
@@ -150,24 +157,37 @@ function addToCartClicked(event) {
 }
 
 /**
+ * This is the function that is responsible to add the items to the cart. It then creates
+ * a row on our cart table and then displays the item that our customer has added to cart.
+ * We have the image of the item, it's name, price, quantity changer and a remove item button
+ * for each of the item on the list.
+ * @param {*} title it gets the class-title of the image from the addToCartClicked function
+ * @param {*} price it gets the class price of the image from the addToCartClicked function
+ * @param {*} imageSrc it gets the image source of the image from the addToCartClicked function
+ * @returns  if the user tries to add an item when its already added to the cart, it prompts
+ * a message saying that the item is already added to cart.
  * 
- * @param {*} title 
- * @param {*} price 
- * @param {*} imageSrc 
- * @returns 
+ * Author: Rahabar Mahmud
  */
 function addItemToCart(title, price, imageSrc) {
+
+  //creating variable for table row which we will append to our table
   var cartRow = document.createElement("tr");
   cartRow.classList.add("cart-row");
   var cartItems = document.getElementsByClassName("cart-items")[0];
 
+  //variable for the item title
   var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
+
+  //checking if the item already exists in the cart
   for (var i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText == title) {
       alert("This item is already added to the cart");
       return;
     }
   }
+
+  //the html for adding the row of items to the table
   var cartRowContents = `
    
         <td><img class="cart-item-image" src="${imageSrc}" alt=""></td>
@@ -177,21 +197,43 @@ function addItemToCart(title, price, imageSrc) {
         <td><button type="button" class="btn-close">Remove Item</button></td>
         `;
   cartRow.innerHTML = cartRowContents;
+
+  //appending the item to the cart row
   cartItems.append(cartRow);
+
+  //adding the remove button
   cartRow
     .getElementsByClassName("btn-close")[0]
     .addEventListener("click", removeCartItem);
+
+  //appending the quantity changer
   cartRow
     .getElementsByClassName("cart-quantity-input")[0]
     .addEventListener("change", quantityChanged);
 }
 
+//the popup that is used when the user checks out
 let popup = document.getElementById('popup');
 
+/**
+ * This function is used to add the the class open-popup to our pop-up div.
+ * I have added some css in the css file for the class open-popup. It makes the
+ * pop-up scale in size and animate itself to the center of the page.
+ * The pop was initially scaled down to 0.1 and was hidden under the menu bar
+ * The user can then click the button on the popup to go back to the main estore page.
+ * 
+ * Author: Rahabar Mahmud
+ */
 function openPopup(){
   popup.classList.add('open-popup');
 }
 
+/**
+ * This function is used to remove the open-popup class from our pop-up div. It will make our
+ * popup scale back to 0.1 and go and hide itself under the menubar again until the user checksout again.
+ * 
+ * Author: Rahabar Mahmud
+ */
 function closePopup(){
   popup.classList.remove('open-popup');
 }
