@@ -37,12 +37,14 @@ function ready() {
     input.addEventListener("change", quantityChanged);
   }
 
+  //
   var addToCartButtons = document.getElementsByClassName("shop-item-button");
   for (var i = 0; i < addToCartButtons.length; i++) {
     var button = addToCartButtons[i];
     button.addEventListener("click", addToCartClicked);
   }
 
+  //
   document
     .getElementsByClassName("btn-purchase")[0]
     .addEventListener("click", purchaseClicked);
@@ -61,23 +63,42 @@ function quantityChanged(event) {
 }
 
 /**
+ * This is a simple function that is used to remove the items from the rows.
+ * It removes the entire row by removing the parent element of the row which contains
+ * all the items information.
+ * It then calls the update cart total function to calculate the total
  * 
  * @param {*} event the clicking of the remove button
+ * 
+ * Author: Rahabar Mahmud
  */
 function removeCartItem(event) {
   var buttonClicked = event.target;
+
+  //removing the rows
   buttonClicked.parentElement.parentElement.remove();
+
+  //updating cart
   updateCartTotal();
 }
 
 /**
+ * This is the function used to ugrade the price of the items in the cart.
+ * It uses a simple for loop that iterates through all the items in the cart and adds
+ * up their prices. It uses the class name of the cart item and the row they are in.
+ * It also checks for the quantity of each item selected by the user. The quantity box can be
+ * updated and the cart total will increase as well. Then it finally displays the total 
+ * price of the items in the cart to the user.
  * 
+ * Author: Rahabar Mahmud
  */
 function updateCartTotal() {
+  //setting up variables for cart item and row of the item
   var cartItemContainer = document.getElementsByClassName("cart-items")[0];
   var cartRows = cartItemContainer.getElementsByClassName("cart-row");
-  var total = 0;
+  var total = 0; //initializing total to be 0
 
+  //the for loop to go through all the items
   for (var i = 0; i < cartRows.length; i++) {
     var cartRow = cartRows[i];
     var priceElement = cartRow.getElementsByClassName("cart-price")[0];
@@ -85,10 +106,13 @@ function updateCartTotal() {
       cartRow.getElementsByClassName("cart-quantity-input")[0];
     var price = parseFloat(priceElement.innerText.replace("$", ""));
 
+    //the price of the item
     var quantity = quantityElement.value;
 
+    //finding the new total
     total = total + price * quantity;
   }
+  //rounding up the results and printing them
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
@@ -96,10 +120,13 @@ function updateCartTotal() {
 
 
 /**
+ * This function is called when the checkout button is called. It uses a while loop to
+ * emptu all the items in the shopping cart. It then updates the cart again by the
+ * update cart function to show the new price of the empty cart, which would now be 0.
  * 
+ * Author: Rahabar Mahmud
  */
 function purchaseClicked() {
-  /**alert("Thank you for your purchase");*/
   var cartItems = document.getElementsByClassName("cart-items")[0];
   while (cartItems.hasChildNodes()) {
     cartItems.removeChild(cartItems.firstChild);
