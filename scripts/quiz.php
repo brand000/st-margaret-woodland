@@ -25,14 +25,14 @@ The question.json file contains a json object. the key value pairs in it isused 
  "4" consists of an array of question(alphabets), options(alphnumeric),image file destination(ASCII characters)
  "5" consists of an array of question(alphabets), options(alphnumeric),image file destination(ASCII characters)
 -->
- 
-  
-  
-  
-  <div class="w3-panel">
 
-          
-					<?php 
+
+
+
+<div class="w3-panel">
+
+
+    <?php 
 					# This script file is used to deal with the retrieval of question data from 
           #the data base and their functioning( By toufiq)
 
@@ -226,158 +226,167 @@ else
   
      retrieve_question();
 }
-?>				
-          
-          
-        </div>
-        <!--This script sets up the AJAX infrastructure for 
+?>
+
+
+</div>
+<!--This script sets up the AJAX infrastructure for 
         requesting time updates from the server(time.php)
         The script is also used to proudce required html, some inline styling that structures
          and gives additional styles to the intial screen (the play button with a background image) 
         of the game and final screen(results view) of the game
         
         -->
-        <script defer>
-        // global variables
-        let Obj = document.getElementsByClassName("qhead"); // get all the element nodes containing 
-                                                            //the question for later accessing the question itself  for display in the results screen
-        var counter =0;  // counter that keeps track of the game so as to ensure the pop-up appweears at the results screen and also index through the nodes containing the question
-        var request = null;    // initialzation for a request object variable
-        /**
-         * Purpose: This function gets the time from the server by
-         *    - accessing the content in the time.php scrpt using xml request
-         * Author same as the file header
-         */
-        function getCurrentTime()
-        {
-            request = new XMLHttpRequest();    // creates a request object
-            var url = "./../../scripts/time.php";  // destination to the time php script
-            request.open("GET", url, true);    // get the content in the script as the request body
-            request.onreadystatechange = updatePage;  // call update when request is received from the server
-            request.send(null);
+<script defer>
+// global variables
+let Obj = document.getElementsByClassName("qhead"); // get all the element nodes containing 
+//the question for later accessing the question itself  for display in the results screen
+var counter =
+    0; // counter that keeps track of the game so as to ensure the pop-up appweears at the results screen and also index through the nodes containing the question
+var request = null; // initialzation for a request object variable
+/**
+ * Purpose: This function gets the time from the server by
+ *    - accessing the content in the time.php scrpt using xml request
+ * Author same as the file header
+ */
+function getCurrentTime() {
+    request = new XMLHttpRequest(); // creates a request object
+    var url = "./../../scripts/time.php"; // destination to the time php script
+    request.open("GET", url, true); // get the content in the script as the request body
+    request.onreadystatechange = updatePage; // call update when request is received from the server
+    request.send(null);
+}
+/**
+ * Purpose: This function injects html consisting of the current date and time by
+ *      -asynchronously updating the page with the xml request body's content 
+ * Author same as the header file
+ */
+function updatePage() {
+    if (request.readyState == 4) // request status is OK then do the following
+    {
+        var dateDisplay = document.getElementById(
+            "datetime"); //accessing the elemnt in the game.php where to inject the html
+        dateDisplay.innerHTML = request.responseText;
+        console.log(request.responseText);
+    }
+}
+getCurrentTime();
+setInterval('getCurrentTime()', 60000); // updates the time evry minute
+
+/**
+ * Purpose: Sets up the result screen of the game with
+ *  - the questions in the order the questions came in the quiz
+ *  - correct answers along with each of the question
+ *  - pop up to appear
+ * 
+ * Additionally the functions checks the answers clicked in the quiz and highlights(red or green) 
+ * the choosen answers based on the check to
+ *  distinguish between questions that the user got right and wrong
+ *  Parameter:(1) the element node of the image button clicked (the classname of the button is the value of the correct answer)
+ * 
+ * Author: same as the file header
+ */
+function set(a) {
+    // if the clicked image button's value matches with the answer for the question then  have the correct answer for this question highlighted as green
+    if (a.value == a.className) {
+        // skip the play button's value as it also appear
+        if (a.value != "Play Quiz") {
+            q = Obj[counter].cloneNode(true); // clone the indexed element node(acessing the current question answered)
+            q.setAttribute("class", "null");
+            l = s.appendChild(q); // add the clone-(element containg the question) to the result screen 
+            g = s.appendChild(document.createElement(
+                "p")); // apped an element that would contain the choosen answer to the question in the quiz
+
+            g.setAttribute("class", "right"); // label the element that has the chosen answer for this question
+
+            g.innerText = a.value;
+            counter++;
         }
-        /**
-         * Purpose: This function injects html consisting of the current date and time by
-         *      -asynchronously updating the page with the xml request body's content 
-         * Author same as the header file
-         */
-        function updatePage()
-        {
-            if (request.readyState == 4)  // request status is OK then do the following
-            {
-                var dateDisplay = document.getElementById("datetime"); //accessing the elemnt in the game.php where to inject the html
-                dateDisplay.innerHTML = request.responseText;
-                console.log(request.responseText);
-            }
+
+        carousel(); // each time the carousel function is called the game moves to the next screen
+        //if 6 screens have been passed display the pop up
+        if (counter == 5) {
+            openPopup();
         }
-        getCurrentTime();
-        setInterval('getCurrentTime()', 60000);   // updates the time evry minute
-				
-				/**
-         * Purpose: Sets up the result screen of the game with
-         *  - the questions in the order the questions came in the quiz
-         *  - correct answers along with each of the question
-         *  - pop up to appear
-         * 
-         * Additionally the functions checks the answers clicked in the quiz and highlights(red or green) 
-         * the choosen answers based on the check to
-         *  distinguish between questions that the user got right and wrong
-         *  Parameter:(1) the element node of the image button clicked (the classname of the button is the value of the correct answer)
-         * 
-         * Author: same as the file header
-         */
-        function set(a) {
-        // if the clicked image button's value matches with the answer for the question then  have the correct answer for this question highlighted as green
-       if(a.value == a.className){
-      // skip the play button's value as it also appear
-       if(a.value != "Play Quiz"){
-        q = Obj[counter].cloneNode(true);    // clone the indexed element node(acessing the current question answered)
-        q.setAttribute("class","null");
-      l = s.appendChild(q);   // add the clone-(element containg the question) to the result screen 
-       g = s.appendChild(document.createElement("p"));  // apped an element that would contain the choosen answer to the question in the quiz
-       
-       g.setAttribute("class","right");   // label the element that has the chosen answer for this question
-       
-       g.innerText=a.value;
-       counter++;
-       }
-       
-      carousel();    // each time the carousel function is called the game moves to the next screen
-      //if 6 screens have been passed display the pop up
-      if(counter == 5){
-        openPopup();
-      }
-      // otherwise if the clicked image button's value doesn't match with 
-      //the answer for the question then  have the correct answer for this question highlighted as red
-    }else{
-       
-       if(a.value != "Play Quiz"){
-        y = Obj[counter].cloneNode(true);   // clone the indexed element node (acessing the the current question answered)
-        y.setAttribute("class","null");
-        z = s.appendChild(y);         // add the clone-(element containg the question) to the result screen
-        x = s.appendChild(document.createElement("p"));  // apped an element that would contain the chosen answer to the question in the quiz
-        x.setAttribute("class","wrong");
-       
-       x.innerText=a.value;
-       counter++;
-      }
-      
-       carousel(); // move to the next screen
-       //if 6 screens have been passed display the pop up
-       if(counter == 5){
-        openPopup();
-      }
+        // otherwise if the clicked image button's value doesn't match with 
+        //the answer for the question then  have the correct answer for this question highlighted as red
+    } else {
+
+        if (a.value != "Play Quiz") {
+            y = Obj[counter].cloneNode(
+                true); // clone the indexed element node (acessing the the current question answered)
+            y.setAttribute("class", "null");
+            z = s.appendChild(y); // add the clone-(element containg the question) to the result screen
+            x = s.appendChild(document.createElement(
+                "p")); // apped an element that would contain the chosen answer to the question in the quiz
+            x.setAttribute("class", "wrong");
+
+            x.innerText = a.value;
+            counter++;
+        }
+
+        carousel(); // move to the next screen
+        //if 6 screens have been passed display the pop up
+        if (counter == 5) {
+            openPopup();
+        }
 
     }
-    
- 
+
+
 }
 
 function validate() {
-  console.log("Validation code is executing.");
+    console.log("Validation code is executing.");
 }
-let play = document.getElementsByClassName("question");  // the initial screen to be made part of the question class
-p = document.createElement("div");          // the div that is going to have the question class
+let play = document.getElementsByClassName("question"); // the initial screen to be made part of the question class
+p = document.createElement("div"); // the div that is going to have the question class
 
-play[0].parentElement.insertBefore(p,play[0]);       // append this screen at the start of the quiz
-p.setAttribute("class","question");
+play[0].parentElement.insertBefore(p, play[0]); // append this screen at the start of the quiz
+p.setAttribute("class", "question");
 p.classList.add("mystyle");
-d = p.appendChild(document.createElement("div"));  // a div that will contain the play button and it's background image
-d.style.height="120px";
-c = d.appendChild(document.createElement("input"));   // the play button
-c.setAttribute("type","button");
-c.setAttribute("value","Play Quiz");
-c.setAttribute("class","Play Quiz");
-c.setAttribute("onclick","set(this)");
-c.style.margin="45px 125px";
-c.style.width="200px";
-c.style.display="block";
-c.style.fontSize="x-large";
-c.style.height="50px";
-c.style.borderRadius="25px";
-c.style.webkitTextFillColor="#32a2a8";
+d = p.appendChild(document.createElement("div")); // a div that will contain the play button and it's background image
+d.style.height = "120px";
+c = d.appendChild(document.createElement("input")); // the play button
+c.setAttribute("type", "button");
+c.setAttribute("value", "Play Quiz");
+c.setAttribute("class", "Play Quiz");
+c.setAttribute("onclick", "set(this)");
+c.style.margin = "45px 125px";
+c.style.width = "200px";
+c.style.display = "block";
+c.style.fontSize = "x-large";
+c.style.height = "50px";
+c.style.borderRadius = "25px";
+c.style.webkitTextFillColor = "#32a2a8";
 
-pa=document.createElement("div");   // the final screen of the quiz( results view)
+pa = document.createElement("div"); // the final screen of the quiz( results view)
 // global variable
-s = play[0].parentElement.appendChild(pa);  //append it at the end of the quiz
-s.setAttribute("class","question");
+s = play[0].parentElement.appendChild(pa); //append it at the end of the quiz
+s.setAttribute("class", "question");
+
+
 /**
- * Purpose:
+ * This function is used to add the the class open-popup to our pop-up div.
+ * I have added some css in the css file for the class open-popup. It makes the
+ * pop-up scale in size and animate itself to the center of the page.
+ * The pop was initially scaled down to 0.1 and was hidden under the menu bar
+ * The user can then click the button on the popup to go back to the main estore page.
  * 
  * Author: Rahabar Mahmud
  */
-function openPopup(){
-  popup.classList.add('open-popup');
-}
-/**
- * Purpouse:  
- * 
- * Author: Rahabar Mahmud
- */
-function closePopup(){
-  popup.classList.remove('open-popup');
+function openPopup() {
+    popup.classList.add('open-popup');
 }
 
+
+/**
+ * This function is used to remove the open-popup class from our pop-up div. It will make our
+ * popup scale back to 0.1 and go and hide itself under the menubar again until the user checksout again.
+ * 
+ * Author: Rahabar Mahmud
+ */
+function closePopup() {
+    popup.classList.remove('open-popup');
+}
 </script>
-      
-      
