@@ -3,6 +3,8 @@
   Authors: 
   Zilong Wang  - styling, content, structure
   Brandon Watson - styling, content, structure
+  Description: We want to use the google map API to extent the content of map part. So this page
+  can be another mode of interactive map based on google map.
 -->
 
 <!DOCTYPE html>
@@ -11,20 +13,22 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
     <title>KML Click Capture Sample</title>
+    <!--This is the css part
+-->
     <style>
       html,
       body {
         height: 370px;
         padding: 0;
         margin: 0;
-      }
+      }/*body's style*/
       #map {
         height: 360px;
         width: 300px;
         overflow: hidden;
         float: left;
         border: thin solid #333;
-      }
+      }/*map's style*/
       #capture {
         height: 360px;
         width: 480px;
@@ -37,7 +41,7 @@
     </style>
   </head>
   <body>
-    <div id="map"></div>
+    <div id="map"></div> <!--create a div to contain the google map -->
     <div id="capture"></div>
     <script>
       var map;
@@ -49,7 +53,7 @@
           center: new google.maps.LatLng(-19.257753, 146.823688),
           zoom: 2,
           mapTypeId: "terrain",
-        });
+        });/*Use api to create a google map on screen*/
 
         var kmlLayer = new google.maps.KmlLayer(src, {
           suppressInfoWindows: true,
@@ -61,7 +65,7 @@
           var testimonial = document.getElementById("capture");
           testimonial.innerHTML = content;
         });
-      }
+      }/*add a eventlistener which user can get the information from google map*/
     </script>
     <script
       async
