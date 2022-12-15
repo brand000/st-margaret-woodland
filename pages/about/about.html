@@ -40,6 +40,27 @@
 
     <!--Linking the javascript files for functionality-->
     <script defer src="../../scripts/estore.js"></script>
+    <script>
+          function seniorFunction(){
+
+var x = document.getElementById("senior").innerHTML;
+
+
+if (x== "Accessibility Mode"){
+  console.log(document.getElementsByClassName('main-container').length);
+document.getElementById("senior").innerHTML = "Normal View";
+document.getElementsByClassName('main-container')[0].style.backgroundColor='dimgrey';
+let len = document.getElementsByClassName('main-container').length;
+for(i=0; i<len; i++){
+  document.getElementsByClassName('main-container')[i].style.color='rgb(225,225,80)';
+  document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+}
+}
+else {
+window.location.reload();
+}
+}   
+        </script>
     <script defer src="../../scripts/main.js"></script>
 
     <title>Saint Margaret's Bay Store</title>
@@ -47,6 +68,8 @@
 
   <body>
     <header>
+      <button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; position: absolute; left: 1400px; color: white; font-weight: bolder;
+      font-size: large; border: none; background-color:MediumSeaGreen;">Accessibility Mode</button>
       <div class="header-container">
         <div class="org-name">
           <!--Links back to homepage if clicked-->
@@ -76,14 +99,14 @@
     </header>
 
     <!--Main content div for all page content for responsive design-->
-    <div class="main-content">
-      <div class="aboutpage-container">
+    <div class="main-content burial main-container" >
+      <div class="aboutpage-container".style.color= "rgb(225,225,80)">
         <div class="history-section">
           <div class="history-title">
-            <h1>HISTORY</h1>
+            <h1 class="main-container">HISTORY</h1>
           </div>
           <div class="history-text">
-            <p>
+            <p class="main-container">
               "In 20xx, the French Village Forest Preservation was discovered by
               X Y who noticed some flora and flauna on the premises that have a
               deserve to be preserved for future generations. After much
@@ -95,10 +118,10 @@
         </div>
         <div class="mission-section">
           <div class="mission-title">
-            <h1>OUR MISSION</h1>
+            <h1 class="main-container">OUR MISSION</h1>
           </div>
           <div class="mission-text">
-            <p>
+            <p class="main-container">
               "To preserve a dynamic and unique system of natural and cultural
               resources, and to develop innovative educational, recreational and
               cultural opportunities of regional value, while exercising
@@ -108,10 +131,10 @@
         </div>
         <div class="rules-section">
           <div class="rules-title">
-            <h1>ORDINANCES, RULES & REGULATIONS</h1>
+            <h1 class="main-container">ORDINANCES, RULES & REGULATIONS</h1>
           </div>
           <div class="rules-text">
-            <p>
+            <p class="main-container">
               The general purpose of these Regulations is to set forth rules and
               regulations governing the use of District Property that are
               intended to protect and preserve District Property and the flora,
