@@ -4,6 +4,11 @@
   Zilong Wang  - styling, content, structure
   Brandon Watson - styling, content, structure
 -->
+  <!--Description: This page is to construct a conservation's map. 
+   When user move their mouse over the markers on map. There will be a brief description about 
+   the places which marker represented. These description boxes are closed to the corresponding markers. Some interactive
+   stuff are on it. When user click the marker. The left side of page will pop out
+   a detailed description box for user to get information  -->
 
 <!DOCTYPE html>
 <html>
@@ -16,9 +21,7 @@
       content="width=
     , initial-scale=1.0"
     />
-
-
-
+    <!--link the css file-->
     <link
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
@@ -31,8 +34,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="styles/interactive map.css" rel="stylesheet" />
     <link
@@ -81,13 +82,16 @@
 
 
   <header>
+    <!--this is the navigation bar on the top-->
     <div class="header-container">
       <div class="org-name">
+        <!--the logo-->
         <a class="org-logo" href="../../index.html">
         <p><a href="../../index.html">French Village Forest <b>Conservation</b></a></p>
       </div>
       <div class="menu-btn">
         <div class="menu-btn_burger"></div>
+        <!--this is the part for options of navigation bar on the top-->
         <div id="nav-bar" class="nav-bar">
           <nav>
             <ul>
@@ -110,6 +114,8 @@
         <div class="main-content">
         <div class="ui-grid-a ui-responsive">
           <div class="ui-block-a ui-responsive">
+            <!--this is main div on this page, the map of conservation is its
+            background-->
             <div id="image-container">
               <img
                 src="../resources/image/map.jpg"
@@ -117,16 +123,18 @@
                 onclick="detect_Click(event)"
               />
             
-            
+            <!--this is the detailed description box on the left side of map,
+             hidden in default-->
               <div id="detail_block">
 
-
+               <!--this is the top picture on the detailed description box-->
                <div class="boxes_picture">
                 <img src="" id="picture_part">
                </div>
 
 
-            
+                <!--basic information like places' name and rating
+                  in detailed description box-->
                <div id="information_part">
                       <div id="name_part">
                         <p id="location_name"></p>
@@ -142,17 +150,23 @@
                       </div>
                </div>
              
-
+                <!--This part contains the information of the selected place 
+                  in detailed description box-->
                <div id="introduction_part">
                      <p id="introduction"></p>
                </div>
 
-
+                <!--This part in detailed description box contain the buttons.
+                  Once user can click, in principle, user can click the learn more button 
+                  to explore the particular page for that location
+                  -->
                <div class="buttons_part">
                 <input type="button" value="Burial" onclick="location.href='/pages/burial/burial.html'" class="btn">
                 <input type="button" value="Learn more" class="btn">
                </div>
-
+               <!--This part will contains the images of the specific location,
+               Unfortunately, We move out our foucus on it and time is not enough. 
+               So the development of this part had been given up-->
                <div id="photo_collection">
                 
                <div id="collection_title">
@@ -164,20 +178,21 @@
 
 
               </div>
+              <button type="button" id="mode_switch" onclick="change_mode()">Switch Version</button><!--switch to Google map version-->
 
-
-
+             <!--The first marker, marker is clickable-->
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker1" onclick="empty_tips()" onmouseover = "moveover_marker1()" onmouseleave="moveout_marker1()">
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
              </svg>
-            
+            <!--The brief description box, it should be closed to the marker1, hidden in default-->
              <div class="short_description_blocks infowin" id="description1" onmouseenter="moveover_description1()" onmouseleave="moveout_description1()">
                <div class="slideshow-container">
+                <!--The picture on the top of brief description box-->
                  <div class="slideshow-image" id="slideshow_image1A" >
                   <img src="../resources/image/trailhead.jpg" class="slideshow_image">
                  </div>
                </div>
-              
+                <!--simple introduction inside brief description box-->
                 <div style="width: 250px; height: 75px; border: 1px solid black; border-radius: 0 0 5px 5px; border: none;">
                  <center><b>Trailhead</b></center>
                  <b style="color:red;">Tip:</b> This is where you start
@@ -185,11 +200,16 @@
              </div>
 
 
+
+
+
+              <!--The second marker, marker is clickable-->
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker2" onclick="marker2_click()" onmouseover = "moveover_marker2()" onmouseleave="moveout_marker2()">
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
              </svg>
-
+               <!--The brief description box, it is closed to the marker2, hidden in default-->
              <div class="description_blocks infowin" id="description2" onmouseenter="moveover_description2()" onmouseleave="moveout_description2()">
+                <!--The slideshow on the top of brief description box-->
                 <div class="slideshow-container">
                   <div class="slideshow-image" id="slideshow_image2A" >
                    <img src="../resources/image/hazelnut tree1.jpg" class="slideshow_image">
@@ -202,6 +222,7 @@
                    <b class="prev" onclick="slideCount2(-1)">&#10094;</b>
                    <b class="next" onclick="slideCount2(1)">&#10095;</b>
                 </div>
+                 <!--simple introduction inside brief description box-->
                 <div class="information_container">
                 <div class="brief_description">
                   <b>Hazelnut tree</b>
@@ -218,23 +239,27 @@
               </div>
 
 
+
+
+
+              <!--The third marker, marker is clickable-->
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker3" onclick="marker3_click()" onmouseenter = "moveover_marker3()" onmouseleave="moveout_marker3()">
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
              </svg>
-
+              <!--The brief description box, it is closed to the marker3, hidden in default-->
              <div class="description_blocks infowin" id="description3" class="infowin" onmouseenter="moveover_description3()" onmouseleave="moveout_description3()">
-                <div class="slideshow-container">
+                <!--The slideshow on the top of brief description box-->
+              <div class="slideshow-container">
                     <div class="slideshow-image" id="slideshow_image3A" >
                      <img src="../resources/image/apple tree1.jpg" class="slideshow_image">
                     </div>
-                     
                     <div class="slideshow-image second_image" id="slideshow_image3B" >
                       <img src="../resources/image/apple tree2.jpg" class="slideshow_image ">
                     </div>
-                     
                      <b class="prev" onclick="slideCount3(-1)">&#10094;</b>
                      <b class="next" onclick="slideCount3(1)">&#10095;</b>
                 </div>
+                <!--simple introduction inside brief description box-->
                 <div class="information_container">
                 <div class="brief_description">
                   <b>Big apple tree</b>
@@ -253,11 +278,14 @@
 
 
 
+
+               <!--The 4th marker, marker is clickable-->
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker4" onclick="marker4_click()" onmouseover = "moveover_marker4()" onmouseleave="moveout_marker4()">
                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
               </svg>
-
+              <!--The brief description box, it is closed to the marker4, hidden in default-->
              <div class="description_blocks infowin" id="description4" onmouseenter="moveover_description4()" onmouseleave="moveout_description4()">
+               <!--The slideshow on the top of brief description box-->
               <div class="slideshow-container">
                 <div class="slideshow-image" id="slideshow_image4A" >
                  <img src="../resources/image/pear tree1.jpg" class="slideshow_image">
@@ -270,6 +298,7 @@
                  <b class="prev" onclick="slideCount4(-1)">&#10094;</b>
                  <b class="next" onclick="slideCount4(1)">&#10095;</b>
               </div>
+              <!--simple introduction inside brief description box-->
               <div class="information_container">
               <div class="brief_description">
                   <b>Pear tree</b>
@@ -289,13 +318,14 @@
 
 
 
-
+              <!--The 5th marker, marker is clickable-->
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker5" onclick="marker5_click()" onmouseover = "moveover_marker5()" onmouseleave="moveout_marker5()">
              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
              </svg>
-
+              <!--The brief description box, it is closed to the marker5, hidden in default-->
               <div class="description_blocks infowin" id="description5" onmouseenter="moveover_description5()" onmouseleave="moveout_description5()">
-               <div class="slideshow-container">
+                <!--The slideshow on the top of brief description box-->
+                <div class="slideshow-container">
               <div class="slideshow-image" id="slideshow_image5A" >
                <img src="../resources/image/Cherry-Honeysuckle Arch1.jpg" class="slideshow_image">
               </div>
@@ -307,6 +337,7 @@
                <b class="prev" onclick="slideCount5(-1)">&#10094;</b>
                <b class="next" onclick="slideCount5(1)">&#10095;</b>
              </div>
+              <!--simple introduction inside brief description box-->
              <div class="information_container">
              <div class="brief_description">
                 <b>Cherry-Honeysuckle Arch</b>
@@ -322,20 +353,22 @@
              </div>
              </div>
 
-    
+
+
+              <!--The 6th marker, marker is clickable-->
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker6" onclick="empty_tips()" onmouseover = "moveover_marker6()" onmouseleave="moveout_marker6()">
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
               </svg>
-          
+             <!--The brief description box, it is closed to the marker6, hidden in default-->
               <div class="short_description_blocks infowin" id="description6" onmouseenter="moveover_description6()" onmouseleave="moveout_description6()">
+              <!--The slideshow on the top of brief description box-->
               <div class="slideshow-container">
               <div class="slideshow-image" id="slideshow_image6A" >
              <img src="../resources/image/sharptrail.jpg" class="slideshow_image">
              </div>
              </div>
-          
+             <!--simple introduction inside brief description box-->
              <div style="width: 250px; height: 75px; border: 1px solid black; border-radius: 0 0 5px 5px; border: none;">
-              
               <center><b>Begining of Spruce Grove </b></center>
               <b style="color:red;">Tip:</b> Trail take sharp turn here. 
               </div>
@@ -344,12 +377,13 @@
 
 
        
-
+              <!--The 7th marker, marker is clickable-->
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker7" onclick="marker7_click()" onmouseover = "moveover_marker7()" onmouseleave="moveout_marker7()">
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
               </svg>
-
+              <!--The brief description box, it is closed to the marker7, hidden in default-->
               <div class="description_blocks infowin" id="description7" onmouseenter="moveover_description7()" onmouseleave="moveout_description7()">
+              <!--The slideshow on the top of brief description box-->
               <div class="slideshow-container">
              <div class="slideshow-image" id="slideshow_image7A" >
              <img src="../resources/image/foundation1.jpg" class="slideshow_image">
@@ -362,6 +396,7 @@
              <b class="prev" onclick="slideCount7(-1)">&#10094;</b>
              <b class="next" onclick="slideCount7(1)">&#10095;</b>
           </div>
+          <!--simple introduction inside brief description box-->
           <div class="information_container">
           <div class="brief_description">
               <b>Foundation</b>
@@ -380,18 +415,19 @@
 
 
 
-       
+       <!--The 8th marker, marker is clickable-->
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker8" onclick=" empty_tips()" onmouseover = "moveover_marker8()" onmouseleave="moveout_marker8()">
          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
         </svg>
-
+       <!--The brief description box, it is closed to the marker8, hidden in default-->
         <div class="short_description_blocks infowin" id="description8" onmouseenter="moveover_description8()" onmouseleave="moveout_description8()">
+          <!--The picture on the top of brief description box-->
           <div class="slideshow-container">
             <div class="slideshow-image" id="slideshow_image8A" >
              <img src="../resources/image/sweetcherry.jpg" class="slideshow_image">
             </div>
           </div>
-          
+          <!--simple introduction inside brief description box-->
           <div style="width: 250px; height: 75px; border: 1px solid black; border-radius: 0 0 5px 5px; border: none;">
               
               <center><b>End of Spruce Grove </b></center>
@@ -401,12 +437,13 @@
 
 
 
-
+        <!--The 9th marker, marker is clickable-->
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker9" onclick="marker9_click()" onmouseover = "moveover_marker9()" onmouseleave="moveout_marker9()">
           <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
          </svg>
-               
+         <!--The brief description box, it is closed to the marker9, hidden in default-->      
          <div class="description_blocks infowin" id="description9" onmouseenter="moveover_description9()" onmouseleave="moveout_description9()">
+         <!--The slideshow on the top of brief description box-->
           <div class="slideshow-container">
             <div class="slideshow-image" id="slideshow_image9A" >
              <img src="../resources/image/biggrove1.jpg" class="slideshow_image">
@@ -419,6 +456,7 @@
              <b class="prev" onclick="slideCount9(-1)">&#10094;</b>
              <b class="next" onclick="slideCount9(1)">&#10095;</b>
           </div>
+          <!--simple introduction inside brief description box-->
           <div class="information_container">
           <div class="brief_description">
               <b>Big Grove</b>
@@ -435,12 +473,13 @@
       </div>
 
 
-
+        <!--The 10th marker(Its id is marker11, it is correspond to its number on map ), marker is clickable-->
          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill mywid bounce" viewBox="0 0 16 16" id="marker11" onclick="marker11_click()" onmouseover = "moveover_marker11()" onmouseleave="moveout_marker11()">
           <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
          </svg>
-          
+          <!--The brief description box, it is closed to the marker11, hidden in default-->     
          <div class="description_blocks infowin" id="description11" onmouseenter="moveover_description11()" onmouseleave="moveout_description11()">
+          <!--The slideshow on the top of brief description box-->
           <div class="slideshow-container">
             <div class="slideshow-image" id="slideshow_image11A" >
              <img src="../resources/image/apple tree1.jpg" class="slideshow_image">
@@ -453,6 +492,7 @@
              <b class="prev" onclick="slideCount11(-1)">&#10094;</b>
              <b class="next" onclick="slideCount11(1)">&#10095;</b>
           </div>
+          <!--simple introduction inside brief description box-->
           <div class="information_container">
           <div class="brief_description">
               <b>A very big apple tree</b>
@@ -483,6 +523,7 @@
 
         </div>
       </div>
+       <!--the bottom of page contain the contact information -->
         <footer class="section-p1">
           <div class="col">
             <h4>Contact Us</h4>
