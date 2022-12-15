@@ -10,10 +10,13 @@ before they continue. The agreement only occur when visitor click button.
 All functions here will relate to the effect after click "burial booking"  
 */
 
-
+/**
+ * This function is used to hide the document
+ * Author: Zilong Wang
+ */
 function setup(){
     document.getElementById("agreement").style.display = "none";
-}/*hide the document  */
+}
 
 
 
