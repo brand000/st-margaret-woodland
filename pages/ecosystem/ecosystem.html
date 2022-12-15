@@ -40,6 +40,27 @@
 
     <!--Linking the javascript files for functionality-->
     <script defer src="../../scripts/estore.js"></script>
+    <script>
+      function seniorFunction(){
+
+var x = document.getElementById("senior").innerHTML;
+
+
+if (x== "Accessibility Mode"){
+console.log(document.getElementsByClassName('main-container').length);
+document.getElementById("senior").innerHTML = "Normal View";
+document.getElementsByClassName('main-container')[0].style.backgroundColor='dimgrey';
+let len = document.getElementsByClassName('main-container').length;
+for(i=0; i<len; i++){
+document.getElementsByClassName('main-container')[i].style.color='rgb(225,225,80)';
+document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
+}
+}
+else {
+window.location.reload();
+}
+}   
+    </script>
     <script defer src="../../scripts/main.js"></script>
 
     <title>Saint Margaret's Bay Store</title>
@@ -62,6 +83,8 @@
             <nav>
               <ul>
                 <!--Links to alternative pages in the navbar-->
+                <li><button id= "senior" ondblclick= "seniorFunction()" style= "padding: 10px; color: white; font-weight: bolder;
+                  font-size: small; border: none; background-color:MediumSeaGreen;">Accessibility Mode</button></li>
                 <li><a href="../../pages/about/about.html">About</a></li>
                 <li><a href="../../pages/ecosystem/ecosystem.html">Ecosystem</a></li>
                 <li><a href="../../pages/map/map.html">Map</a></li>
@@ -75,13 +98,13 @@
       </div>
     </header>
     <!--Main content div for all page content for responsive design-->
-    <div class="main-content">
+    <div id="main-content" class="main-content main-container">
       <div class="ecosystem-about">
         <div class="ecosystemabout-title">
-          <h1>ECOSYSTEM</h1>
+          <h1 class="main-container">ECOSYSTEM</h1>
         </div>
         <div class="ecosystem-text">
-          <p>
+          <p class="main-container">
             <b>French Village Forest Conservation</b> is home to a diverse
             ecosystem. With historic and interesting flora and fauna, there is
             something to see for everyone. Whether you are interested in the
@@ -92,23 +115,23 @@
         </div>
       </div>
       <div class="ecosystemcontent-title">
-        <h4>Hover over the circles for more information!</h4>
+        <h4 class="main-container">Hover over the circles for more information!</h4>
       </div>
       <div class="ecosystem-content">
         <!--Container for the flora flipcards-->
         <div class="flora-container">
           <div class="flora-title">
-            <h2>Flora</h2>
+            <h2 class="main-container">Flora</h2>
           </div>
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-birchfront"></div>
               <div class="flip-card-back">
-                <h1>
+                <h1 class="main-container">
                   Coastal Yellow<br />
                   Birch
                 </h1>
-                <p>
+                <p class="main-container">
                   Coastal Yellow birch is Nova Scotia's longest-lived hardwood
                   species dating over 300 years.
                 </p>
@@ -120,8 +143,8 @@
             <div class="flip-card-inner">
               <div class="flip-card-applefront"></div>
               <div class="flip-card-back">
-                <h1>Apple Trees<br /></h1>
-                <p>
+                <h1 class="main-container">Apple Trees<br /></h1>
+                <p class="main-container">
                   French Village is home to some of the largest apple trees in
                   eastern Canada
                 </p>
@@ -133,8 +156,8 @@
             <div class="flip-card-inner">
               <div class="flip-card-pearfront"></div>
               <div class="flip-card-back">
-                <h1>Pear Trees<br /></h1>
-                <p>
+                <h1 class="main-container">Pear Trees<br /></h1>
+                <p class="main-container">
                   French Village is home to some of the largest apple trees in
                   eastern Canada
                 </p>
@@ -146,15 +169,15 @@
         <!--Container for the fauna flipcards-->
         <div class="fauna-container">
           <div class="fauna-title">
-            <h2>Fauna</h2>
+            <h2 class="main-container">Fauna</h2>
           </div>
 
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-goosefront"></div>
               <div class="flip-card-back">
-                <h1>Canada Goose</h1>
-                <p>
+                <h1 class="main-container">Canada Goose</h1>
+                <p class="main-container">
                   At French Village Conservation, you will find a Canadian
                   staple, the Canada Goose.
                 </p>
@@ -166,11 +189,11 @@
             <div class="flip-card-inner">
               <div class="flip-card-salamanderfront"></div>
               <div class="flip-card-back">
-                <h1>
+                <h1 class="main-container">
                   Eastern<br />Red-backed<br />
                   Salamander
                 </h1>
-                <p>
+                <p class="main-container">
                   One of our many scaly friends on the conservation, these guys
                   are a small salamander that inhabits wooded slopes.
                 </p>

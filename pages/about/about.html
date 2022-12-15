@@ -3,6 +3,7 @@
   Authors:  
   Devon Leigh - Styling, structure, content
   Rahabar Mahmud - Footer
+  Jeeva Murugesan - Accessibility Mode
 -->
 
 <!DOCTYPE html>
@@ -40,6 +41,10 @@
 
     <!--Linking the javascript files for functionality-->
     <script defer src="../../scripts/estore.js"></script>
+
+    <!--seniorFunction() is executed after the double click button action
+        The button changes to "Default View" by using the button's ID as reference
+        The background color changes to 'dimgrey' by using the class name of the main container as reference-->
     <script>
           function seniorFunction(){
 
@@ -48,9 +53,11 @@ var x = document.getElementById("senior").innerHTML;
 
 if (x== "Accessibility Mode"){
   console.log(document.getElementsByClassName('main-container').length);
-document.getElementById("senior").innerHTML = "Normal View";
+document.getElementById("senior").innerHTML = "Default View";
 document.getElementsByClassName('main-container')[0].style.backgroundColor='dimgrey';
 let len = document.getElementsByClassName('main-container').length;
+
+/*The font color and size changes with every iteration of the for loop as every header and paragraph has 'main-container' as its ClassName */
 for(i=0; i<len; i++){
   document.getElementsByClassName('main-container')[i].style.color='rgb(225,225,80)';
   document.getElementsByClassName('main-container')[i].style.fontSize = '30px';
@@ -68,8 +75,6 @@ window.location.reload();
 
   <body>
     <header>
-      <!--button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; position: absolute; top:30%; right:45%; color: white; font-weight: bolder;
-      font-size: small; border: none; background-color:MediumSeaGreen;">Accessibility Mode</button-->
       <div class="header-container">
         <div class="org-name">
           <!--Links back to homepage if clicked-->
@@ -85,7 +90,8 @@ window.location.reload();
             <nav>
               <ul>
                 <!--Links to alternative pages in the navbar-->
-                <li><button id= "senior" onclick= "seniorFunction()" style= "padding: 10px; color: white; font-weight: bolder;
+                <!--Double click on the 'Accessibility Mode' button calls seniorFunction()-->
+                <li><button id= "senior" ondblclick= "seniorFunction()" style= "padding: 10px; color: white; font-weight: bolder;
                   font-size: small; border: none; background-color:MediumSeaGreen;">Accessibility Mode</button></li>
                 <li><a href="../../pages/about/about.html">About</a></li>
                 <li><a href="../../pages/ecosystem/ecosystem.html">Ecosystem</a></li>
