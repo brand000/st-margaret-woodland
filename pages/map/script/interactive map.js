@@ -4,7 +4,7 @@
 //  Brandon Watson - functions content, structure
 
 /*
-Description: This is the javascript page for our e-store page. This script file is called in the
+Description: This is the javascript file for our map page. This script file is called in the
 header of all our map page. This file is to ensure the map page is interactive for all users.
 When user move their coursor over or out of the marker. There will be a different respond from page
 When user move their mouse over the markers, the brief description box will occur. When they move out,
