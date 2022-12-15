@@ -6,6 +6,10 @@
   Devon Leigh - Styling, structure
   Rahabar Mahmud - Footer
 -->
+ <!--Description: This page is to help the people who are
+interested in the green burial of conservation. Users can get 
+information about conservation green burial from this page. Besides,
+they can select the burial booking in this page  -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -70,7 +74,7 @@
    
     <script src="./script/burial information.js"></script>
   </head>
-
+  <!--This is the navigation bar, include a lot of clickable buttons-->
   <header id="header">
     <div class="header-container">
       <div class="org-name">
@@ -98,13 +102,14 @@
   <body onload="setup()">
     <div data-role="page">
       <div class="ui-content" id="ui-content">
-        
+           <!--This is the part that contain all content-->
             <div id="information_container" class="change_part">
+              <!--The div contain the background image which is a church-->
               <div id="background_image">
                 <img src="../resources/image/background_image.jpg" style="width:100%; height:100%; opacity: 80%;">
                 <b id="title">THE BURIAL YOU SHOULD KNOW</b>
               </div>
-
+              <!--The div contain information of green burial which conservation provide-->
               <div id="information">
                  <center><p id="information_title">Want a natural burial?</p></center>
                  <p id="information_content"><b>Our conservation provied the green-burial service, </b>If you actually have the demand for it. Please call us at 352-317-7307 to discuss your personal situation. 
@@ -119,18 +124,19 @@
                   Prepaying a funeral home is a choice some people make, but the most important thing to do is to make and share a plan.
                   To understand the decisions involved in arranging a natural burial please review our Burial Planning Guide, look at our FAQ page, and/or give us a call. 
                  </p>
-
+                <!--The div will contain a video which detailed introduce the vurial service -->
                  <center><video width="400px" height="300px" controls>
                  <source src="../resources/video/green_burial.mp4" type="video/mp4"></center>
               </div>
-
+                 <!--The div will contain the button of booking burial  -->
               <div id="button_div">
                  <button type="button" id="button" onclick="clickable()" onmouseover="color_change()" onmouseout="color_back()">Start Burial Booking</button>
               </div>
             </div>
           
-
+            <!--The agreement that user should read before next step, hidden in default  -->
             <div id="agreement">
+              <!--The agreement content -->
               <div id="agreement_information">
                 Licensing Agreement
                 This License Agreement (this “Agreement”) is made effective as of [Insert Date Here] between [Insert Name of Owner of Property to be Licensed], of [Insert Full Address Here], and [Insert Name of the Party Who Will Use the Licensed Property], of [Insert Full Address Here].
@@ -149,7 +155,7 @@
                 [Insert Name of the Party Who Will Use the Licensed Property] may not modify or change the Authored Work in any manner.
 
               </div>
-
+              <!--When user click "I agree", page will redirect; If not, page refresh -->
               <div id="button_group">
                 <button type="button" id="back_button" onclick="go_back()">Back</button>
                 <button type="button" id="agree_button" onclick="next()">I agree</button>
